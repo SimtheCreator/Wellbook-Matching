@@ -1,0 +1,105 @@
+{
+  "projectInfo": {
+    "name": "WellBook TED IDEATION",
+    "budget": 150000,
+    "startDate": "2026-05-22",
+    "endDate": "2026-11-22",
+    "program": "TED IDEATION Program FY2569"
+  },
+  "team": [
+    {
+      "name": "Ice",
+      "emoji": "🧊",
+      "role": "CEO + Marketing",
+      "title": "PM / Leader",
+      "color": "#06b6d4",
+      "colorVar": "ice",
+      "responsibilities": [
+        "วางแผนกลยุทธ์ Go-to-Market",
+        "ศึกษาตลาด + กลุ่มเป้าหมาย",
+        "ทดสอบตลาดกับ End User ≥ 100 ราย",
+        "จัดทำแผนธุรกิจฉบับสมบูรณ์",
+        "เตรียม Pitch Deck ปิดโครงการ"
+      ]
+    },
+    {
+      "name": "Sim",
+      "emoji": "🟣",
+      "role": "COO + Operations",
+      "title": "BD & Compliance Lead",
+      "color": "#8b5cf6",
+      "colorVar": "sim",
+      "responsibilities": [
+        "ปรึกษาผู้เชี่ยวชาญ NCDs / โภชนาการ",
+        "รวบรวม Wellness Knowledge Base",
+        "จัดหมวดหมู่กิจกรรม + Rule-based Mapping",
+        "ทดสอบรอบ 1: กลุ่มนำร่อง 30 ราย",
+        "จัดทำรายงาน TED Fund + เบิกทุน"
+      ]
+    },
+    {
+      "name": "Tao",
+      "emoji": "🟢",
+      "role": "CTO + Tech / AI",
+      "title": "Developer",
+      "color": "#10b981",
+      "colorVar": "tao",
+      "responsibilities": [
+        "ออกแบบ UX แบบประเมินสุขภาพ",
+        "พัฒนา Webapp + Auth + Dashboard",
+        "พัฒนาระบบวิเคราะห์โปรไฟล์สุขภาพ",
+        "พัฒนา Matching Logic + Recommendation",
+        "ทดสอบระบบ + แก้บัก"
+      ]
+    }
+  ],
+  "tasks": [
+    { "id": "T01", "name": "วางแผนการตลาด + กลยุทธ์ Go-to-Market", "owner": "Ice", "start": "2026-05-22", "end": "2026-06-10", "status": "Done", "phase": 1, "description": "" },
+    { "id": "T02", "name": "ศึกษาตลาด + ความต้องการกลุ่มเป้าหมาย", "owner": "Ice", "start": "2026-05-22", "end": "2026-06-15", "status": "Done", "phase": 1, "description": "" },
+    { "id": "T03", "name": "ปรึกษาผู้เชี่ยวชาญด้านการดูแลผู้ป่วย NCDs", "owner": "Sim", "start": "2026-05-26", "end": "2026-06-12", "status": "Done", "phase": 1, "description": "" },
+    { "id": "T04", "name": "ปรึกษาผู้เชี่ยวชาญด้านโภชนาการ / Wellness", "owner": "Sim", "start": "2026-05-26", "end": "2026-06-12", "status": "Done", "phase": 1, "description": "" },
+    { "id": "T05", "name": "ออกแบบผลิตภัณฑ์ + ศึกษาความเป็นไปได้", "owner": "Tao", "start": "2026-06-01", "end": "2026-06-20", "status": "Done", "phase": 1, "description": "" },
+    { "id": "T06", "name": "นำข้อมูลเบื้องต้นไปพูดคุยกับกลุ่มเป้าหมาย", "owner": "Ice", "start": "2026-06-10", "end": "2026-06-21", "status": "Done", "phase": 1, "description": "" },
+    { "id": "M01", "name": "◆ เบิกทุนงวดที่ 1 (75,000 บาท)", "owner": "Sim", "start": "2026-06-15", "end": "2026-06-22", "status": "Done", "phase": 1, "isMilestone": true, "description": "เอกสาร: แผนการดำเนินงาน, แผนงบประมาณ, สัญญา" },
+    { "id": "T07", "name": "UX Design: แบบประเมินโปรไฟล์สุขภาพ", "owner": "Tao", "start": "2026-06-22", "end": "2026-07-05", "status": "Done", "phase": 2, "description": "" },
+    { "id": "T08", "name": "โครงสร้าง Webapp + ระบบ Login/Auth", "owner": "Tao", "start": "2026-06-22", "end": "2026-07-15", "status": "Done", "phase": 2, "description": "" },
+    { "id": "T09", "name": "รวบรวมข้อมูล Wellness Knowledge Base", "owner": "Sim", "start": "2026-06-22", "end": "2026-07-25", "status": "Doing", "phase": 2, "description": "" },
+    { "id": "T10", "name": "พัฒนาระบบเก็บ+วิเคราะห์โปรไฟล์สุขภาพ", "owner": "Tao", "start": "2026-07-06", "end": "2026-07-31", "status": "Doing", "phase": 2, "description": "" },
+    { "id": "T11", "name": "ระบบ Recovery Password", "owner": "Tao", "start": "2026-07-16", "end": "2026-07-25", "status": "To do", "phase": 2, "description": "" },
+    { "id": "T12", "name": "จัดหมวดหมู่กิจกรรม + Rule-based Mapping", "owner": "Sim", "start": "2026-07-20", "end": "2026-08-10", "status": "To do", "phase": 2, "description": "" },
+    { "id": "T13", "name": "พัฒนา Matching Logic", "owner": "Tao", "start": "2026-08-01", "end": "2026-08-31", "status": "To do", "phase": 2, "description": "" },
+    { "id": "T14", "name": "หน้าแสดงผลคำแนะนำ + อธิบายเหตุผล", "owner": "Tao", "start": "2026-08-25", "end": "2026-09-10", "status": "To do", "phase": 2, "description": "" },
+    { "id": "T15", "name": "Dashboard ผู้ใช้", "owner": "Tao", "start": "2026-09-01", "end": "2026-09-15", "status": "To do", "phase": 3, "description": "" },
+    { "id": "T16", "name": "ทดสอบระบบภายใน + แก้บัก", "owner": "Tao", "start": "2026-09-10", "end": "2026-09-21", "status": "To do", "phase": 3, "description": "" },
+    { "id": "T17", "name": "ทดสอบรอบ 1: กลุ่มนำร่อง 30 ราย", "owner": "Sim", "start": "2026-09-22", "end": "2026-10-05", "status": "To do", "phase": 3, "description": "" },
+    { "id": "T18", "name": "เก็บ Feedback + ปรับปรุงระบบ", "owner": "Tao", "start": "2026-10-06", "end": "2026-10-12", "status": "To do", "phase": 3, "description": "" },
+    { "id": "T19", "name": "ทดสอบรอบ 2: ผู้ใช้ทั่วไป", "owner": "Sim", "start": "2026-10-08", "end": "2026-10-18", "status": "To do", "phase": 3, "description": "" },
+    { "id": "T20", "name": "ทดสอบตลาดกับ End User ≥ 100 ราย", "owner": "Ice", "start": "2026-09-22", "end": "2026-10-21", "status": "To do", "phase": 3, "description": "" },
+    { "id": "T21", "name": "สรุปผลการทดสอบ + วิเคราะห์ผล", "owner": "Sim", "start": "2026-10-22", "end": "2026-10-31", "status": "To do", "phase": 4, "description": "" },
+    { "id": "T22", "name": "จัดทำแผนธุรกิจฉบับสมบูรณ์", "owner": "Ice", "start": "2026-10-22", "end": "2026-11-15", "status": "To do", "phase": 4, "description": "" },
+    { "id": "T23", "name": "จัดทำแผนพัฒนาต่อยอด", "owner": "Tao", "start": "2026-11-01", "end": "2026-11-15", "status": "To do", "phase": 4, "description": "" },
+    { "id": "T24", "name": "จัดทำรายงานสรุปโครงการ TED Fund", "owner": "Sim", "start": "2026-11-01", "end": "2026-11-15", "status": "To do", "phase": 4, "description": "" },
+    { "id": "T25", "name": "เตรียม Pitch Deck นำเสนอปิดโครงการ", "owner": "Ice", "start": "2026-11-10", "end": "2026-11-20", "status": "To do", "phase": 4, "description": "" },
+    { "id": "M02", "name": "◆ เบิกทุนงวดที่ 2 (75,000 บาท) + ปิดโครงการ", "owner": "Sim", "start": "2026-11-15", "end": "2026-11-22", "status": "To do", "phase": 4, "isMilestone": true, "description": "เอกสาร: รายงานฉบับสมบูรณ์, รายงาน KPI, Pitch Deck" }
+  ],
+  "expenses": [
+    { "id": "E01", "name": "ค่าเดินทางพบผู้เชี่ยวชาญ NCDs", "amount": 3000, "category": "การวิจัย", "date": "2026-06-05" },
+    { "id": "E02", "name": "ค่าเดินทางพบผู้เชี่ยวชาญโภชนาการ", "amount": 3000, "category": "การวิจัย", "date": "2026-06-08" },
+    { "id": "E03", "name": "ค่า Cloud Hosting (3 เดือน)", "amount": 5400, "category": "เทคโนโลยี", "date": "2026-06-22" },
+    { "id": "E04", "name": "ค่า Domain + SSL", "amount": 1500, "category": "เทคโนโลยี", "date": "2026-06-22" },
+    { "id": "E05", "name": "ค่าโฆษณา Facebook/IG ทดสอบตลาด", "amount": 8000, "category": "การตลาด", "date": "2026-07-01" }
+  ],
+  "milestoneChecklist": {
+    "M01": [
+      { "label": "แผนการดำเนินงาน (Operational Plan)", "checked": true },
+      { "label": "แผนงบประมาณ (Budget Plan)", "checked": true },
+      { "label": "เอกสารสัญญา (Contract & Agreement)", "checked": true }
+    ],
+    "M02": [
+      { "label": "รายงานฉบับสมบูรณ์ (Final Report)", "checked": false },
+      { "label": "รายงานผลตัวชี้วัด KPI", "checked": false },
+      { "label": "Pitch Deck นำเสนอปิดโครงการ", "checked": false },
+      { "label": "ทดสอบกับผู้ใช้ ≥ 100 ราย", "checked": false }
+    ]
+  }
+}

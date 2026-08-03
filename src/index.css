@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { 
+    background-color: #f5f3ef; 
+    color: #2c3329; 
+    overflow-x: hidden; 
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .step { display: none; opacity: 0; transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1); flex-shrink: 0; }
+  .step.active { display: flex; opacity: 1; animation: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+  @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  
+  .option-btn { transition: all 0.3s ease; cursor: pointer; border: 1px solid #e8e5df; background-color: #ffffff; }
+  .option-btn:hover { border-color: #8ba382; transform: translateY(-2px); box-shadow: 0 4px 15px rgba(107, 123, 92, 0.08); }
+  .option-btn.selected { border-color: #6b7b5c; background-color: #eef2eb; box-shadow: 0 0 0 1px #6b7b5c; transform: scale(1.02); color: #2c3329 !important;}
+  .option-btn.selected .lucide { stroke: #4f5b44; }
+
+  .likert-btn { transition: all 0.2s ease; cursor: pointer; border: 1px solid #e8e5df; background-color: #ffffff; aspect-ratio: 1/1; display: flex; justify-content: center; align-items: center; border-radius: 50%; font-weight: 500; font-size: 14px;}
+  .likert-btn:hover { border-color: #8ba382; background-color: #f4f6f0; }
+  .likert-btn.selected { border-color: #6b7b5c; background-color: #6b7b5c; color: white; transform: scale(1.1); box-shadow: 0 4px 10px rgba(107, 123, 92, 0.3); }
+
+  .checkbox-btn { transition: all 0.3s ease; cursor: pointer; border: 1px solid #e8e5df; background-color: #ffffff; }
+  .checkbox-btn.selected { border-color: #ef4444; background-color: rgba(239, 68, 68, 0.05); }
+  .checkbox-btn-none.selected { border-color: #6b7b5c; background-color: #eef2eb; }
+  .checkbox-btn.selected .indicator { background-color: #ef4444; border-color: #ef4444; }
+  .checkbox-btn.selected .indicator::after { content: '\2713'; color: white; font-size: 12px; font-weight: bold; }
+  .checkbox-btn-none.selected #ind-none { background-color: #6b7b5c; border-color: #6b7b5c; }
+  .checkbox-btn-none.selected #ind-none::after { content: '\2713'; color: white; font-size: 12px; font-weight: bold; }
+  
+  .premium-shadow { box-shadow: 0 20px 40px rgba(44, 51, 41, 0.08); }
+}
+
+@layer utilities {
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #d1cec7; border-radius: 2px; }
+
+  @media (max-width: 768px) {
+      .mobile-container { border-radius: 0; border: none; height: 100dvh; max-height: 100dvh; }
+  }
+}
+
+body.lang-en .lang-th { display: none !important; }
+body.lang-th .lang-en { display: none !important; }
