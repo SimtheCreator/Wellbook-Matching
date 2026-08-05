@@ -559,17 +559,16 @@ export default function WellnistaAssessment() {
                 </div>
 
                 <div className="mt-8 bg-white/70 p-5 rounded-3xl border border-wellnista-border shadow-[0_8px_30px_rgb(0,0,0,0.04)] max-w-sm text-center mx-4">
-                    <div className="flex justify-center mb-3">
+                    <div className="flex justify-center mb-2">
                         <i data-lucide="sparkles" className="w-5 h-5 text-wellnista-gold"></i>
                     </div>
-                    <p className="text-[11.5px] text-wellnista-textDark leading-relaxed mb-4 font-light">
-                        <span className="font-medium text-wellnista-oliveDark">สวัสดีค่ะ! 🙏 รบกวนเวลาสักนิดนะคะ</span><br/>
-                        แบบประเมินนี้จัดทำขึ้นเพื่อเก็บข้อมูลทดสอบและฝึกฝนระบบ AI ของเรา โดยเรา<span className="text-rose-500 font-medium">จะไม่มีการเก็บข้อมูลส่วนตัวใดๆ</span> ของคุณเลยค่ะ สบายใจได้เลยนะคะ 😊<br/><br/>
-                        สุดท้ายนี้ ฝากให้คะแนนคำแนะนำจาก AI ในตอนท้ายด้วยน้า ว่าตรงใจคุณหรือเปล่า ขอบพระคุณที่ช่วยเหลือเราค่ะ 💖
+                    <p className="text-[11.5px] text-wellnista-textDark leading-relaxed mb-3 font-light">
+                        แบบประเมินนี้จัดทำขึ้นเพื่อทดสอบและฝึกฝนระบบ AI โดย<span className="text-rose-500 font-medium">ไม่มีการเก็บข้อมูลส่วนตัว</span><br/><br/>
+                        รบกวนช่วยประเมินความแม่นยำของคำแนะนำในตอนท้าย ขอบคุณค่ะ 🙏
                     </p>
                     <div className="h-[1px] w-12 bg-[#e8e5df] mx-auto mb-3"></div>
                     <p className="text-[10px] text-wellnista-textMuted leading-relaxed font-light">
-                        <span className="font-medium text-wellnista-olive">Hello!</span> This assessment helps train our AI system. <span className="text-rose-400 font-medium">No personal data is collected.</span> Please help us by rating the AI's recommendations at the end. Thank you so much! 💖
+                        This assessment helps train our AI. <span className="text-rose-400 font-medium">No personal data is collected.</span> Please help rate the recommendations at the end. Thank you! 🙏
                     </p>
                 </div>
             </div>
