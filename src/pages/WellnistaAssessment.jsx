@@ -544,7 +544,7 @@ export default function WellnistaAssessment() {
         <main className="flex-1 overflow-y-auto p-5 md:p-6 flex flex-col relative pb-8" id="app-container">
             
             {/* Step 0: Language Selection */}
-            <div id="step-0" className="step active flex-col justify-center items-center flex-1 h-full pb-10">
+            <div id="step-0" className="step active flex-col justify-center items-center flex-1 min-h-full pb-10">
                 <i data-lucide="globe-2" className="w-12 h-12 text-wellnista-sand mb-6"></i>
                 <h2 className="text-2xl font-bold font-serif text-wellnista-textDark mb-2">Select Language</h2>
                 <p className="text-xs text-wellnista-textMuted mb-10"><span className="lang-th">เลือกภาษาที่ต้องการใช้งาน</span><span className="lang-en">Select your preferred language</span></p>
