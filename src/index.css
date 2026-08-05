@@ -33,6 +33,10 @@
     overflow-x: hidden; 
     font-family: 'Inter', sans-serif;
   }
+
+  .lucide {
+    stroke-width: 1.5;
+  }
 }
 
 @layer components {
@@ -40,7 +44,7 @@
   .step.active { display: flex; opacity: 1; animation: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
   @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
   
-  .option-btn { transition: all 0.3s ease; cursor: pointer; border: 1px solid #e8e5df; background-color: #ffffff; }
+  .option-btn { transition: all 0.3s ease; cursor: pointer; border: 1px solid #e8e5df; background-color: #ffffff; white-space: normal; word-break: break-word; }
   .option-btn:hover { border-color: #8ba382; transform: translateY(-2px); box-shadow: 0 4px 15px rgba(107, 123, 92, 0.08); }
   .option-btn.selected { border-color: #6b7b5c; background-color: #eef2eb; box-shadow: 0 0 0 1px #6b7b5c; transform: scale(1.02); color: #2c3329 !important;}
   .option-btn.selected .lucide { stroke: #4f5b44; }
@@ -70,5 +74,5 @@
   }
 }
 
+body:not(.lang-en) .lang-en { display: none !important; }
 body.lang-en .lang-th { display: none !important; }
-body.lang-th .lang-en { display: none !important; }
