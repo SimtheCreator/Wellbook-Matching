@@ -57,9 +57,9 @@
   .checkbox-btn.selected { border-color: #ef4444; background-color: rgba(239, 68, 68, 0.05); }
   .checkbox-btn-none.selected { border-color: #6b7b5c; background-color: #eef2eb; }
   .checkbox-btn.selected .indicator { background-color: #ef4444; border-color: #ef4444; }
-  .checkbox-btn.selected .indicator::after { content: '\2713'; color: white; font-size: 12px; font-weight: bold; }
+  .checkbox-btn.selected .indicator::after { content: '✓'; color: white; font-size: 12px; font-weight: bold; }
   .checkbox-btn-none.selected #ind-none { background-color: #6b7b5c; border-color: #6b7b5c; }
-  .checkbox-btn-none.selected #ind-none::after { content: '\2713'; color: white; font-size: 12px; font-weight: bold; }
+  .checkbox-btn-none.selected #ind-none::after { content: '✓'; color: white; font-size: 12px; font-weight: bold; }
   
   .premium-shadow { box-shadow: 0 20px 40px rgba(44, 51, 41, 0.08); }
 }

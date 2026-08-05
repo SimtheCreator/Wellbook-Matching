@@ -30,7 +30,7 @@ import { saveAssessmentAnonymous } from "../lib/firebase";
             physical: '', mental: '', negative: '',
             vitals: { rhr: '', sleep: '', exercise: '', stress: '' },
             redFlags: [],
-            style: '', openness: '', social: '',
+            style: [], openness: '', social: '',
             env: '', access: '', time: '',
             rating: 0,
             targetActivity: '', targetReason: '',
@@ -252,7 +252,7 @@ import { saveAssessmentAnonymous } from "../lib/firebase";
             const step4Valid = state.redFlags.length > 0 || (btnNone && btnNone.classList.contains('selected'));
             if(document.getElementById('btn-next-4')) document.getElementById('btn-next-4').disabled = !step4Valid;
 
-            if(state.style && state.openness && state.social) document.getElementById('btn-next-5').disabled = false;
+            if(state.style.length > 0 && state.openness && state.social) document.getElementById('btn-next-5').disabled = false;
             if(state.env && state.access && state.time) document.getElementById('btn-next-6').disabled = false;
             if(state.targetActivity && state.targetReason) document.getElementById('btn-next-9').disabled = false;
         }
@@ -267,6 +267,20 @@ import { saveAssessmentAnonymous } from "../lib/firebase";
                 el.classList.add('selected');
             }
             document.getElementById('btn-none').classList.remove('selected');
+            saveState();
+            checkSteps();
+        }
+
+        function toggleStyle(val, el) {
+            if (!Array.isArray(state.style)) state.style = [];
+            const idx = state.style.indexOf(val);
+            if(idx > -1) {
+                state.style.splice(idx, 1);
+                el.classList.remove('selected');
+            } else {
+                state.style.push(val);
+                el.classList.add('selected');
+            }
             saveState();
             checkSteps();
         }
@@ -351,10 +365,12 @@ import { saveAssessmentAnonymous } from "../lib/firebase";
             else { uv.m -= 4; uv.n -= 2; }
 
             // Step 5: Personality
-            if(state.style === 'active') uv.p += 4;
-            else if(state.style === 'passive') { uv.p -= 4; uv.m -= 2; }
-            else if(state.style === 'creative') uv.n += 4;
-            else if(state.style === 'growth') { uv.g += 4; uv.m += 2; }
+            if(Array.isArray(state.style)) {
+                if(state.style.includes('active')) uv.p += 4;
+                if(state.style.includes('passive')) { uv.p -= 4; uv.m -= 2; }
+                if(state.style.includes('creative')) uv.n += 4;
+                if(state.style.includes('growth')) { uv.g += 4; uv.m += 2; }
+            }
 
             if(state.openness === 'low') uv.n -= 4;
             else if(state.openness === 'high') uv.n += 4;
@@ -493,6 +509,7 @@ export default function WellnistaAssessment() {
     window.submitRating = submitRating;
     window.processUserChoice = processUserChoice;
     window.toggleCheckbox = toggleCheckbox;
+    window.toggleStyle = toggleStyle;
     window.toggleNone = toggleNone;
     
     const script = document.createElement("script");
@@ -651,7 +668,7 @@ export default function WellnistaAssessment() {
                 <div className="grid grid-cols-1 gap-2 mb-4" id="q-negative">
                     <button onClick={(e) => {selectSingle('negative', 'tension', e.currentTarget)}} className="option-btn p-3 rounded-2xl flex items-center gap-3 text-left">
                         <i data-lucide="cloud-lightning" className="w-4 h-4 text-wellnista-sand flex-shrink-0"></i>
-                        <div className="font-medium text-[11px]"><span className="lang-th">เครียดสะสม</span><span className="lang-en">Chronic Stress</span> รับมือปัญหาไม่ไหว</div>
+                        <div className="font-medium text-[11px]"><span className="lang-th">เครียดสะสม รับมือปัญหาไม่ไหว</span><span className="lang-en">Chronic Stress, unable to cope</span></div>
                     </button>
                     <button onClick={(e) => {selectSingle('negative', 'mood', e.currentTarget)}} className="option-btn p-3 rounded-2xl flex items-center gap-3 text-left">
                         <i data-lucide="frown" className="w-4 h-4 text-wellnista-sand flex-shrink-0"></i>
@@ -801,19 +818,19 @@ export default function WellnistaAssessment() {
                 
                 <h3 className="text-[10px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase"><span className="lang-th">1. สไตล์กิจกรรม (Style)</span><span className="lang-en">1. Activity Style</span></h3>
                 <div className="grid grid-cols-1 gap-2 mb-4" id="q-style">
-                    <button onClick={(e) => {selectSingle('style', 'passive', e.currentTarget)}} className="option-btn p-3 rounded-2xl flex items-center gap-3 text-left">
+                    <button onClick={(e) => {toggleStyle('passive', e.currentTarget)}} className="option-btn p-3 rounded-2xl flex items-center gap-3 text-left">
                         <i data-lucide="wind" className="w-4 h-4 text-wellnista-sage flex-shrink-0"></i> 
                         <div className="font-medium text-[11px]"><span className="lang-th">อยู่นิ่งๆ (Passive) ฟื้นฟูตัวเอง</span><span className="lang-en">Passive & Restorative</span></div>
                     </button>
-                    <button onClick={(e) => {selectSingle('style', 'active', e.currentTarget)}} className="option-btn p-3 rounded-2xl flex items-center gap-3 text-left">
+                    <button onClick={(e) => {toggleStyle('active', e.currentTarget)}} className="option-btn p-3 rounded-2xl flex items-center gap-3 text-left">
                         <i data-lucide="flame" className="w-4 h-4 text-wellnista-sage flex-shrink-0"></i> 
                         <div className="font-medium text-[11px]"><span className="lang-th">เรียกเหงื่อ (Active)</span><span className="lang-en">Active & Sweaty</span></div>
                     </button>
-                    <button onClick={(e) => {selectSingle('style', 'creative', e.currentTarget)}} className="option-btn p-3 rounded-2xl flex items-center gap-3 text-left">
+                    <button onClick={(e) => {toggleStyle('creative', e.currentTarget)}} className="option-btn p-3 rounded-2xl flex items-center gap-3 text-left">
                         <i data-lucide="palette" className="w-4 h-4 text-wellnista-sage flex-shrink-0"></i> 
                         <div className="font-medium text-[11px]"><span className="lang-th">ความคิดสร้างสรรค์ (Creative)</span><span className="lang-en">Creative & Expressive</span></div>
                     </button>
-                    <button onClick={(e) => {selectSingle('style', 'growth', e.currentTarget)}} className="option-btn p-3 rounded-2xl flex items-center gap-3 text-left">
+                    <button onClick={(e) => {toggleStyle('growth', e.currentTarget)}} className="option-btn p-3 rounded-2xl flex items-center gap-3 text-left">
                         <i data-lucide="book-open" className="w-4 h-4 text-wellnista-sage flex-shrink-0"></i> 
                         <div className="font-medium text-[11px]"><span className="lang-th">พัฒนาทักษะ (Growth)</span><span className="lang-en">Skill Growth</span></div>
                     </button>
