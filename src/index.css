@@ -56,10 +56,10 @@
   .checkbox-btn { transition: all 0.3s ease; cursor: pointer; border: 1px solid #e8e5df; background-color: #ffffff; }
   .checkbox-btn.selected { border-color: #ef4444; background-color: rgba(239, 68, 68, 0.05); }
   .checkbox-btn-none.selected { border-color: #6b7b5c; background-color: #eef2eb; }
-  .checkbox-btn.selected .indicator { background-color: #ef4444; border-color: #ef4444; }
+  .checkbox-btn.selected .indicator { background-color: #ef4444 !important; border-color: #ef4444 !important; }
   .checkbox-btn .check-icon, .checkbox-btn-none .check-icon { opacity: 0 !important; transition: opacity 0.2s ease; }
   .checkbox-btn.selected .check-icon, .checkbox-btn-none.selected .check-icon { opacity: 1 !important; }
-  .checkbox-btn-none.selected #ind-none { background-color: #6b7b5c; border-color: #6b7b5c; }
+  .checkbox-btn-none.selected #ind-none { background-color: #6b7b5c !important; border-color: #6b7b5c !important; }
   
   .premium-shadow { box-shadow: 0 20px 40px rgba(44, 51, 41, 0.08); }
 }
