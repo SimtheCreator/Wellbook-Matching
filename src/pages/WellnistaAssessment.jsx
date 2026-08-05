@@ -525,7 +525,7 @@ export default function WellnistaAssessment() {
     <div className="h-[100dvh] w-full flex justify-center items-center bg-[#eae7e0] font-sans m-0 p-0">
 
 
-    <div className="w-full h-full md:w-[414px] md:h-[896px] bg-wellnista-bg md:rounded-[40px] premium-shadow relative flex flex-col overflow-hidden border border-[#e8e5df]/50 mobile-container">
+    <div className="w-full h-full md:w-[414px] md:h-[896px] md:max-h-[95dvh] bg-wellnista-bg md:rounded-[40px] premium-shadow relative flex flex-col overflow-hidden border border-[#e8e5df]/50 mobile-container">
         
         <header className="py-3 px-4 text-center border-b border-[#e8e5df] flex-shrink-0 z-10 bg-white/80 backdrop-blur-md relative flex flex-col justify-center items-center">
             <button onClick={(e) => resetApp()} className="absolute top-1/2 -translate-y-1/2 right-4 text-wellnista-sand hover:text-wellnista-olive transition-colors flex flex-col items-center" title="Change Language / Restart">
