@@ -558,18 +558,28 @@ export default function WellnistaAssessment() {
                     </button>
                 </div>
 
-                <div className="mt-8 bg-white/70 p-5 rounded-3xl border border-wellnista-border shadow-[0_8px_30px_rgb(0,0,0,0.04)] max-w-sm text-center mx-4">
-                    <div className="flex justify-center mb-2">
-                        <i data-lucide="sparkles" className="w-5 h-5 text-wellnista-gold"></i>
+                <div className="mt-8 px-4 w-full">
+                    <div className="bg-gradient-to-b from-white/50 to-white/90 backdrop-blur-md p-5 rounded-3xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.03)] text-center relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-wellnista-sage/10 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none"></div>
+                        <div className="absolute bottom-0 left-0 w-24 h-24 bg-wellnista-gold/10 rounded-full blur-xl -ml-8 -mb-8 pointer-events-none"></div>
+                        
+                        <div className="relative z-10">
+                            <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/80 border border-wellnista-border mb-3 shadow-sm">
+                                <i data-lucide="sparkles" className="w-4 h-4 text-wellnista-gold"></i>
+                            </div>
+                            <h3 className="text-[13px] font-semibold text-wellnista-oliveDark mb-2 tracking-wide">
+                                ค้นหากิจกรรมที่ใช่ สำหรับคุณ
+                            </h3>
+                            <p className="text-[11px] text-wellnista-textDark leading-[1.7] mb-3 font-light">
+                                ระบบอยู่ในช่วงทดสอบและฝึกฝน AI สบายใจได้เลยว่า <span className="font-semibold text-wellnista-olive">ไม่มีการจัดเก็บข้อมูลส่วนตัว</span> ใดๆ ค่ะ<br/>
+                                รบกวนช่วยประเมินความแม่นยำของคำแนะนำในหน้าสุดท้ายให้ด้วยนะคะ 🙏
+                            </p>
+                            <div className="h-px w-10 bg-wellnista-border mx-auto mb-3"></div>
+                            <p className="text-[9.5px] text-wellnista-textMuted leading-relaxed font-light">
+                                We are in AI testing. <span className="font-medium text-wellnista-sage">No personal data is collected.</span> Please help rate our recommendations at the end. Thank you!
+                            </p>
+                        </div>
                     </div>
-                    <p className="text-[11.5px] text-wellnista-textDark leading-relaxed mb-3 font-light">
-                        ระบบนี้ออกแบบมาเพื่อค้นหากิจกรรม Wellness ที่เหมาะสมกับคุณที่สุด<br/><br/>
-                        ปัจจุบันอยู่ในช่วงทดสอบ AI (<span className="text-rose-500 font-medium">ไม่มีการเก็บข้อมูลส่วนตัว</span>) รบกวนช่วยประเมินความแม่นยำของคำแนะนำในหน้าสุดท้าย ขอบคุณค่ะ 🙏
-                    </p>
-                    <div className="h-[1px] w-12 bg-[#e8e5df] mx-auto mb-3"></div>
-                    <p className="text-[10px] text-wellnista-textMuted leading-relaxed font-light">
-                        This matching system is designed to find your ideal wellness activity.<br/>It is currently in AI testing (<span className="text-rose-400 font-medium">no personal data collected</span>). Please help rate the results at the end. Thank you! 🙏
-                    </p>
                 </div>
             </div>
 
@@ -788,7 +798,7 @@ export default function WellnistaAssessment() {
                 <div className="space-y-3 mb-6" id="q-vetoes">
                     <button onClick={(e) => {toggleCheckbox('heart_risk', e.currentTarget)}} className="checkbox-btn w-full p-4 rounded-[20px] flex items-center gap-4 text-left">
                         <div className="w-5 h-5 border border-wellnista-border rounded flex items-center justify-center indicator flex-shrink-0 transition-colors bg-white">
-                            <i data-lucide="check" className="w-3.5 h-3.5 text-white check-icon opacity-0 transition-opacity"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-white check-icon opacity-0 transition-opacity"><polyline points="20 6 9 17 4 12"></polyline></svg>
                         </div>
                         <div className="flex-1">
                             <div className="text-[11px] font-medium"><span className="lang-th">โรคหัวใจ / ความดันโลหิตสูง</span><span className="lang-en">Heart Disease / High BP</span></div>
@@ -796,7 +806,7 @@ export default function WellnistaAssessment() {
                     </button>
                     <button onClick={(e) => {toggleCheckbox('joint_injury', e.currentTarget)}} className="checkbox-btn w-full p-4 rounded-[20px] flex items-center gap-4 text-left">
                         <div className="w-5 h-5 border border-wellnista-border rounded flex items-center justify-center indicator flex-shrink-0 transition-colors bg-white">
-                            <i data-lucide="check" className="w-3.5 h-3.5 text-white check-icon opacity-0 transition-opacity"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-white check-icon opacity-0 transition-opacity"><polyline points="20 6 9 17 4 12"></polyline></svg>
                         </div>
                         <div className="flex-1">
                             <div className="text-[11px] font-medium"><span className="lang-th">บาดเจ็บข้อต่อ / กระดูก</span><span className="lang-en">Joint / Bone Injury</span></div>
@@ -804,7 +814,7 @@ export default function WellnistaAssessment() {
                     </button>
                     <button onClick={(e) => {toggleCheckbox('sensory', e.currentTarget)}} className="checkbox-btn w-full p-4 rounded-[20px] flex items-center gap-4 text-left">
                         <div className="w-5 h-5 border border-wellnista-border rounded flex items-center justify-center indicator flex-shrink-0 transition-colors bg-white">
-                            <i data-lucide="check" className="w-3.5 h-3.5 text-white check-icon opacity-0 transition-opacity"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-white check-icon opacity-0 transition-opacity"><polyline points="20 6 9 17 4 12"></polyline></svg>
                         </div>
                         <div className="flex-1">
                             <div className="text-[11px] font-medium"><span className="lang-th">ไมเกรน / ไวต่อแสงและเสียง</span><span className="lang-en">Migraine / Sensory Sensitivity</span></div>
@@ -815,7 +825,7 @@ export default function WellnistaAssessment() {
 
                     <button onClick={(e) => {toggleNone(e.currentTarget)}} className="checkbox-btn-none w-full p-4 rounded-[20px] flex items-center gap-4 text-left" id="btn-none">
                         <div className="w-5 h-5 border border-wellnista-border rounded flex items-center justify-center flex-shrink-0 transition-colors bg-white" id="ind-none">
-                            <i data-lucide="check" className="w-3.5 h-3.5 text-white check-icon opacity-0 transition-opacity"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-white check-icon opacity-0 transition-opacity"><polyline points="20 6 9 17 4 12"></polyline></svg>
                         </div>
                         <div className="flex-1">
                             <div className="text-[11px] font-semibold text-wellnista-oliveDark"><span className="lang-th">ไม่มีข้อจำกัดทางสุขภาพ</span><span className="lang-en">No medical conditions</span></div>
