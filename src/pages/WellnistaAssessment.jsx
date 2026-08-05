@@ -773,19 +773,25 @@ export default function WellnistaAssessment() {
                 
                 <div className="space-y-3 mb-6" id="q-vetoes">
                     <button onClick={(e) => {toggleCheckbox('heart_risk', e.currentTarget)}} className="checkbox-btn w-full p-4 rounded-[20px] flex items-center gap-4 text-left">
-                        <div className="w-5 h-5 border border-wellnista-border rounded flex items-center justify-center indicator flex-shrink-0 transition-colors bg-white"></div>
+                        <div className="w-5 h-5 border border-wellnista-border rounded flex items-center justify-center indicator flex-shrink-0 transition-colors bg-white">
+                            <i data-lucide="check" className="w-3.5 h-3.5 text-white check-icon opacity-0 transition-opacity"></i>
+                        </div>
                         <div className="flex-1">
                             <div className="text-[11px] font-medium"><span className="lang-th">โรคหัวใจ / ความดันโลหิตสูง</span><span className="lang-en">Heart Disease / High BP</span></div>
                         </div>
                     </button>
                     <button onClick={(e) => {toggleCheckbox('joint_injury', e.currentTarget)}} className="checkbox-btn w-full p-4 rounded-[20px] flex items-center gap-4 text-left">
-                        <div className="w-5 h-5 border border-wellnista-border rounded flex items-center justify-center indicator flex-shrink-0 transition-colors bg-white"></div>
+                        <div className="w-5 h-5 border border-wellnista-border rounded flex items-center justify-center indicator flex-shrink-0 transition-colors bg-white">
+                            <i data-lucide="check" className="w-3.5 h-3.5 text-white check-icon opacity-0 transition-opacity"></i>
+                        </div>
                         <div className="flex-1">
                             <div className="text-[11px] font-medium"><span className="lang-th">บาดเจ็บข้อต่อ / กระดูก</span><span className="lang-en">Joint / Bone Injury</span></div>
                         </div>
                     </button>
                     <button onClick={(e) => {toggleCheckbox('sensory', e.currentTarget)}} className="checkbox-btn w-full p-4 rounded-[20px] flex items-center gap-4 text-left">
-                        <div className="w-5 h-5 border border-wellnista-border rounded flex items-center justify-center indicator flex-shrink-0 transition-colors bg-white"></div>
+                        <div className="w-5 h-5 border border-wellnista-border rounded flex items-center justify-center indicator flex-shrink-0 transition-colors bg-white">
+                            <i data-lucide="check" className="w-3.5 h-3.5 text-white check-icon opacity-0 transition-opacity"></i>
+                        </div>
                         <div className="flex-1">
                             <div className="text-[11px] font-medium"><span className="lang-th">ไมเกรน / ไวต่อแสงและเสียง</span><span className="lang-en">Migraine / Sensory Sensitivity</span></div>
                         </div>
@@ -794,7 +800,9 @@ export default function WellnistaAssessment() {
                     <div className="my-6 border-t border-[#e8e5df]"></div>
 
                     <button onClick={(e) => {toggleNone(e.currentTarget)}} className="checkbox-btn-none w-full p-4 rounded-[20px] flex items-center gap-4 text-left" id="btn-none">
-                        <div className="w-5 h-5 border border-wellnista-border rounded flex items-center justify-center flex-shrink-0 transition-colors bg-white" id="ind-none"></div>
+                        <div className="w-5 h-5 border border-wellnista-border rounded flex items-center justify-center flex-shrink-0 transition-colors bg-white" id="ind-none">
+                            <i data-lucide="check" className="w-3.5 h-3.5 text-white check-icon opacity-0 transition-opacity"></i>
+                        </div>
                         <div className="flex-1">
                             <div className="text-[11px] font-semibold text-wellnista-oliveDark"><span className="lang-th">ไม่มีข้อจำกัดทางสุขภาพ</span><span className="lang-en">No medical conditions</span></div>
                         </div>
