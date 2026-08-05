@@ -477,15 +477,14 @@ export default function WellnistaAssessment() {
   useEffect(() => {
     window.selectLang = selectLang;
     window.selectSingle = selectSingle;
-    window.selectMultiple = selectMultiple;
-    window.setRating = setRating;
-    window.saveGoal = saveGoal;
     window.goToStep = goToStep;
     window.nextStep = nextStep;
     window.resetApp = resetApp;
     window.processData = processData;
     window.submitRating = submitRating;
     window.processUserChoice = processUserChoice;
+    window.toggleCheckbox = toggleCheckbox;
+    window.toggleNone = toggleNone;
     
     const script = document.createElement("script");
     script.src = "https://unpkg.com/lucide@latest";

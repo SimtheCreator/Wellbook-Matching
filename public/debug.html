@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Debug</title></head>
+<body>
+<pre id="log"></pre>
+<script type="module">
+const log = document.getElementById('log');
+window.onerror = (msg, src, line, col, err) => {
+  log.textContent += `ERROR: ${msg}\nSource: ${src}:${line}:${col}\nStack: ${err?.stack}\n\n`;
+};
+window.addEventListener('unhandledrejection', e => {
+  log.textContent += `PROMISE ERROR: ${e.reason}\n${e.reason?.stack}\n\n`;
+});
+try {
+  const { default: App } = await import('/src/App.jsx');
+  log.textContent += 'App module loaded OK\n';
+} catch(e) {
+  log.textContent += `IMPORT ERROR: ${e.message}\n${e.stack}\n`;
+}
+</script>
+</body>
+</html>
