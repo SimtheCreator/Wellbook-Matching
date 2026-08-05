@@ -501,8 +501,12 @@ export default function WellnistaAssessment() {
 
     <div className="w-full h-full md:w-[414px] md:h-[896px] bg-wellnista-bg md:rounded-[40px] premium-shadow relative flex flex-col overflow-hidden border border-[#e8e5df]/50 mobile-container">
         
-        <header className="p-5 text-center border-b border-[#e8e5df] flex-shrink-0 z-10 bg-white/80 backdrop-blur-md">
-            <div className="text-2xl md:text-3xl font-bold font-serif text-wellnista-olive tracking-tight">Wellnista</div>
+        <header className="p-5 text-center border-b border-[#e8e5df] flex-shrink-0 z-10 bg-white/80 backdrop-blur-md relative">
+            <button onClick={(e) => resetApp()} className="absolute top-1/2 -translate-y-1/2 right-5 text-wellnista-sand hover:text-wellnista-olive transition-colors flex flex-col items-center" title="Change Language / Restart">
+                <i data-lucide="globe-2" className="w-5 h-5"></i>
+                <span className="text-[8px] mt-1 font-medium tracking-wider"><span className="lang-th">เปลี่ยนภาษา</span><span className="lang-en hidden">LANG</span></span>
+            </button>
+            <div className="text-2xl md:text-3xl font-bold font-serif text-wellnista-olive tracking-tight cursor-pointer" onClick={(e) => resetApp()}>Wellnista</div>
             <div className="text-[9px] text-wellnista-sand font-mono tracking-[0.2em] mt-1 uppercase">Wellness & Community</div>
         </header>
 
