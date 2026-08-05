@@ -496,7 +496,7 @@ export default function WellnistaAssessment() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen bg-[#f5f3ef] text-[#2c3329] overflow-x-hidden font-[Inter]">
+    <div className="h-[100dvh] w-full flex justify-center items-center bg-[#eae7e0] font-sans m-0 p-0">
 
 
     <div className="w-full h-full md:w-[414px] md:h-[896px] bg-wellnista-bg md:rounded-[40px] premium-shadow relative flex flex-col overflow-hidden border border-[#e8e5df]/50 mobile-container">
