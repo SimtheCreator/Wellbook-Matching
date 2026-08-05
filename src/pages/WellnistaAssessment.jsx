@@ -563,12 +563,12 @@ export default function WellnistaAssessment() {
                         <i data-lucide="sparkles" className="w-5 h-5 text-wellnista-gold"></i>
                     </div>
                     <p className="text-[11.5px] text-wellnista-textDark leading-relaxed mb-3 font-light">
-                        แบบประเมินนี้จัดทำขึ้นเพื่อทดสอบและฝึกฝนระบบ AI โดย<span className="text-rose-500 font-medium">ไม่มีการเก็บข้อมูลส่วนตัว</span><br/><br/>
-                        รบกวนช่วยประเมินความแม่นยำของคำแนะนำในตอนท้าย ขอบคุณค่ะ 🙏
+                        ระบบนี้ออกแบบมาเพื่อค้นหากิจกรรม Wellness ที่เหมาะสมกับคุณที่สุด<br/><br/>
+                        ปัจจุบันอยู่ในช่วงทดสอบ AI (<span className="text-rose-500 font-medium">ไม่มีการเก็บข้อมูลส่วนตัว</span>) รบกวนช่วยประเมินความแม่นยำของคำแนะนำในหน้าสุดท้าย ขอบคุณค่ะ 🙏
                     </p>
                     <div className="h-[1px] w-12 bg-[#e8e5df] mx-auto mb-3"></div>
                     <p className="text-[10px] text-wellnista-textMuted leading-relaxed font-light">
-                        This assessment helps train our AI. <span className="text-rose-400 font-medium">No personal data is collected.</span> Please help rate the recommendations at the end. Thank you! 🙏
+                        This matching system is designed to find your ideal wellness activity.<br/>It is currently in AI testing (<span className="text-rose-400 font-medium">no personal data collected</span>). Please help rate the results at the end. Thank you! 🙏
                     </p>
                 </div>
             </div>
