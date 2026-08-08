@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellBook SEO Dominance Strategy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b1120;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --brand-primary: #10b981; /* Emerald */
+            --brand-secondary: #3b82f6; /* Blue */
+            --brand-accent: #8b5cf6; /* Violet */
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 5rem;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .badge {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--brand-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--brand-primary), var(--brand-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Flywheel Diagram */
+        .flywheel-section {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 4rem;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .flywheel-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .flywheel-node {
+            width: 280px;
+            padding: 2rem;
+            background: rgba(11, 17, 32, 0.6);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            position: relative;
+            z-index: 2;
+            transition: transform 0.3s ease;
+        }
+
+        .flywheel-node:hover {
+            transform: translateY(-5px);
+            border-color: var(--brand-primary);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
+        }
+
+        .flywheel-node h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .flywheel-node p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .arrow {
+            font-size: 2rem;
+            color: var(--brand-accent);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.5; }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Two Column Layout for B2B/B2C */
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .strategy-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 3rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .strategy-card h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .b2b-title { color: var(--brand-secondary); }
+        .b2c-title { color: var(--brand-accent); }
+
+        .feature-box {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-left: 4px solid;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .b2b-box { border-left-color: var(--brand-secondary); }
+        .b2c-box { border-left-color: var(--brand-accent); }
+
+        .feature-box h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-text {
+            color: var(--brand-primary);
+            font-weight: 600;
+        }
+
+        /* Success Story Panel */
+        .success-panel {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1));
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .success-panel h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .keyword-pill {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 0.5rem;
+            font-family: monospace;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <div class="badge">Growth Marketing Playbook</div>
+        <h1 class="title">SEO Aggregator Strategy</h1>
+        <p class="subtitle">ถอดรหัสโมเดลความสำเร็จแบบ Gowabi และ HDmall นำมาประยุกต์ใช้เพื่อทำให้ WellBook เป็นศูนย์กลางการค้นหาด้าน Wellness อันดับ 1 ของไทย</p>
+    </header>
+
+    <section class="flywheel-section">
+        <h2>The Aggregator SEO Flywheel</h2>
+        <p class="text-muted" style="margin-top: 10px;">โมเดลการเติบโตของ Marketplace ที่ขับเคลื่อนด้วย User-Generated Content (UGC)</p>
+        
+        <div class="flywheel-grid">
+            <div class="flywheel-node">
+                <h3>1. Organizer Listings</h3>
+                <p>ผู้จัดงาน 100 ราย สร้างโปรไฟล์และอีเวนต์บนระบบ ทำให้เกิดหน้าเว็บใหม่ๆ อัตโนมัติ (Dynamic Pages)</p>
+            </div>
+            <div class="arrow">➔</div>
+            <div class="flywheel-node">
+                <h3>2. Massive Indexing</h3>
+                <p>Google สแกนเจอ Long-tail keywords นับพันคำ เช่น "โยคะ วันเสาร์ สุขุมวิท" หรือ "Sound Bath สำหรับผู้เริ่มต้น"</p>
+            </div>
+            <div class="arrow">➔</div>
+            <div class="flywheel-node">
+                <h3>3. Organic Traffic Flow</h3>
+                <p>ผู้ใช้งานค้นหาบน Google เจองานของ Partner ทันที นำไปสู่ยอดจองโดยไม่ต้องเสียค่าโฆษณา (Zero CAC)</p>
+            </div>
+            <div class="arrow">➔</div>
+            <div class="flywheel-node">
+                <h3>4. More Organizers Join</h3>
+                <p>ผู้จัดงานรายอื่นๆ เห็นว่าลงงานบน WellBook แล้วคนจองเยอะ จึงแห่มาสมัครเพิ่ม สร้าง Loop การเติบโตไม่รู้จบ</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="strategy-grid">
+        <div class="strategy-card">
+            <h2 class="b2b-title">🏢 B2B SEO Strategy<br><span style="font-size:1rem; color:var(--text-muted); font-weight:normal;">ดึงดูดผู้จัดงาน (Supply)</span></h2>
+            
+            <div class="feature-box b2b-box">
+                <h4>Programmatic Content Hub</h4>
+                <p>สร้างบทความ (Blog) แบบเจาะจงกลุ่มเป้าหมาย (Niche Content) เพื่อดักจับ Pain Point ของผู้จัดงาน</p>
+                <div style="margin-top: 1rem;">
+                    <span class="keyword-pill">วิธีรับจองคลาสโยคะออนไลน์</span>
+                    <span class="keyword-pill">แอปเช็คอินงานวิ่ง</span>
+                    <span class="keyword-pill">วิธีตั้งค่า Google Form รับเงิน</span>
+                </div>
+            </div>
+
+            <div class="feature-box b2b-box">
+                <h4>Inbound Lead Generation</h4>
+                <p>เมื่อ Organizer ค้นหาวิธีแก้ปัญหาความวุ่นวายหลังบ้าน จะเจอโพสต์ของ WellBook นำไปสู่หน้า Landing Page เพื่อสมัครเป็น Partner <span class="highlight-text">(Automated Acquisition)</span></p>
+            </div>
+        </div>
+
+        <div class="strategy-card">
+            <h2 class="b2c-title">🧘‍♀️ B2C SEO Strategy<br><span style="font-size:1rem; color:var(--text-muted); font-weight:normal;">ดึงดูดผู้ใช้งานทั่วไป (Demand)</span></h2>
+            
+            <div class="feature-box b2c-box">
+                <h4>Dynamic Directory Structure</h4>
+                <p>จัดโครงสร้างเว็บไซต์ (Structured Data) เลียนแบบ Gowabi ให้ URL ถูกสร้างและปรับแต่ง SEO อัตโนมัติตาม Location และ Category</p>
+                <div style="margin-top: 1rem;">
+                    <span class="keyword-pill">wellbook.co/yoga/bangkok</span>
+                    <span class="keyword-pill">wellbook.co/sound-bath/thonglor</span>
+                    <span class="keyword-pill">wellbook.co/run-club/chiang-mai</span>
+                </div>
+            </div>
+
+            <div class="feature-box b2c-box">
+                <h4>Hyper-Local Long-Tail Keywords</h4>
+                <p>เจาะจงระดับย่านหรือสถานีรถไฟฟ้า เพราะคนต้องการความสะดวก เมื่อลูกค้าเสิร์ชหาคลาสออกกำลังกายใกล้บ้าน WellBook จะขึ้นเป็นอันดับแรก</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="success-panel">
+        <h2>The Blueprint to Market Dominance</h2>
+        <p style="color: var(--text-muted); max-width: 800px; margin: 0 auto 2rem auto;">
+            ด้วยกลยุทธ์ SEO Aggregator แบบเดียวกับที่ HDmall ยึดคลินิกความงาม และ Gowabi ยึดร้านนวดสปา 
+            WellBook จะสามารถยึดครองพื้นที่ของ <strong>"กิจกรรม Wellness และ Community"</strong> ทั้งหมดในไทยได้ 
+            โดยมีต้นทุนค่าโฆษณา (Customer Acquisition Cost) ที่ลดลงเรื่อยๆ จนเข้าใกล้ศูนย์ในระยะยาว
+        </p>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" style="background: var(--brand-primary); color: white; border: none; padding: 1rem 2rem; border-radius: 30px; font-weight: bold; cursor: pointer; font-size: 1.1rem;">Explore Flywheel</button>
+    </section>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellBook Co-Creator Circle - Workshop Strategy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f8fafc; /* Light Gray/Cream */
+            --text-main: #1e293b; /* Dark Slate */
+            --text-muted: #64748b;
+            --brand-green: #047857; /* Wellnista Emerald */
+            --brand-light-green: #d1fae5;
+            --brand-orange: #f97316; /* Energetic Orange */
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 0% 0%, rgba(4, 120, 87, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(249, 115, 22, 0.05) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Outfit', sans-serif;
+            color: var(--brand-green);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 5rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .badge {
+            background: var(--brand-light-green);
+            color: var(--brand-green);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--brand-green);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* The Core Concept */
+        .concept-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .concept-text {
+            flex: 1;
+        }
+
+        .concept-icon {
+            font-size: 5rem;
+            background: var(--brand-light-green);
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: var(--brand-green);
+            box-shadow: 0 0 20px rgba(4, 120, 87, 0.1);
+        }
+
+        /* Timeline Flow */
+        .flow-section {
+            margin-bottom: 5rem;
+        }
+
+        .flow-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: var(--brand-light-green);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item.left { left: 0; text-align: right; }
+        .timeline-item.right { left: 50%; }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            right: -12px;
+            background-color: var(--brand-orange);
+            border: 4px solid var(--bg-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-item.right::after { left: -12px; }
+
+        .timeline-item:hover::after {
+            transform: scale(1.3);
+        }
+
+        .timeline-content {
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: var(--brand-green);
+        }
+
+        .timeline-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--brand-orange);
+        }
+
+        /* Interactive SWOT Cards */
+        .swot-section {
+            margin-bottom: 5rem;
+        }
+
+        .swot-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .swot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            height: 300px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .flip-card-front {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--brand-green);
+        }
+
+        .flip-card-front h3 {
+            font-size: 1.8rem;
+            margin-top: 1rem;
+        }
+
+        .flip-card-front span {
+            font-size: 4rem;
+        }
+
+        .flip-card-back {
+            background-color: var(--brand-green);
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-back.orange { background-color: var(--brand-orange); }
+        .flip-card-back.dark { background-color: var(--text-main); }
+
+        .flip-card-back p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        /* Extensions Section */
+        .extensions-section {
+            background: linear-gradient(135deg, var(--brand-green), #064e3b);
+            border-radius: 24px;
+            padding: 4rem 3rem;
+            color: white;
+            text-align: center;
+        }
+
+        .extensions-section h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .ext-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .ext-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 2rem;
+            border-radius: 16px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ext-card h3 {
+            color: #d1fae5;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .timeline::after { left: 31px; }
+            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+            .timeline-item.left { text-align: left; }
+            .timeline-item.left::after, .timeline-item.right::after { left: 15px; }
+            .concept-section { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <div class="badge">Community-Led Growth Strategy</div>
+        <h1 class="title">WellBook Co-Creator Circle</h1>
+        <p class="subtitle">การเปลี่ยนผู้จัดกิจกรรม (Organizer) จาก "ลูกค้า" ให้กลายเป็น "ผู้ร่วมสร้างสรรค์" โดยใช้พลังงานบวกและเสน่ห์ของ Founder ในการจัดเวิร์กชอปเชื่อมสัมพันธ์</p>
+    </header>
+
+    <section class="concept-section" style="flex-direction: column; text-align: center; gap: 1.5rem;">
+        <img src="file:///C:/Users/LENOVO/.gemini/antigravity/brain/39007444-9b60-469f-b815-57b9a2d0abbc/wellness_workshop_vibe_1784487102544.jpg" alt="Wellness Workshop Vibe" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 1rem;">
+        <div class="concept-icon" style="margin: 0 auto; margin-top: -80px; position: relative; z-index: 10; border: 8px solid var(--card-bg);">🤝</div>
+        <div class="concept-text" style="max-width: 800px; margin: 0 auto;">
+            <h2>The Core Concept (The IKEA Effect)</h2>
+            <p style="margin-top: 1rem; font-size: 1.1rem; color: var(--text-muted);">
+                ผู้คนมักจะรักและผูกพันกับสิ่งที่ตัวเองมีส่วนร่วมในการสร้าง (The IKEA Effect) 
+                ด้วยจุดแข็งของเจ้าของ Wellnista ที่มี Charisma และพลังงานในการดึงดูดคน 
+                เราจะไม่เริ่มต้นด้วยการ <strong>"ขายแอป"</strong> แต่จะเริ่มด้วยการจัด <strong>"เวิร์กชอปพัฒนาคอมมูนิตี้"</strong> 
+                ชวนผู้นำกลุ่มต่างๆ มาแชร์ทริค และเชิญให้พวกเขาทดสอบระบบของเราในฐานะ Co-creator 
+            </p>
+        </div>
+    </section>
+
+    <section class="flow-section">
+        <h2>The Workshop Flow</h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>Phase 1: The Invitation</h3>
+                    <p>ชวน Leader คอมมูนิตี้ต่างๆ (โยคะ, วิ่ง, สมาธิ) มารวมตัวกันในหัวข้อเชิงบวก เช่น <strong>"จัดคลาสยังไงให้คนเต็มตลอดปี"</strong> (เน้นให้คุณค่า ไม่ได้มาเพื่อขายของ)</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>Phase 2: The Workshop & Share</h3>
+                    <p>ในงาน ให้ทุกคนแชร์ Pain Point ปัญหาหลังบ้านของตัวเอง และให้ Founder นำบรรยากาศในการแก้ปัญหา สร้าง Trust และสร้างสายสัมพันธ์ (Connection) ระหว่าง Organizer</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>Phase 3: The Beta Test</h3>
+                    <p>ในช่วงท้าย นำเสนอ <strong>WellBook</strong> ในฐานะ "เครื่องมือที่เรากำลังพัฒนาเพื่อช่วยพวกคุณ" และขอให้พวกเขาเป็น <em>Exclusive Beta Tester</em> นำไปใช้จัดงานจริงและขอ Feedback กลับมา</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>Phase 4: The Co-Launch</h3>
+                    <p>เมื่อพัฒนาเสร็จและตอบโจทย์จริง กลุ่ม Co-creator จะนำแอปลงไปใช้กับลูกเพจตัวเอง (B2C) พร้อมกัน เกิดเป็นกระแสการตลาดและ Word of Mouth อย่างรวดเร็ว</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="swot-section">
+        <h2>Analysis (Hover to Flip)</h2>
+        <div class="swot-grid">
+            
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <span>🎯</span>
+                        <h3>โอกาสสำเร็จ</h3>
+                        <p class="text-muted">Probability of Success</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3 style="margin-bottom: 1rem; color: white;">ระดับสูงมาก (High)</h3>
+                        <p>เพราะขับเคลื่อนด้วย Trust และความสัมพันธ์ส่วนตัวของ Founder การทำให้พวกเขารู้สึกเป็น "คนวงใน" (Insider) จะทำลายกำแพงการขายแอปแบบเดิมๆ ทิ้งไป</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <span>👍</span>
+                        <h3>จุดที่ดี</h3>
+                        <p class="text-muted">Pros & Benefits</p>
+                    </div>
+                    <div class="flip-card-back orange">
+                        <h3 style="margin-bottom: 1rem; color: white;">ข้อดีหลัก</h3>
+                        <ul style="text-align: left; margin-left: 1.5rem; font-size: 1.05rem;">
+                            <li style="margin-bottom: 0.5rem;">ได้ Feedback การใช้งาน (UX) จากของจริง</li>
+                            <li style="margin-bottom: 0.5rem;">User Retention จะสูงมากเพราะพวกเขาผูกพันกับโปรดักต์</li>
+                            <li>เกิด Network Effect จากการแนะนำแบบปากต่อปาก</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <span>⚠️</span>
+                        <h3>จุดบกพร่อง</h3>
+                        <p class="text-muted">Cons & Risks</p>
+                    </div>
+                    <div class="flip-card-back dark">
+                        <h3 style="margin-bottom: 1rem; color: white;">ข้อควรระวัง</h3>
+                        <ul style="text-align: left; margin-left: 1.5rem; font-size: 1.05rem;">
+                            <li style="margin-bottom: 0.5rem;">ใช้พลังงานของ Founder สูงมาก (Burnout Risk)</li>
+                            <li style="margin-bottom: 0.5rem;">ขยายผลให้เร็ว (Scale) ในช่วงแรกได้ยาก เพราะเป็นงาน Craft สานสัมพันธ์ทีละกลุ่ม</li>
+                            <li>แอปต้องทำงานได้ดีจริงระดับนึง ไม่งั้นจะเสียหน้า</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="extensions-section">
+        <h2>Future Extensions (การต่อยอด)</h2>
+        <div class="ext-grid">
+            <div class="ext-card">
+                <h3>🏅 Organizer Ambassador Program</h3>
+                <p>แต่งตั้งกลุ่ม Co-creator กลุ่มแรกเป็น Ambassador มอบสิทธิพิเศษ (เช่น ส่วนลดตลอดชีพ หรือ Affiliate fee) หากพวกเขาสามารถแนะนำ Organizer ท่านอื่นให้เข้ามาเปิดอีเวนต์ในระบบได้</p>
+            </div>
+            <div class="ext-card">
+                <h3>🎪 Mega Wellness Festival</h3>
+                <p>ต่อยอดความสัมพันธ์ด้วยการรวบรวม Organizer ทั้ง 50-100 ราย จัดงานอีเวนต์สุขภาพสเกลใหญ่ร่วมกัน (Co-hosted Event) โดยใช้ระบบ WellBook เป็นศูนย์กลางการจองตั๋วทั้งหมดในงานเดียว</p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>

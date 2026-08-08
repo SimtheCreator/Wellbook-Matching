@@ -26,7 +26,7 @@ import { saveAssessmentAnonymous } from "../lib/firebase";
 
         // Default State
         const defaultState = {
-            version: '4.3',
+            version: '4.4',
             currentStep: 0,
             lang: '',
             gender: '', age: '', work: '',
@@ -36,7 +36,7 @@ import { saveAssessmentAnonymous } from "../lib/firebase";
             style: [], openness: '', social: '',
             env: '', access: '', time: '',
             rating: 0,
-            targetActivity: '', targetReason: '',
+            targetActivity: [], targetReason: '',
             aiScores: [],
             topMatchId: ''
         };
@@ -79,7 +79,7 @@ import { saveAssessmentAnonymous } from "../lib/firebase";
         }
 
         function restoreUIState() {
-            const singles = ['gender', 'age', 'work', 'physical', 'mental', 'negative', 'style', 'openness', 'social', 'env', 'access', 'time', 'targetActivity', 'targetReason'];
+            const singles = ['gender', 'age', 'work', 'physical', 'mental', 'negative', 'openness', 'social', 'env', 'access', 'time', 'targetReason'];
             singles.forEach(key => {
                 if(state[key]) {
                     const buttons = document.querySelectorAll(`button[onclick*="'${key}', '${state[key]}'"]`);
@@ -88,6 +88,20 @@ import { saveAssessmentAnonymous } from "../lib/firebase";
                     }
                 }
             });
+
+            // Restore multi-select fields (style, targetActivity)
+            if(Array.isArray(state.style) && state.style.length > 0) {
+                state.style.forEach(val => {
+                    const buttons = document.querySelectorAll(`button[onclick*="toggleStyle('${val}'"]`);
+                    if(buttons.length > 0) buttons[0].classList.add('selected');
+                });
+            }
+            if(Array.isArray(state.targetActivity) && state.targetActivity.length > 0) {
+                state.targetActivity.forEach(val => {
+                    const buttons = document.querySelectorAll(`button[onclick*="toggleTargetActivity('${val}'"]`);
+                    if(buttons.length > 0) buttons[0].classList.add('selected');
+                });
+            }
 
             const vitals = ['rhr', 'sleep', 'exercise', 'stress'];
             vitals.forEach(key => {
@@ -257,7 +271,7 @@ import { saveAssessmentAnonymous } from "../lib/firebase";
 
             if(state.style.length > 0 && state.openness && state.social) document.getElementById('btn-next-5').disabled = false;
             if(state.env && state.access && state.time) document.getElementById('btn-next-6').disabled = false;
-            if(state.targetActivity && state.targetReason) document.getElementById('btn-next-9').disabled = false;
+            if(state.targetActivity.length > 0 && state.targetReason) document.getElementById('btn-next-9').disabled = false;
         }
 
         function toggleCheckbox(val, el) {
@@ -292,6 +306,37 @@ import { saveAssessmentAnonymous } from "../lib/firebase";
             state.redFlags = [];
             document.querySelectorAll('#q-vetoes .checkbox-btn').forEach(btn => btn.classList.remove('selected'));
             el.classList.add('selected');
+            saveState();
+            checkSteps();
+        }
+
+        function toggleTargetActivity(val, el) {
+            if (!Array.isArray(state.targetActivity)) state.targetActivity = [];
+            
+            // "perfect" is mutually exclusive with other activities
+            if (val === 'perfect') {
+                document.querySelectorAll('[id^="q-target-activity"] button').forEach(btn => btn.classList.remove('selected'));
+                state.targetActivity = ['perfect'];
+                el.classList.add('selected');
+            } else {
+                // Remove "perfect" if selecting a specific activity
+                const perfIdx = state.targetActivity.indexOf('perfect');
+                if (perfIdx > -1) {
+                    state.targetActivity.splice(perfIdx, 1);
+                    document.querySelectorAll('[id^="q-target-activity"] button').forEach(btn => {
+                        if(btn.textContent.includes('✨') || btn.textContent.includes('Satisfied')) btn.classList.remove('selected');
+                    });
+                }
+                
+                const idx = state.targetActivity.indexOf(val);
+                if (idx > -1) {
+                    state.targetActivity.splice(idx, 1);
+                    el.classList.remove('selected');
+                } else {
+                    state.targetActivity.push(val);
+                    el.classList.add('selected');
+                }
+            }
             saveState();
             checkSteps();
         }
@@ -431,6 +476,7 @@ import { saveAssessmentAnonymous } from "../lib/firebase";
                 // Target Activity Boost 
                 // Removed: targetActivity is asked post-recommendation for ML training. It should not influence initial scoring.
 
+                score = Math.max(score, 0); // Floor at 0%
                 score = Math.min(score, 99); // Cap at 99%
 
                 console.log(`Distance to ${act.id}: ${distance.toFixed(2)}, Score: ${score}%`);
@@ -526,9 +572,10 @@ export default function WellnistaAssessment() {
     window.toggleCheckbox = toggleCheckbox;
     window.toggleStyle = toggleStyle;
     window.toggleNone = toggleNone;
+    window.toggleTargetActivity = toggleTargetActivity;
     
     const script = document.createElement("script");
-    script.src = "https://unpkg.com/lucide@latest";
+    script.src = "https://unpkg.com/lucide@0.460.0";
     script.onload = () => { window.lucide.createIcons(); };
     document.body.appendChild(script);
     
@@ -1032,24 +1079,24 @@ export default function WellnistaAssessment() {
                 <div className="flex-1 pb-4 w-full">
                     <h3 className="text-[9px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase border-b border-wellnista-border pb-1"><span className="lang-th">หมวดร่างกาย / พักผ่อน</span><span className="lang-en">Physical / Rest</span></h3>
                     <div className="grid grid-cols-2 gap-2 mb-3" id="q-target-activity-1">
-                        <button onClick={(e) => {selectSingle('targetActivity', 'perfect', e.currentTarget)}} className="option-btn p-2 rounded-xl text-center text-[10px] font-medium col-span-2"><span className="lang-th">พอใจกับกิจกรรมที่แนะนำแล้ว ✨</span><span className="lang-en">Satisfied with the recommendation ✨</span></button>
-                        <button onClick={(e) => {selectSingle('targetActivity', 'pilates', e.currentTarget)}} className="option-btn p-2 rounded-xl text-center text-[10px] font-medium">Reformer Pilates</button>
-                        <button onClick={(e) => {selectSingle('targetActivity', 'muaythai', e.currentTarget)}} className="option-btn p-2 rounded-xl text-center text-[10px] font-medium">Muay Thai / HIIT</button>
-                        <button onClick={(e) => {selectSingle('targetActivity', 'onsen', e.currentTarget)}} className="option-btn p-2 rounded-xl text-center text-[10px] font-medium">Onsen / Hot Springs</button>
-                        <button onClick={(e) => {selectSingle('targetActivity', 'ice_bath', e.currentTarget)}} className="option-btn p-2 rounded-xl text-center text-[10px] font-medium">Cold Plunge</button>
+                        <button onClick={(e) => {toggleTargetActivity('perfect', e.currentTarget)}} className="option-btn p-2 rounded-xl text-center text-[10px] font-medium col-span-2"><span className="lang-th">พอใจกับกิจกรรมที่แนะนำแล้ว ✨</span><span className="lang-en">Satisfied with the recommendation ✨</span></button>
+                        <button onClick={(e) => {toggleTargetActivity('pilates', e.currentTarget)}} className="option-btn p-2 rounded-xl text-center text-[10px] font-medium">Reformer Pilates</button>
+                        <button onClick={(e) => {toggleTargetActivity('muaythai', e.currentTarget)}} className="option-btn p-2 rounded-xl text-center text-[10px] font-medium">Muay Thai / HIIT</button>
+                        <button onClick={(e) => {toggleTargetActivity('onsen', e.currentTarget)}} className="option-btn p-2 rounded-xl text-center text-[10px] font-medium">Onsen / Hot Springs</button>
+                        <button onClick={(e) => {toggleTargetActivity('ice_bath', e.currentTarget)}} className="option-btn p-2 rounded-xl text-center text-[10px] font-medium">Cold Plunge</button>
                     </div>
 
                     <h3 className="text-[9px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase border-b border-wellnista-border pb-1"><span className="lang-th">หมวดจิตใจ / ทางเลือกสงบ</span><span className="lang-en">Mental / Calm</span></h3>
                     <div className="grid grid-cols-2 gap-2 mb-3" id="q-target-activity-2">
-                        <button onClick={(e) => {selectSingle('targetActivity', 'sound_bath', e.currentTarget)}} className="option-btn p-2 rounded-xl text-center text-[10px] font-medium">Sound Bath</button>
-                        <button onClick={(e) => {selectSingle('targetActivity', 'clay_art', e.currentTarget)}} className="option-btn p-2 rounded-xl text-center text-[10px] font-medium">Clay Art Workshop</button>
+                        <button onClick={(e) => {toggleTargetActivity('sound_bath', e.currentTarget)}} className="option-btn p-2 rounded-xl text-center text-[10px] font-medium">Sound Bath</button>
+                        <button onClick={(e) => {toggleTargetActivity('clay_art', e.currentTarget)}} className="option-btn p-2 rounded-xl text-center text-[10px] font-medium">Clay Art Workshop</button>
                     </div>
 
                     <h3 className="text-[9px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase border-b border-wellnista-border pb-1"><span className="lang-th">หมวดคอมมูนิตี้ & เติบโต</span><span className="lang-en">Community & Growth</span></h3>
                     <div className="grid grid-cols-2 gap-2 mb-4" id="q-target-activity-3">
-                        <button onClick={(e) => {selectSingle('targetActivity', 'boardgame', e.currentTarget)}} className="option-btn p-2 rounded-xl text-center text-[10px] font-medium">Board Game Club</button>
-                        <button onClick={(e) => {selectSingle('targetActivity', 'selfdev', e.currentTarget)}} className="option-btn p-2 rounded-xl text-center text-[10px] font-medium">Self-Development</button>
-                        <button onClick={(e) => {selectSingle('targetActivity', 'business', e.currentTarget)}} className="option-btn p-2 rounded-xl text-center text-[10px] font-medium col-span-2">Business & Networking</button>
+                        <button onClick={(e) => {toggleTargetActivity('boardgame', e.currentTarget)}} className="option-btn p-2 rounded-xl text-center text-[10px] font-medium">Board Game Club</button>
+                        <button onClick={(e) => {toggleTargetActivity('selfdev', e.currentTarget)}} className="option-btn p-2 rounded-xl text-center text-[10px] font-medium">Self-Development</button>
+                        <button onClick={(e) => {toggleTargetActivity('business', e.currentTarget)}} className="option-btn p-2 rounded-xl text-center text-[10px] font-medium col-span-2">Business & Networking</button>
                     </div>
 
                     <h3 className="text-[10px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase"><span className="lang-th">เหตุผลหลักคืออะไร?</span><span className="lang-en">What is the main reason?</span></h3>

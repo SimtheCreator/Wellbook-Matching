@@ -1,0 +1,1055 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/fyy8st",
+    "id": "fyy8st",
+    "slide": 6,
+    "layoutId": "0b422280-47dd-4274-8221-93423629f6b9",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "15eb64e6-35e2-4e7e-aa05-0c10faf81bf0",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Aptos",
+      "Leelawadee UI"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "0b422280-47dd-4274-8221-93423629f6b9",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "15eb64e6-35e2-4e7e-aa05-0c10faf81bf0",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "15eb64e6-35e2-4e7e-aa05-0c10faf81bf0",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jm1cfa9w",
+      "id": "1",
+      "bbox": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "geometry": "rect",
+      "fillColor": "#F7F1E8",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c7u54zid",
+      "id": "2",
+      "bbox": [
+        58,
+        55,
+        28,
+        3
+      ],
+      "geometry": "rect",
+      "fillColor": "#2E6F5B",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1orytsvu",
+      "id": "3",
+      "bbox": [
+        100,
+        48,
+        520,
+        24
+      ],
+      "geometry": "rect",
+      "text": "OKR / KPI SYSTEM",
+      "textPreview": "OKR / KPI SYSTEM",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 12,
+        "typeface": "Aptos",
+        "color": "#2E6F5B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "OKR / KPI SYSTEM"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "OKR / KPI SYSTEM",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Aptos",
+            "color": "#2E6F5B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "OKR / KPI SYSTEM",
+              "fontSize": 12,
+              "typeface": "Aptos",
+              "color": "#2E6F5B",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u9knih4b",
+      "id": "4",
+      "bbox": [
+        56,
+        82,
+        840,
+        86
+      ],
+      "geometry": "rect",
+      "text": "KPI ต้องตอบ vision ไม่ใช่แค่วัด activity",
+      "textPreview": "KPI ต้องตอบ vision ไม่ใช่แค่วัด activity",
+      "resolvedFontSize": 36,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 36,
+        "typeface": "Leelawadee UI",
+        "color": "#12211D",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "KPI ต้องตอบ vision ไม่ใช่แค่วัด activity"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "KPI ต้องตอบ vision ไม่ใช่แค่วัด activity",
+          "resolvedTextStyle": {
+            "fontSize": 36,
+            "typeface": "Leelawadee UI",
+            "color": "#12211D",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "KPI ต้องตอบ vision ไม่ใช่แค่วัด activity",
+              "fontSize": 36,
+              "typeface": "Leelawadee UI",
+              "color": "#12211D",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/judg7ads",
+      "id": "5",
+      "bbox": [
+        58,
+        178,
+        760,
+        44
+      ],
+      "geometry": "rect",
+      "text": "ใช้ระบบ 3 ชั้น: Company OKR -> Owner KPI -> Weekly priorities",
+      "textPreview": "ใช้ระบบ 3 ชั้น: Company OKR -> Owner KPI -> Weekly priorities",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 17,
+        "typeface": "Leelawadee UI",
+        "color": "#5F6B64",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ใช้ระบบ 3 ชั้น: Company OKR -> Owner KPI -> Weekly priorities"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ใช้ระบบ 3 ชั้น: Company OKR -> Owner KPI -> Weekly priorities",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "Leelawadee UI",
+            "color": "#5F6B64",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ใช้ระบบ 3 ชั้น: Company OKR -> Owner KPI -> Weekly priorities",
+              "fontSize": 17,
+              "typeface": "Leelawadee UI",
+              "color": "#5F6B64"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cfa9w3m9",
+      "id": "6",
+      "bbox": [
+        166,
+        270,
+        948,
+        72
+      ],
+      "geometry": "rect",
+      "fillColor": "#0E1A17",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 1
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1032lszq",
+      "id": "7",
+      "bbox": [
+        192,
+        282,
+        230,
+        28
+      ],
+      "geometry": "rect",
+      "text": "Vision",
+      "textPreview": "Vision",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "Leelawadee UI",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Vision"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Vision",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Leelawadee UI",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Vision",
+              "fontSize": 21,
+              "typeface": "Leelawadee UI",
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/udg7adsj",
+      "id": "8",
+      "bbox": [
+        450,
+        286,
+        638,
+        38
+      ],
+      "geometry": "rect",
+      "text": "Every woman can pursue ambition without sacrificing health, peace, or people she loves.",
+      "textPreview": "Every woman can pursue ambition without sacrificing health, peace, or people she loves.",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Leelawadee UI",
+        "color": "#F6F1EA",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Every woman can pursue ambition without sacrificing health, peace, or people she loves."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Every woman can pursue ambition without sacrificing health, peace, or people she loves.",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Leelawadee UI",
+            "color": "#F6F1EA",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Every woman can pursue ambition without sacrificing health, peace, or people she loves.",
+              "fontSize": 15,
+              "typeface": "Leelawadee UI",
+              "color": "#F6F1EA"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nyd0z610",
+      "id": "9",
+      "bbox": [
+        226,
+        366,
+        828,
+        72
+      ],
+      "geometry": "rect",
+      "fillColor": "#2E6F5B",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 1
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/v6psfil0",
+      "id": "10",
+      "bbox": [
+        252,
+        378,
+        230,
+        28
+      ],
+      "geometry": "rect",
+      "text": "3 Company Objectives",
+      "textPreview": "3 Company Objectives",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "Leelawadee UI",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "3 Company Objectives"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "3 Company Objectives",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Leelawadee UI",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "3 Company Objectives",
+              "fontSize": 21,
+              "typeface": "Leelawadee UI",
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2lszqtcj",
+      "id": "11",
+      "bbox": [
+        510,
+        382,
+        518,
+        38
+      ],
+      "geometry": "rect",
+      "text": "Tech usage · Event/partnership revenue · Operating foundation",
+      "textPreview": "Tech usage · Event/partnership revenue · Operating foundation",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Leelawadee UI",
+        "color": "#F6F1EA",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Tech usage · Event/partnership revenue · Operating foundation"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Tech usage · Event/partnership revenue · Operating foundation",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Leelawadee UI",
+            "color": "#F6F1EA",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Tech usage · Event/partnership revenue · Operating foundation",
+              "fontSize": 15,
+              "typeface": "Leelawadee UI",
+              "color": "#F6F1EA"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d8bat47y",
+      "id": "12",
+      "bbox": [
+        286,
+        462,
+        708,
+        72
+      ],
+      "geometry": "rect",
+      "fillColor": "#C69A45",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 1
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/knih4byh",
+      "id": "13",
+      "bbox": [
+        312,
+        474,
+        230,
+        28
+      ],
+      "geometry": "rect",
+      "text": "Owner KPIs",
+      "textPreview": "Owner KPIs",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "Leelawadee UI",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Owner KPIs"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Owner KPIs",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Leelawadee UI",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Owner KPIs",
+              "fontSize": 21,
+              "typeface": "Leelawadee UI",
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vu9knih4",
+      "id": "14",
+      "bbox": [
+        570,
+        478,
+        398,
+        38
+      ],
+      "geometry": "rect",
+      "text": "P'Tao ships · Alice grows revenue/brand · Sim runs ops · BD creates market evidence",
+      "textPreview": "P'Tao ships · Alice grows revenue/brand · Sim runs ops · BD creates market evidence",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Leelawadee UI",
+        "color": "#F6F1EA",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "P'Tao ships · Alice grows revenue/brand · Sim runs ops · BD"
+          },
+          {
+            "index": 2,
+            "text": "creates market evidence"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "P'Tao ships · Alice grows revenue/brand · Sim runs ops · BD creates market evidence",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Leelawadee UI",
+            "color": "#F6F1EA",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "P'Tao ships · Alice grows revenue/brand · Sim runs ops · BD creates market evidence",
+              "fontSize": 15,
+              "typeface": "Leelawadee UI",
+              "color": "#F6F1EA"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/29gr2p8n",
+      "id": "15",
+      "bbox": [
+        346,
+        558,
+        588,
+        76
+      ],
+      "geometry": "rect",
+      "fillColor": "#E87961",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 1
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d0z61032",
+      "id": "16",
+      "bbox": [
+        372,
+        570,
+        230,
+        28
+      ],
+      "geometry": "rect",
+      "text": "Weekly Top 3",
+      "textPreview": "Weekly Top 3",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "Leelawadee UI",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Weekly Top 3"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Weekly Top 3",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Leelawadee UI",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Weekly Top 3",
+              "fontSize": 21,
+              "typeface": "Leelawadee UI",
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kf6dcbul",
+      "id": "17",
+      "bbox": [
+        630,
+        574,
+        278,
+        38
+      ],
+      "geometry": "rect",
+      "text": "Each person commits only three priorities per week",
+      "textPreview": "Each person commits only three priorities per week",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Leelawadee UI",
+        "color": "#F6F1EA",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Each person commits only three priorities"
+          },
+          {
+            "index": 2,
+            "text": "per week"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Each person commits only three priorities per week",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Leelawadee UI",
+            "color": "#F6F1EA",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Each person commits only three priorities per week",
+              "fontSize": 15,
+              "typeface": "Leelawadee UI",
+              "color": "#F6F1EA"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vixczed8",
+      "id": "18",
+      "bbox": [
+        80,
+        232,
+        1040,
+        26
+      ],
+      "geometry": "rect",
+      "text": "Bad KPI: ทำ marketing เยอะขึ้น  |  Good KPI: 10 verified leads, 2 discovery calls, 1 pilot proposal",
+      "textPreview": "Bad KPI: ทำ marketing เยอะขึ้น  |  Good KPI: 10 verified leads, 2 discovery calls, 1 pilot proposal",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 16,
+        "typeface": "Leelawadee UI",
+        "color": "#5F6B64",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Bad KPI: ทำ marketing เยอะขึ้น  |  Good KPI: 10 verified leads, 2 discovery calls, 1 pilot proposal"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Bad KPI: ทำ marketing เยอะขึ้น  |  Good KPI: 10 verified leads, 2 discovery calls, 1 pilot proposal",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Leelawadee UI",
+            "color": "#5F6B64",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Bad KPI: ทำ marketing เยอะขึ้น  |  Good KPI: 10 verified leads, 2 discovery calls, 1 pilot proposal",
+              "fontSize": 16,
+              "typeface": "Leelawadee UI",
+              "color": "#5F6B64"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2x4nap4r",
+      "id": "19",
+      "bbox": [
+        54,
+        676,
+        360,
+        18
+      ],
+      "geometry": "rect",
+      "text": "Wellnista Operating System · 06",
+      "textPreview": "Wellnista Operating System · 06",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10,
+        "typeface": "Aptos",
+        "color": "#5F6B64",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Wellnista Operating System · 06"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Wellnista Operating System · 06",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "typeface": "Aptos",
+            "color": "#5F6B64",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Wellnista Operating System · 06",
+              "fontSize": 10,
+              "typeface": "Aptos",
+              "color": "#5F6B64"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ex0nuxc3",
+      "id": "20",
+      "bbox": [
+        1116,
+        683,
+        110,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#D8CCC0",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

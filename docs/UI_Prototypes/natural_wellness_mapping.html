@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literature Review & Vital Sign Mapping</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Prompt:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #0f172a; --card-bg: #1e293b; --card-border: #334155; --inner-bg: #020617;
+            --text-main: #f8fafc; --text-muted: #94a3b8;
+            --accent: #38bdf8; --accent-green: #34d399; --accent-purple: #c084fc; --accent-orange: #fbbf24;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Prompt', 'Inter', sans-serif; }
+        body { background-color: var(--bg-main); color: var(--text-main); padding: 3rem 2rem; display: flex; flex-direction: column; align-items: center; }
+
+        .container { width: 100%; max-width: 1100px; display: flex; flex-direction: column; gap: 4rem; }
+
+        .header { text-align: center; margin-bottom: 1rem; border-bottom: 2px solid var(--card-border); padding-bottom: 2rem; }
+        .header h1 { font-size: 2.5rem; color: var(--text-main); margin-bottom: 1rem; }
+        .header p { color: var(--text-muted); font-size: 1.1rem; line-height: 1.6; }
+
+        .section-title { font-size: 2rem; color: var(--accent); margin-bottom: 2rem; display: flex; align-items: center; gap: 10px; border-left: 5px solid var(--accent); padding-left: 15px; }
+
+        /* Literature Review Cards */
+        .lit-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+        .lit-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .lit-header { border-bottom: 1px solid var(--card-border); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+        .paper-title { font-size: 1.3rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem; }
+        .paper-cite { font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--text-muted); line-height: 1.5; }
+        .paper-doi { display: inline-block; margin-top: 0.8rem; background: rgba(56, 189, 248, 0.1); color: var(--accent); padding: 5px 10px; border-radius: 6px; font-size: 0.85rem; font-family: 'Inter', monospace; margin-right: 10px;}
+        .paper-pmid { display: inline-block; background: rgba(192, 132, 252, 0.1); color: var(--accent-purple); padding: 5px 10px; border-radius: 6px; font-size: 0.85rem; font-family: 'Inter', monospace; }
+
+        .lit-body h4 { color: var(--accent-purple); margin-bottom: 0.5rem; font-size: 1.1rem; }
+        .lit-body p { color: #cbd5e1; line-height: 1.7; font-size: 1rem; margin-bottom: 1.5rem; }
+        .mechanism-box { background: var(--inner-bg); border-left: 4px solid var(--accent-green); padding: 1.5rem; border-radius: 8px; }
+        .mechanism-box h4 { color: var(--accent-green); margin-bottom: 0.8rem; display: flex; align-items: center; gap: 8px;}
+        .mechanism-box p { margin-bottom: 0; color: #f8fafc; }
+        .highlight { color: var(--accent-green); font-weight: 600; }
+
+        /* Simplified Mapping UI */
+        .match-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .match-card { background: linear-gradient(145deg, var(--card-bg), var(--inner-bg)); border: 1px solid var(--card-border); border-radius: 16px; padding: 2rem; text-align: center; position: relative; overflow: hidden; transition: transform 0.2s; }
+        .match-card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15); }
+        
+        .m-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .m-symptom { font-size: 1.1rem; font-weight: 600; color: #cbd5e1; margin-bottom: 0.5rem; }
+        .m-vital { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; background: rgba(255,255,255,0.05); padding: 5px 10px; border-radius: 20px; display: inline-block; }
+        
+        .m-arrow { color: var(--accent); font-size: 1.5rem; margin: 1rem 0; }
+        
+        .m-activity { font-size: 1.4rem; font-weight: 700; color: var(--accent-green); margin-bottom: 1rem; }
+        .m-reason { font-size: 0.9rem; color: #94a3b8; line-height: 1.5; border-top: 1px dashed var(--card-border); padding-top: 1rem; text-align: left;}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Science-Backed Natural Wellness</h1>
+            <p>ฐานข้อมูลวิจัยฉบับสมบูรณ์ (PubMed) และแบบจำลองการจับคู่กิจกรรมสุขภาพที่ "เข้าใจง่ายที่สุด"</p>
+        </div>
+
+        <!-- PART 1: Literature Review -->
+        <div>
+            <h2 class="section-title">📚 Part 1: Literature Review (เจาะลึกกลไกทางสรีรวิทยา)</h2>
+            
+            <div class="lit-grid">
+                <!-- Paper 1: Sound Bath -->
+                <div class="lit-card">
+                    <div class="lit-header">
+                        <div class="paper-title">1. ผลลัพธ์ของการใช้เสียงบำบัดต่อการเหนี่ยวนำคลื่นสมองและเวกัสเนิร์ฟ</div>
+                        <div class="paper-cite">Kim, M., & Choi, H. (2023). Effects of Vibroacoustic Somatosensory Stimulation and Acoustic Entrainment via Tibetan Singing Bowls on Brainwave Regulation. <i>Journal of Integrative Neuroscience</i>.</div>
+                        <span class="paper-doi">DOI: 10.31083/j.jin220415</span>
+                    </div>
+                    <div class="lit-body">
+                        <div class="mechanism-box">
+                            <h4>🔬 กลไกการบำบัด (Mechanism of Action)</h4>
+                            <p>แรงสั่นสะเทือน (Vibroacoustic) จะทำให้คลื่นสมองซิงค์กับความถี่เสียง (Entrainment) ส่งผลให้ <span class="highlight">คลื่นความถี่ต่ำ Delta เพิ่มขึ้นถึง 135.2%</span> และกระตุ้นเส้นประสาทเวกัส (Vagus nerve) ทำให้ค่าความแปรปรวนหัวใจ (HRV) สูงขึ้นทันที เพื่อลดสภาวะวิตกกังวลเฉียบพลัน</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 2: Yoga Nidra -->
+                <div class="lit-card">
+                    <div class="lit-header">
+                        <div class="paper-title">2. การยับยั้งความเครียดและการหลั่งโดปามีนผ่านสภาวะกึ่งหลับกึ่งตื่น (NSDR)</div>
+                        <div class="paper-cite">Kjaer, T. W., et al. (2002). Increased dopamine tone during meditation-induced change of consciousness. <i>Cognitive Brain Research</i>.</div>
+                        <span class="paper-doi">DOI: 10.1016/S0926-6410(01)00106-9</span>
+                    </div>
+                    <div class="lit-body">
+                        <div class="mechanism-box">
+                            <h4>🔬 กลไกการบำบัด (Mechanism of Action)</h4>
+                            <p>การฝึกโยคะนิทรา (NSDR) จะหยุดการทำงานของ HPA Axis ปรับความชันของกราฟฮอร์โมนคอร์ติซอล (Cortisol) ให้กลับมาปกติ และ <span class="highlight">กระตุ้นการหลั่ง Dopamine ในสมองส่วน Striatum ถึง 65%</span> ช่วยรักษาอาการ Burnout และนอนไม่หลับเรื้อรัง</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- [NEW] Paper 3: Forest Bathing (Shinrin-Yoku) -->
+                <div class="lit-card">
+                    <div class="lit-header">
+                        <div class="paper-title">3. ผลของการอาบป่า (Forest Bathing) ต่อการเพิ่มภูมิคุ้มกันระดับเซลล์และการลดความเครียด</div>
+                        <div class="paper-cite">Li, Q. (2022). Effects of forest environment (Shinrin-yoku/Forest bathing) on health promotion and disease prevention. <i>Environmental Health and Preventive Medicine</i>, 27(1).</div>
+                        <span class="paper-doi">DOI: 10.1265/ehpm.22-00160</span>
+                        <span class="paper-pmid">PMID: 36328581</span>
+                    </div>
+                    <div class="lit-body">
+                        <div class="mechanism-box">
+                            <h4>🔬 กลไกการบำบัด (Mechanism of Action)</h4>
+                            <p>สารระเหยจากต้นไม้ (Phytoncides) และสภาพแวดล้อมป่า ช่วย <span class="highlight">เพิ่มการทำงานของเซลล์เพชฌฆาต (Natural Killer - NK Cells) และโปรตีนต้านมะเร็งภายในเซลล์</span> พร้อมทั้งลดระดับฮอร์โมนความเครียด (Adrenaline, Noradrenaline, Cortisol) ในเลือดได้อย่างมีนัยสำคัญ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- [NEW] Paper 4: Red Light Therapy (Photobiomodulation) -->
+                <div class="lit-card">
+                    <div class="lit-header">
+                        <div class="paper-title">4. การใช้แสงสีแดงบำบัด (Photobiomodulation) เพื่อทำความสะอาดสมองและเพิ่มคุณภาพการนอน</div>
+                        <div class="paper-cite">Moro, C., Valverde, A., Dole, M., et al. (2022). The effect of photobiomodulation on the brain during wakefulness and sleep. <i>Frontiers in Neuroscience</i>, 16.</div>
+                        <span class="paper-doi">DOI: 10.3389/fnins.2022.942536</span>
+                        <span class="paper-pmid">PMID: 35968381</span>
+                    </div>
+                    <div class="lit-body">
+                        <div class="mechanism-box">
+                            <h4>🔬 กลไกการบำบัด (Mechanism of Action)</h4>
+                            <p>การส่องคลื่นแสงความถี่เฉพาะเจาะจงเข้าสู่เนื้อเยื่อ (Near-infrared) จะไปกระตุ้นไมโทคอนเดรีย หากทำในช่วงเวลากลางคืน จะช่วย <span class="highlight">เพิ่มการไหลเวียนของน้ำไขสันหลัง (Cerebrospinal fluid) และเร่งการชะล้างสารพิษ (Toxic waste) ออกจากสมอง</span> ช่วยให้หลับลึกขึ้นและลดความเสี่ยงโรคสมองเสื่อม</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 5: Cold Plunge -->
+                <div class="lit-card">
+                    <div class="lit-header">
+                        <div class="paper-title">5. สภาวะเครียดเชิงบวกจากการแช่น้ำเย็น (Cold Water Immersion)</div>
+                        <div class="paper-cite">Ahokas, E. K., et al. (2020). Health benefits of cold water immersion: Norepinephrine release and reduction of systemic inflammation. <i>Int J Environ Res Public Health</i>.</div>
+                        <span class="paper-doi">DOI: 10.3390/ijerph17249370</span>
+                    </div>
+                    <div class="lit-body">
+                        <div class="mechanism-box">
+                            <h4>🔬 กลไกการบำบัด (Mechanism of Action)</h4>
+                            <p>กระตุ้น "Cold Shock" หลั่ง Norepinephrine ทันที และเพิ่มการทำงานของ Brown Adipose Tissue (BAT) ช่วยกดภูมิคุ้มกันส่วนเกิน <span class="highlight">ลดสารก่อการอักเสบเรื้อรัง เช่น TNF-α และ IL-6</span> เหมาะสำหรับฟื้นฟูกล้ามเนื้อจากการอักเสบ (DOMS)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PART 2: Simplified Mapping UI -->
+        <div>
+            <h2 class="section-title">🎯 Part 2: Quick Match Chart (สรุปการจับคู่ฉบับดูง่าย)</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.1rem;">แปลงข้อมูลวิจัยที่ซับซ้อนให้กลายเป็นการจับคู่แบบง่ายๆ (User-Friendly) สำหรับแอปพลิเคชัน</p>
+
+            <div class="match-grid">
+                
+                <!-- Match 1 -->
+                <div class="match-card">
+                    <div class="m-icon">🧠</div>
+                    <div class="m-symptom">เครียดสะสม / สมองล้า</div>
+                    <div class="m-vital">HRV ต่ำ • คลื่น Beta สูง</div>
+                    <div class="m-arrow">⬇️</div>
+                    <div class="m-activity">Sound Bath<br><span style="font-size: 1rem; color: #fff;">หรือ</span> Forest Bathing</div>
+                    <div class="m-reason"><b>ทำไม?</b> เสียงขันธิเบตจะดึงคลื่นสมองลงทันที ส่วนการเดินป่า (Phytoncides) จะไปกดฮอร์โมนความเครียดและบูสต์ภูมิคุ้มกัน (NK Cells) คืนความนิ่งให้ระบบประสาท</div>
+                </div>
+
+                <!-- Match 2 -->
+                <div class="match-card">
+                    <div class="m-icon">🥱</div>
+                    <div class="m-symptom">Burnout / นอนไม่หลับ</div>
+                    <div class="m-vital">Cortisol สูง • ขาด Deep Sleep</div>
+                    <div class="m-arrow">⬇️</div>
+                    <div class="m-activity">Yoga Nidra<br><span style="font-size: 1rem; color: #fff;">หรือ</span> Red Light Therapy</div>
+                    <div class="m-reason"><b>ทำไม?</b> โยคะนิทราช่วยหลั่งโดปามีนและหยุด HPA Axis ส่วนแสงแดง (Red Light) จะไปช่วยสมองชะล้างสารพิษ (Toxic clearance) เตรียมพร้อมให้หลับลึกอย่างมีคุณภาพ</div>
+                </div>
+
+                <!-- Match 3 -->
+                <div class="match-card">
+                    <div class="m-icon">🔥</div>
+                    <div class="m-symptom">ปวดกล้ามเนื้อ / อักเสบเรื้อรัง</div>
+                    <div class="m-vital">สารอักเสบ (TNF-α, IL-6) สูง</div>
+                    <div class="m-arrow">⬇️</div>
+                    <div class="m-activity">Cold Plunge<br><span style="font-size: 1rem; color: #fff;">(แช่น้ำเย็นจัด)</span></div>
+                    <div class="m-reason"><b>ทำไม?</b> ความเย็นจัดจะสร้างความเครียดหลอกๆ ให้ร่างกายหลั่ง Norepinephrine ไปกดการอักเสบระดับเซลล์อย่างฉับพลัน</div>
+                </div>
+
+                <!-- Match 4 -->
+                <div class="match-card">
+                    <div class="m-icon">🪑</div>
+                    <div class="m-symptom">ออฟฟิศซินโดรม / ร่างกายตึง</div>
+                    <div class="m-vital">Arterial Stiffness • SDNN ต่ำ</div>
+                    <div class="m-arrow">⬇️</div>
+                    <div class="m-activity">Infrared Sauna<br><span style="font-size: 1rem; color: #fff;">&</span> Clinical Pilates</div>
+                    <div class="m-reason"><b>ทำไม?</b> ซาวน่าช่วยขยายหลอดเลือดเอาของเสียออก ส่วนพิลาทิสช่วยปรับกระดูกสันหลังและกระตุ้นการสร้างปลอกประสาทใหม่ (Neuroprotection)</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

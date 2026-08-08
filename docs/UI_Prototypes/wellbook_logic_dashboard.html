@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellBook Logic Architecture Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Prompt', 'Inter', 'sans-serif'], mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'] },
+                    colors: { slate: { 800: '#1e293b', 900: '#0f172a', 950: '#020617' } }
+                }
+            }
+        }
+        mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+    </script>
+    <style>
+        body { background-color: #020617; color: #f8fafc; }
+        .mermaid { background: transparent !important; }
+        /* Custom scrollbar for database list */
+        .custom-scroll::-webkit-scrollbar { width: 6px; }
+        .custom-scroll::-webkit-scrollbar-track { background: rgba(30, 41, 59, 0.5); border-radius: 4px; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: rgba(71, 85, 105, 0.8); border-radius: 4px; }
+    </style>
+</head>
+<body class="min-h-screen p-6 max-w-7xl mx-auto flex flex-col space-y-8">
+
+    <header class="flex items-center justify-between pb-4 border-b border-slate-800">
+        <div>
+            <h1 class="text-3xl font-bold text-white flex items-center gap-3 font-sans">
+                <svg class="w-8 h-8 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                Logic Architecture Dashboard
+            </h1>
+            <p class="text-slate-400 mt-1 text-sm">Visualizing the Clinical & Lifestyle Matching Algorithm (Wellness + Connection)</p>
+        </div>
+        <div class="bg-slate-900 border border-slate-700 px-4 py-2 rounded-lg flex items-center gap-3 shadow-lg">
+            <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+            </span>
+            <span class="text-sm font-mono text-emerald-400">ENGINE V3 ONLINE</span>
+        </div>
+    </header>
+
+    <!-- Section 1: Top Level Data Flow & Database -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- Left: Flowchart -->
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl flex flex-col">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2 border-b border-slate-800 pb-2 text-cyan-400">
+                1. Core Pipeline (Data Flow)
+            </h2>
+            <div class="flex-1 flex items-center justify-center bg-slate-950/50 rounded-2xl border border-slate-800 p-4">
+                <div class="mermaid text-sm">
+                    graph TD
+                        A[User Input] --> B(Physical, Mental, Stress, Biomarkers)
+                        A --> C(Social, Lifestyle, Growth Goals)
+                        A --> D{Medical Veto Check}
+                        
+                        D -- Risk Found --> E((VETO: Exclude Activity))
+                        D -- Safe --> F[Vector Engine Processing]
+                        
+                        B -->|User Modifiers| F
+                        C -->|User Modifiers| F
+                        
+                        F --> G[Calculate User 5D Vector]
+                        G --> I{Calculate Euclidean Distance to All Activities}
+                        
+                        I --> J[Sort by Lowest Distance % Match]
+                        E --> J
+                        
+                        classDef veto fill:#450a0a,stroke:#ef4444,stroke-width:2px,color:#f87171;
+                        class E veto;
+                        classDef input fill:#1e293b,stroke:#0ea5e9,color:#fff;
+                        class A,B,C,D input;
+                        classDef output fill:#064e3b,stroke:#10b981,color:#fff;
+                        class J output;
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Database -->
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl flex flex-col">
+            <h2 class="text-xl font-bold mb-4 border-b border-slate-800 pb-2 text-violet-400 flex justify-between">
+                <span>Extended Database</span>
+                <span class="text-xs bg-violet-500/20 text-violet-300 px-2 py-1 rounded-full">10 Activities</span>
+            </h2>
+            <div class="space-y-3 overflow-y-auto max-h-[350px] pr-2 custom-scroll">
+                
+                <!-- Physical / Active -->
+                <div class="bg-slate-950 border border-slate-800 p-3 rounded-xl flex gap-3 items-center">
+                    <div class="text-3xl bg-slate-800 p-2 rounded-lg">🤸‍♀️</div>
+                    <div>
+                        <div class="font-bold text-sm">Reformer Pilates</div>
+                        <div class="text-[10px] text-cyan-400 font-mono">PMID: 22375213 (Core stability)</div>
+                        <div class="text-[10px] text-red-400 mt-1">VETO: Joint Injury</div>
+                    </div>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 p-3 rounded-xl flex gap-3 items-center">
+                    <div class="text-3xl bg-slate-800 p-2 rounded-lg">🥊</div>
+                    <div>
+                        <div class="font-bold text-sm">Muay Thai / HIIT</div>
+                        <div class="text-[10px] text-cyan-400 font-mono">PMID: 35547204 (VO2 Max)</div>
+                        <div class="text-[10px] text-red-400 mt-1">VETO: Heart Risk, Joint Injury</div>
+                    </div>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 p-3 rounded-xl flex gap-3 items-center">
+                    <div class="text-3xl bg-slate-800 p-2 rounded-lg">🧊</div>
+                    <div>
+                        <div class="font-bold text-sm">Cold Plunge</div>
+                        <div class="text-[10px] text-cyan-400 font-mono">PMID: 24799686 (Cytokines)</div>
+                        <div class="text-[10px] text-red-400 mt-1">VETO: Heart Risk</div>
+                    </div>
+                </div>
+
+                <!-- Passive / Mental -->
+                <div class="bg-slate-950 border border-slate-800 p-3 rounded-xl flex gap-3 items-center">
+                    <div class="text-3xl bg-slate-800 p-2 rounded-lg">♨️</div>
+                    <div>
+                        <div class="font-bold text-sm">Onsen / Hot Springs</div>
+                        <div class="text-[10px] text-cyan-400 font-mono">PMID: 29882782 (HSP70)</div>
+                        <div class="text-[10px] text-red-400 mt-1">VETO: Heart Risk</div>
+                    </div>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 p-3 rounded-xl flex gap-3 items-center">
+                    <div class="text-3xl bg-slate-800 p-2 rounded-lg">🧘</div>
+                    <div>
+                        <div class="font-bold text-sm">Sound Bath</div>
+                        <div class="text-[10px] text-cyan-400 font-mono">PMID: 36826208 (Vagus Nerve)</div>
+                        <div class="text-[10px] text-red-400 mt-1">VETO: Migraine/Sensory</div>
+                    </div>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 p-3 rounded-xl flex gap-3 items-center">
+                    <div class="text-3xl bg-slate-800 p-2 rounded-lg">🧘‍♀️</div>
+                    <div>
+                        <div class="font-bold text-sm">Restorative Yoga</div>
+                        <div class="text-[10px] text-cyan-400 font-mono">PMID: 32240757 (Parasympathetic)</div>
+                        <div class="text-[10px] text-emerald-400 mt-1">VETO: None</div>
+                    </div>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 p-3 rounded-xl flex gap-3 items-center">
+                    <div class="text-3xl bg-slate-800 p-2 rounded-lg">🏺</div>
+                    <div>
+                        <div class="font-bold text-sm">Clay Art Workshop</div>
+                        <div class="text-[10px] text-cyan-400 font-mono">PMID: 28730717 (Flow state)</div>
+                        <div class="text-[10px] text-emerald-400 mt-1">VETO: None</div>
+                    </div>
+                </div>
+
+                <!-- Community / Growth (New in V3) -->
+                <div class="bg-slate-950 border border-emerald-900/50 p-3 rounded-xl flex gap-3 items-center relative overflow-hidden">
+                    <div class="absolute right-0 top-0 text-[8px] bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded-bl-lg font-bold">NEW V3</div>
+                    <div class="text-3xl bg-slate-800 p-2 rounded-lg">📈</div>
+                    <div>
+                        <div class="font-bold text-sm text-emerald-300">Business Workshop</div>
+                        <div class="text-[10px] text-cyan-400 font-mono">PMID: 11148302 (SDT, Competence)</div>
+                        <div class="text-[10px] text-emerald-400 mt-1">LOGISTICS: On-site only</div>
+                    </div>
+                </div>
+                <div class="bg-slate-950 border border-emerald-900/50 p-3 rounded-xl flex gap-3 items-center relative overflow-hidden">
+                    <div class="absolute right-0 top-0 text-[8px] bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded-bl-lg font-bold">NEW V3</div>
+                    <div class="text-3xl bg-slate-800 p-2 rounded-lg">🧠</div>
+                    <div>
+                        <div class="font-bold text-sm text-emerald-300">Self-Development</div>
+                        <div class="text-[10px] text-cyan-400 font-mono">PMID: 24192560 (Neuroplasticity)</div>
+                        <div class="text-[10px] text-emerald-400 mt-1">LOGISTICS: Any (Online/Offline)</div>
+                    </div>
+                </div>
+                <div class="bg-slate-950 border border-emerald-900/50 p-3 rounded-xl flex gap-3 items-center relative overflow-hidden">
+                    <div class="absolute right-0 top-0 text-[8px] bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded-bl-lg font-bold">NEW V3</div>
+                    <div class="text-3xl bg-slate-800 p-2 rounded-lg">🎲</div>
+                    <div>
+                        <div class="font-bold text-sm text-emerald-300">Board Game Club</div>
+                        <div class="text-[10px] text-cyan-400 font-mono">PMID: 25910392 (Oxytocin release)</div>
+                        <div class="text-[10px] text-emerald-400 mt-1">LOGISTICS: On-site only</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 2: Match Paths -->
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl">
+        <h2 class="text-xl font-bold mb-6 border-b border-slate-800 pb-2 text-emerald-400">
+            2. Match Paths (Decision Trees)
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Path A -->
+            <div class="bg-slate-950/50 p-4 rounded-2xl border border-slate-800">
+                <h3 class="font-bold text-sm mb-4 text-emerald-400 text-center uppercase tracking-wider">🤝 Connection & Growth Path</h3>
+                <div class="mermaid text-xs flex justify-center">
+flowchart TD
+    A[ผู้ใช้: สังคม = Networking] --> B{ระดับความเครียด}
+    B -- เครียดจัด (High Stress) --> C[ห้ามจ่ายคลาส Business]
+    C --> D((🎲 Board Game))
+    
+    B -- เครียดน้อย-ปานกลาง --> E{สไตล์กิจกรรม}
+    E -- Growth (พัฒนาทักษะ) --> F((📈 Business Workshop))
+    E -- หมดไฟ / ต้องการไอเดียใหม่ --> G((🧠 Self-Dev Workshop))
+    
+    style D fill:#064e3b,stroke:#22c55e,stroke-width:2px,color:#4ade80
+    style F fill:#064e3b,stroke:#22c55e,stroke-width:2px,color:#4ade80
+    style G fill:#064e3b,stroke:#22c55e,stroke-width:2px,color:#4ade80
+    style C fill:#450a0a,stroke:#ef4444,stroke-width:1px,color:#f87171
+                </div>
+            </div>
+
+            <!-- Path B -->
+            <div class="bg-slate-950/50 p-4 rounded-2xl border border-slate-800">
+                <h3 class="font-bold text-sm mb-4 text-blue-400 text-center uppercase tracking-wider">📉 Passive & Recovery Path</h3>
+                <div class="mermaid text-xs flex justify-center">
+flowchart TD
+    A[ผู้ใช้: สังคม = ทำคนเดียว (Solo)] --> B{จุดกระตุ้นเจ็บปวด}
+    
+    B -- ร่างกาย (ปวด/นอนน้อย) --> C{มีโรคหัวใจ?}
+    C -- มีประวัติ --> D((🧘‍♀️ Restorative Yoga))
+    C -- ไม่มีประวัติ --> E((♨️ Onsen))
+    
+    B -- จิตใจ (วิตกกังวล/เครียด) --> F{ชีพจรขณะพัก}
+    F -- ชีพจรเต้นเร็ว (High) --> G((🧘 Sound Bath))
+    F -- ปกติ (Normal) --> H((🏺 Clay Art))
+    
+    style D fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#93c5fd
+    style E fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#93c5fd
+    style G fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#93c5fd
+    style H fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#93c5fd
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3: Data Collection Breakdown -->
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl mb-12 mt-12">
+        <h2 class="text-xl font-bold mb-4 border-b border-slate-800 pb-2 text-fuchsia-400">
+            3. Data Collection Breakdown (การจัดกลุ่มข้อมูลที่จัดเก็บ)
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+            <!-- Demographics -->
+            <div class="bg-slate-950 border border-slate-800 p-5 rounded-2xl">
+                <h3 class="font-bold text-amber-400 mb-3 flex items-center gap-2"><i data-lucide="user" class="w-4 h-4"></i> Demographics</h3>
+                <p class="text-slate-400 text-xs mb-3">ข้อมูลพื้นฐานเพื่อจัดกลุ่มและทำความเข้าใจบริบทของผู้ใช้</p>
+                <ul class="space-y-2 text-slate-300">
+                    <li class="flex items-start gap-2"><span class="text-amber-500/50 mt-0.5">•</span> <strong>เพศ (Gender):</strong> ชาย, หญิง, ไม่ระบุ</li>
+                    <li class="flex items-start gap-2"><span class="text-amber-500/50 mt-0.5">•</span> <strong>ช่วงอายุ (Age):</strong> 18-24 จนถึง 55+</li>
+                    <li class="flex items-start gap-2"><span class="text-amber-500/50 mt-0.5">•</span> <strong>รูปแบบการทำงาน (Work Style):</strong> พนักงานบริษัท, เจ้าของธุรกิจ, WFH, นักศึกษา</li>
+                </ul>
+            </div>
+
+            <!-- Health Score -->
+            <div class="bg-slate-950 border border-slate-800 p-5 rounded-2xl">
+                <h3 class="font-bold text-emerald-400 mb-3 flex items-center gap-2"><i data-lucide="heart-pulse" class="w-4 h-4"></i> Health Score</h3>
+                <p class="text-slate-400 text-xs mb-3">ดัชนีชี้วัดสุขภาพ (Biomarkers & Vetoes) เพื่อความปลอดภัย</p>
+                <ul class="space-y-2 text-slate-300">
+                    <li class="flex items-start gap-2"><span class="text-emerald-500/50 mt-0.5">•</span> <strong>อาการทางกาย/ใจ:</strong> ปวดเมื่อย, นอนไม่หลับ, เครียด</li>
+                    <li class="flex items-start gap-2"><span class="text-emerald-500/50 mt-0.5">•</span> <strong>Vital Signs (Likert 1-5):</strong> อัตราการเต้นหัวใจ, เวลานอน, ความถี่ออกกำลังกาย, ระดับความเครียด</li>
+                    <li class="flex items-start gap-2"><span class="text-emerald-500/50 mt-0.5">•</span> <strong>Medical Vetoes:</strong> ข้อจำกัดสุขภาพ (โรคหัวใจ, บาดเจ็บ)</li>
+                </ul>
+            </div>
+
+            <!-- Preference -->
+            <div class="bg-slate-950 border border-slate-800 p-5 rounded-2xl">
+                <h3 class="font-bold text-cyan-400 mb-3 flex items-center gap-2"><i data-lucide="compass" class="w-4 h-4"></i> Preference</h3>
+                <p class="text-slate-400 text-xs mb-3">ความชอบและวิถีชีวิต เพื่อดึงดูดให้อยากทำกิจกรรม</p>
+                <ul class="space-y-2 text-slate-300">
+                    <li class="flex items-start gap-2"><span class="text-cyan-500/50 mt-0.5">•</span> <strong>บุคลิกภาพ:</strong> สไตล์กิจกรรม, ความเปิดรับสิ่งใหม่</li>
+                    <li class="flex items-start gap-2"><span class="text-cyan-500/50 mt-0.5">•</span> <strong>สังคม (Likert 1-5):</strong> ความต้องการพบปะผู้คน (Social Level)</li>
+                    <li class="flex items-start gap-2"><span class="text-cyan-500/50 mt-0.5">•</span> <strong>Logistics:</strong> สภาพแวดล้อมที่ชอบ, ความสะดวกในการเดินทาง, เวลาว่าง</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 4: The 5-Dimensional Vector Scoring (ระบบมิติพลังงาน 5 ด้าน) -->
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl mb-12">
+        <h2 class="text-xl font-bold mb-4 border-b border-slate-800 pb-2 text-pink-400">
+            4. The 5-Dimensional Vector Scoring (ระบบมิติพลังงาน 5 ด้าน)
+        </h2>
+        <p class="text-slate-400 text-xs mb-6">เราได้ยกระดับอัลกอริทึมจาก <strong>Rule-Based</strong> เป็น <strong>Vector Distance Matching</strong> โดยให้คะแนนใน 5 แกนมิติ (แกนละ -5 ถึง +5) เมื่อผู้ใช้ตอบคำถาม ระบบจะสะสมคะแนนทั้ง 5 มิติเพื่อสร้าง "สภาวะปัจจุบันของผู้ใช้" แล้วนำไปเทียบกับกิจกรรมทั้งหมดว่า <strong>"ระยะห่าง (Distance) ระหว่างผู้ใช้กับกิจกรรมใดใกล้เคียงกันที่สุด"</strong></p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
+            <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+                <div class="font-bold text-emerald-400 mb-1">Physical</div>
+                <div class="text-[10px] text-slate-400">-5: Passive/พักผ่อน<br>+5: Active/ใช้แรง</div>
+            </div>
+            <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+                <div class="font-bold text-amber-400 mb-1">Mental</div>
+                <div class="text-[10px] text-slate-400">-5: ผ่อนคลายสมอง<br>+5: ใช้ความคิดเยอะ</div>
+            </div>
+            <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+                <div class="font-bold text-cyan-400 mb-1">Social</div>
+                <div class="text-[10px] text-slate-400">-5: ส่วนตัว/คนเดียว<br>+5: พบปะผู้คน/ปาร์ตี้</div>
+            </div>
+            <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+                <div class="font-bold text-fuchsia-400 mb-1">Novelty</div>
+                <div class="text-[10px] text-slate-400">-5: กิจวัตรเดิมๆ<br>+5: สิ่งใหม่/สร้างสรรค์</div>
+            </div>
+            <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+                <div class="font-bold text-indigo-400 mb-1">Growth</div>
+                <div class="text-[10px] text-slate-400">-5: ไม่มีเป้าหมายชิลๆ<br>+5: มุ่งพัฒนาตัวเอง</div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Activity Base Vectors -->
+            <div class="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden shadow-md">
+                <div class="bg-slate-800 p-3 border-b border-slate-700 font-bold text-sm text-pink-300">
+                    A. Activity Base Vectors (มิติตั้งต้นของกิจกรรม)
+                </div>
+                <table class="w-full text-[10px] text-center">
+                    <thead class="text-slate-500 uppercase bg-slate-900/30">
+                        <tr><th class="px-2 py-2 text-left">Activity</th><th>Phy</th><th>Men</th><th>Soc</th><th>Nov</th><th>Gro</th></tr>
+                    </thead>
+                    <tbody class="text-slate-300">
+                        <tr class="border-b border-slate-800"><td class="px-2 py-2 text-left text-xs font-semibold">Muay Thai</td><td class="text-emerald-400">+5</td><td class="text-amber-400">+2</td><td class="text-cyan-400">+3</td><td class="text-fuchsia-400">+1</td><td class="text-indigo-400">+3</td></tr>
+                        <tr class="border-b border-slate-800"><td class="px-2 py-2 text-left text-xs font-semibold">Pilates</td><td class="text-emerald-400">+3</td><td class="text-amber-400">+1</td><td class="text-cyan-400">+2</td><td class="text-fuchsia-400">0</td><td class="text-indigo-400">+2</td></tr>
+                        <tr class="border-b border-slate-800"><td class="px-2 py-2 text-left text-xs font-semibold">Ice Bath</td><td class="text-emerald-400">+2</td><td class="text-amber-400">+2</td><td class="text-cyan-400">-4</td><td class="text-fuchsia-400">+4</td><td class="text-indigo-400">+3</td></tr>
+                        <tr class="border-b border-slate-800"><td class="px-2 py-2 text-left text-xs font-semibold">Onsen</td><td class="text-emerald-400">-4</td><td class="text-amber-400">-3</td><td class="text-cyan-400">-4</td><td class="text-fuchsia-400">0</td><td class="text-indigo-400">-2</td></tr>
+                        <tr class="border-b border-slate-800"><td class="px-2 py-2 text-left text-xs font-semibold">Sound Bath</td><td class="text-emerald-400">-4</td><td class="text-amber-400">-5</td><td class="text-cyan-400">-3</td><td class="text-fuchsia-400">+2</td><td class="text-indigo-400">+1</td></tr>
+                        <tr class="border-b border-slate-800"><td class="px-2 py-2 text-left text-xs font-semibold">Clay Art</td><td class="text-emerald-400">-2</td><td class="text-amber-400">-2</td><td class="text-cyan-400">+2</td><td class="text-fuchsia-400">+4</td><td class="text-indigo-400">+1</td></tr>
+                        <tr class="border-b border-slate-800"><td class="px-2 py-2 text-left text-xs font-semibold">Business Class</td><td class="text-emerald-400">0</td><td class="text-amber-400">+5</td><td class="text-cyan-400">+5</td><td class="text-fuchsia-400">+2</td><td class="text-indigo-400">+5</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- User Choice Modifiers -->
+            <div class="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden shadow-md">
+                <div class="bg-slate-800 p-3 border-b border-slate-700 font-bold text-sm text-emerald-300">
+                    B. User Choice Modifiers (การขยับมิติตามคำตอบ)
+                </div>
+                <table class="w-full text-xs text-left">
+                    <thead class="text-slate-500 uppercase bg-slate-900/30">
+                        <tr><th class="px-3 py-2 w-1/2">หากผู้ใช้ตอบ (Choice)</th><th class="px-3 py-2 w-1/2">ผลต่อสมการ Vector</th></tr>
+                    </thead>
+                    <tbody class="text-slate-300">
+                        <tr class="border-b border-slate-800"><td class="px-3 py-2">ความเครียด = <span class="text-red-400">สูงมาก</span></td><td class="px-3 py-2 font-mono">Mental: -3</td></tr>
+                        <tr class="border-b border-slate-800"><td class="px-3 py-2">เวลานอน = <span class="text-red-400">< 5 ชม.</span></td><td class="px-3 py-2 font-mono">Phy: -4, Men: -3</td></tr>
+                        <tr class="border-b border-slate-800"><td class="px-3 py-2">ออกกำลังกาย = 5+ วัน</td><td class="px-3 py-2 font-mono">Phy: +4</td></tr>
+                        <tr class="border-b border-slate-800"><td class="px-3 py-2">สไตล์ที่ชอบ = Growth</td><td class="px-3 py-2 font-mono">Growth: +4, Men: +2</td></tr>
+                        <tr class="border-b border-slate-800"><td class="px-3 py-2">สังคม = ทำคนเดียว</td><td class="px-3 py-2 font-mono">Social: -4</td></tr>
+                        <tr><td class="px-3 py-2">สังคม = Networking</td><td class="px-3 py-2 font-mono">Social: +4</td></tr>
+                    </tbody>
+                </table>
+                <div class="p-3 bg-slate-900 border-t border-slate-800 text-xs text-slate-400">
+                    <strong>* การคำนวณ (Calculation):</strong> ระบบจะนำ Vector ของผู้ใช้ที่ได้จากการตอบทุกข้อ มารวมกัน แล้วนำไปเทียบกับกิจกรรมทุกตัวด้วยสูตร <strong>Euclidean Distance (ระยะห่างระหว่างจุด 2 จุดใน 5 มิติ)</strong> กิจกรรมที่มีระยะห่างน้อยที่สุด = 99% Match
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Section 5: The 17-Variable Matrix (ทำไมถึงเป็น Logic ที่ละเอียดที่สุด) -->
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl mb-12">
+        <h2 class="text-xl font-bold mb-4 border-b border-slate-800 pb-2 text-amber-400">
+            5. The 17-Variable Matrix & Future AI Scaling
+        </h2>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2 text-sm text-slate-300 space-y-4 leading-relaxed">
+                <p>แม้จะใช้ระบบสมการ <strong>Vector Distance Matching</strong> แต่กลไกการจับคู่ก็ยังคงครอบคลุมและแม่นยำที่สุด เนื่องจากระบบดึงข้อมูลถึง <strong>17 ตัวแปรหลัก</strong> มาแปลงเป็นมิติพลังงาน และทำการประมวลผลร่วมกัน (Cross-calculation) ในเสี้ยววินาที:</p>
+                
+                <div class="grid grid-cols-2 gap-x-4 gap-y-2 mt-4 font-mono text-xs">
+                    <div class="flex items-center gap-2"><span class="text-amber-400">01.</span> Gender (เพศ)</div>
+                    <div class="flex items-center gap-2"><span class="text-amber-400">10.</span> Clinical Vetoes (ข้อห้ามทางแพทย์)</div>
+                    
+                    <div class="flex items-center gap-2"><span class="text-amber-400">02.</span> Age Range (ช่วงอายุ)</div>
+                    <div class="flex items-center gap-2"><span class="text-amber-400">11.</span> Activity Style (สไตล์ที่ชอบ)</div>
+                    
+                    <div class="flex items-center gap-2"><span class="text-amber-400">03.</span> Work Style (รูปแบบทำงาน)</div>
+                    <div class="flex items-center gap-2"><span class="text-amber-400">12.</span> Openness (ความเปิดรับสิ่งใหม่)</div>
+                    
+                    <div class="flex items-center gap-2"><span class="text-amber-400">04.</span> Physical State (สภาวะร่างกาย)</div>
+                    <div class="flex items-center gap-2"><span class="text-amber-400">13.</span> Social Level (เข้าสังคม)</div>
+                    
+                    <div class="flex items-center gap-2"><span class="text-amber-400">05.</span> Mental State (สภาวะจิตใจ)</div>
+                    <div class="flex items-center gap-2"><span class="text-amber-400">14.</span> Environment (สภาพแวดล้อม)</div>
+                    
+                    <div class="flex items-center gap-2"><span class="text-amber-400">06.</span> Resting HR (ชีพจรขณะพัก)</div>
+                    <div class="flex items-center gap-2"><span class="text-amber-400">15.</span> Accessibility (การเดินทาง)</div>
+                    
+                    <div class="flex items-center gap-2"><span class="text-amber-400">07.</span> Sleep Quality (คุณภาพการนอน)</div>
+                    <div class="flex items-center gap-2"><span class="text-amber-400">16.</span> Time of Day (เวลาว่าง)</div>
+                    
+                    <div class="flex items-center gap-2"><span class="text-amber-400">08.</span> Stress Level (ระดับความเครียด)</div>
+                    <div class="flex items-center gap-2"><span class="text-amber-400">17.</span> Target Activity (ความต้องการลึกๆ)</div>
+                    
+                    <div class="flex items-center gap-2"><span class="text-amber-400">09.</span> Exercise Freq (ความถี่ออกกำลัง)</div>
+                    <div class="flex items-center gap-2"></div>
+                </div>
+            </div>
+
+            <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 shadow-md">
+                <h3 class="font-bold text-sm text-cyan-400 mb-2 border-b border-slate-800 pb-2 flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    Future ML Scaling
+                </h3>
+                <p class="text-xs text-slate-400 leading-relaxed mb-3">
+                    ปัจจุบันระบบเป็น <strong>Vector Engine</strong> ที่กำหนดน้ำหนักการขยับมิติ (Shift Vector) โดยมนุษย์ เพื่อควบคุมความปลอดภัยทางการแพทย์อย่างเข้มงวด
+                </p>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    หากแพลตฟอร์มมี Data ผู้ใช้งานจริงเกิน 10,000 ชุด ระบบจะให้ <strong>Machine Learning AI</strong> เข้ามาเรียนรู้รูปแบบ และปรับน้ำหนักมิติ (Dynamic Weighting) บนพื้นฐานของพฤติกรรมจริงโดยอัตโนมัติ
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

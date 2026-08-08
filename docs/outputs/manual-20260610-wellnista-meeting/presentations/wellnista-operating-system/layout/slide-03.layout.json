@@ -1,0 +1,1312 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/mws089",
+    "id": "mws089",
+    "slide": 3,
+    "layoutId": "0b422280-47dd-4274-8221-93423629f6b9",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "15eb64e6-35e2-4e7e-aa05-0c10faf81bf0",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Aptos",
+      "Leelawadee UI"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "0b422280-47dd-4274-8221-93423629f6b9",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "15eb64e6-35e2-4e7e-aa05-0c10faf81bf0",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "15eb64e6-35e2-4e7e-aa05-0c10faf81bf0",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ixczed8v",
+      "id": "1",
+      "bbox": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "geometry": "rect",
+      "fillColor": "#F7F1E8",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tovahoza",
+      "id": "2",
+      "bbox": [
+        58,
+        55,
+        28,
+        3
+      ],
+      "geometry": "rect",
+      "fillColor": "#2E6F5B",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/032lszqt",
+      "id": "3",
+      "bbox": [
+        100,
+        48,
+        520,
+        24
+      ],
+      "geometry": "rect",
+      "text": "PROBLEM MAP",
+      "textPreview": "PROBLEM MAP",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 12,
+        "typeface": "Aptos",
+        "color": "#2E6F5B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "PROBLEM MAP"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "PROBLEM MAP",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Aptos",
+            "color": "#2E6F5B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "PROBLEM MAP",
+              "fontSize": 12,
+              "typeface": "Aptos",
+              "color": "#2E6F5B",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bulwval8",
+      "id": "4",
+      "bbox": [
+        56,
+        82,
+        840,
+        86
+      ],
+      "geometry": "rect",
+      "text": "ปัญหาไม่ใช่ไอเดียน้อย แต่คือไอเดียยังไม่ผ่านเครื่องแปลงเป็น action",
+      "textPreview": "ปัญหาไม่ใช่ไอเดียน้อย แต่คือไอเดียยังไม่ผ่านเครื่องแปลงเป็น action",
+      "resolvedFontSize": 36,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 36,
+        "typeface": "Leelawadee UI",
+        "color": "#12211D",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ปัญหาไม่ใช่ไอเดียน้อย"
+          },
+          {
+            "index": 2,
+            "text": "แต่คือไอเดียยังไม่ผ่านเครื่องแปลงเป็น action"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ปัญหาไม่ใช่ไอเดียน้อย แต่คือไอเดียยังไม่ผ่านเครื่องแปลงเป็น action",
+          "resolvedTextStyle": {
+            "fontSize": 36,
+            "typeface": "Leelawadee UI",
+            "color": "#12211D",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ปัญหาไม่ใช่ไอเดียน้อย แต่คือไอเดียยังไม่ผ่านเครื่องแปลงเป็น action",
+              "fontSize": 36,
+              "typeface": "Leelawadee UI",
+              "color": "#12211D",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/i9s36hcr",
+      "id": "5",
+      "bbox": [
+        58,
+        178,
+        760,
+        44
+      ],
+      "geometry": "rect",
+      "text": "ต้องมีระบบกลางที่ถามให้คิด, ปิดจุดอ่อน, และทำให้ทุกงานมี owner",
+      "textPreview": "ต้องมีระบบกลางที่ถามให้คิด, ปิดจุดอ่อน, และทำให้ทุกงานมี owner",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 17,
+        "typeface": "Leelawadee UI",
+        "color": "#5F6B64",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ต้องมีระบบกลางที่ถามให้คิด, ปิดจุดอ่อน, และทำให้ทุกงานมี owner"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ต้องมีระบบกลางที่ถามให้คิด, ปิดจุดอ่อน, และทำให้ทุกงานมี owner",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "Leelawadee UI",
+            "color": "#5F6B64",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ต้องมีระบบกลางที่ถามให้คิด, ปิดจุดอ่อน, และทำให้ทุกงานมี owner",
+              "fontSize": 17,
+              "typeface": "Leelawadee UI",
+              "color": "#5F6B64"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p0bi9s36",
+      "id": "6",
+      "bbox": [
+        64,
+        262,
+        240,
+        178
+      ],
+      "geometry": "rect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#D8CCC0",
+      "lineWidth": 1
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0fepkzup",
+      "id": "7",
+      "bbox": [
+        64,
+        262,
+        240,
+        8
+      ],
+      "geometry": "rect",
+      "fillColor": "#2E6F5B",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/byhgn29g",
+      "id": "8",
+      "bbox": [
+        84,
+        292,
+        190,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Vision",
+      "textPreview": "Vision",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Leelawadee UI",
+        "color": "#2E6F5B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Vision"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Vision",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "typeface": "Leelawadee UI",
+            "color": "#2E6F5B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Vision",
+              "fontSize": 24,
+              "typeface": "Leelawadee UI",
+              "color": "#2E6F5B",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/idonyd0z",
+      "id": "9",
+      "bbox": [
+        84,
+        338,
+        198,
+        78
+      ],
+      "geometry": "rect",
+      "text": "ภาพใหญ่ชัด แต่ยังไม่ถูกแตกเป็นตัวเลขและงานรายสัปดาห์",
+      "textPreview": "ภาพใหญ่ชัด แต่ยังไม่ถูกแตกเป็นตัวเลขและงานรายสัปดาห์",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Leelawadee UI",
+        "color": "#5F6B64",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ภาพใหญ่ชัด"
+          },
+          {
+            "index": 2,
+            "text": "แต่ยังไม่ถูกแตกเป็นตัวเลขและงานร"
+          },
+          {
+            "index": 3,
+            "text": "ายสัปดาห์"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ภาพใหญ่ชัด แต่ยังไม่ถูกแตกเป็นตัวเลขและงานรายสัปดาห์",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Leelawadee UI",
+            "color": "#5F6B64",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ภาพใหญ่ชัด แต่ยังไม่ถูกแตกเป็นตัวเลขและงานรายสัปดาห์",
+              "fontSize": 15,
+              "typeface": "Leelawadee UI",
+              "color": "#5F6B64"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c7u54zid",
+      "id": "10",
+      "bbox": [
+        312,
+        350,
+        34,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#D8CCC0",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1orytsvu",
+      "id": "11",
+      "bbox": [
+        344,
+        345,
+        12,
+        12
+      ],
+      "geometry": "rect",
+      "fillColor": "#D8CCC0",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u18jqh0f",
+      "id": "12",
+      "bbox": [
+        364,
+        262,
+        240,
+        178
+      ],
+      "geometry": "rect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#D8CCC0",
+      "lineWidth": 1
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jm1cfa9w",
+      "id": "13",
+      "bbox": [
+        364,
+        262,
+        240,
+        8
+      ],
+      "geometry": "rect",
+      "fillColor": "#C69A45",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cfa9w3m9",
+      "id": "14",
+      "bbox": [
+        384,
+        292,
+        190,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Ideas",
+      "textPreview": "Ideas",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Leelawadee UI",
+        "color": "#C69A45",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Ideas"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Ideas",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "typeface": "Leelawadee UI",
+            "color": "#C69A45",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Ideas",
+              "fontSize": 24,
+              "typeface": "Leelawadee UI",
+              "color": "#C69A45",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1032lszq",
+      "id": "15",
+      "bbox": [
+        384,
+        338,
+        198,
+        78
+      ],
+      "geometry": "rect",
+      "text": "มีหลายไอเดีย แต่ยังไม่มี feasibility machine คัดก่อนลงมือ",
+      "textPreview": "มีหลายไอเดีย แต่ยังไม่มี feasibility machine คัดก่อนลงมือ",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Leelawadee UI",
+        "color": "#5F6B64",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "มีหลายไอเดีย แต่ยังไม่มี feasibility"
+          },
+          {
+            "index": 2,
+            "text": "machine คัดก่อนลงมือ"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "มีหลายไอเดีย แต่ยังไม่มี feasibility machine คัดก่อนลงมือ",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Leelawadee UI",
+            "color": "#5F6B64",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "มีหลายไอเดีย แต่ยังไม่มี feasibility machine คัดก่อนลงมือ",
+              "fontSize": 15,
+              "typeface": "Leelawadee UI",
+              "color": "#5F6B64"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u9knih4b",
+      "id": "16",
+      "bbox": [
+        612,
+        350,
+        34,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#D8CCC0",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/judg7ads",
+      "id": "17",
+      "bbox": [
+        644,
+        345,
+        12,
+        12
+      ],
+      "geometry": "rect",
+      "fillColor": "#D8CCC0",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cj6tovah",
+      "id": "18",
+      "bbox": [
+        664,
+        262,
+        240,
+        178
+      ],
+      "geometry": "rect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#D8CCC0",
+      "lineWidth": 1
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/54zidony",
+      "id": "19",
+      "bbox": [
+        664,
+        262,
+        240,
+        8
+      ],
+      "geometry": "rect",
+      "fillColor": "#E87961",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9s36hcrm",
+      "id": "20",
+      "bbox": [
+        684,
+        292,
+        190,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Owners",
+      "textPreview": "Owners",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Leelawadee UI",
+        "color": "#E87961",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Owners"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Owners",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "typeface": "Leelawadee UI",
+            "color": "#E87961",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Owners",
+              "fontSize": 24,
+              "typeface": "Leelawadee UI",
+              "color": "#E87961",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/g7adsji5",
+      "id": "21",
+      "bbox": [
+        684,
+        338,
+        198,
+        78
+      ],
+      "geometry": "rect",
+      "text": "หลายงานช่วยกันทำ แต่ accountable owner ยังไม่คม",
+      "textPreview": "หลายงานช่วยกันทำ แต่ accountable owner ยังไม่คม",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Leelawadee UI",
+        "color": "#5F6B64",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "หลายงานช่วยกันทำ แต่"
+          },
+          {
+            "index": 2,
+            "text": "accountable owner ยังไม่คม"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "หลายงานช่วยกันทำ แต่ accountable owner ยังไม่คม",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Leelawadee UI",
+            "color": "#5F6B64",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "หลายงานช่วยกันทำ แต่ accountable owner ยังไม่คม",
+              "fontSize": 15,
+              "typeface": "Leelawadee UI",
+              "color": "#5F6B64"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rmhk3q5o",
+      "id": "22",
+      "bbox": [
+        912,
+        350,
+        34,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#D8CCC0",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/y1kre1w7",
+      "id": "23",
+      "bbox": [
+        944,
+        345,
+        12,
+        12
+      ],
+      "geometry": "rect",
+      "fillColor": "#D8CCC0",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/90je9cvi",
+      "id": "24",
+      "bbox": [
+        964,
+        262,
+        240,
+        178
+      ],
+      "geometry": "rect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#D8CCC0",
+      "lineWidth": 1
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gfmlkjm1",
+      "id": "25",
+      "bbox": [
+        964,
+        262,
+        240,
+        8
+      ],
+      "geometry": "rect",
+      "fillColor": "#5177A8",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rytsvu9k",
+      "id": "26",
+      "bbox": [
+        984,
+        292,
+        190,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Tracker",
+      "textPreview": "Tracker",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Leelawadee UI",
+        "color": "#5177A8",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Tracker"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Tracker",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "typeface": "Leelawadee UI",
+            "color": "#5177A8",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Tracker",
+              "fontSize": 24,
+              "typeface": "Leelawadee UI",
+              "color": "#5177A8",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yd0z6103",
+      "id": "27",
+      "bbox": [
+        984,
+        338,
+        198,
+        78
+      ],
+      "geometry": "rect",
+      "text": "งาน/decision/metric ยังไม่เป็น source of truth เดียว",
+      "textPreview": "งาน/decision/metric ยังไม่เป็น source of truth เดียว",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Leelawadee UI",
+        "color": "#5F6B64",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "งาน/decision/metric ยังไม่เป็น"
+          },
+          {
+            "index": 2,
+            "text": "source of truth เดียว"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "งาน/decision/metric ยังไม่เป็น source of truth เดียว",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Leelawadee UI",
+            "color": "#5F6B64",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "งาน/decision/metric ยังไม่เป็น source of truth เดียว",
+              "fontSize": 15,
+              "typeface": "Leelawadee UI",
+              "color": "#5F6B64"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9cvixcze",
+      "id": "28",
+      "bbox": [
+        78,
+        514,
+        220,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Prototype answer",
+      "textPreview": "Prototype answer",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "Leelawadee UI",
+        "color": "#2E6F5B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Prototype answer"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Prototype answer",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Leelawadee UI",
+            "color": "#2E6F5B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Prototype answer",
+              "fontSize": 18,
+              "typeface": "Leelawadee UI",
+              "color": "#2E6F5B",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gr2p8nqx",
+      "id": "29",
+      "bbox": [
+        78,
+        546,
+        940,
+        64
+      ],
+      "geometry": "rect",
+      "text": "Role/RACI + OKR/KPI + Delegation Card + Task Tracker + BD Feasibility Machine",
+      "textPreview": "Role/RACI + OKR/KPI + Delegation Card + Task Tracker + BD Feasibility Machine",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Leelawadee UI",
+        "color": "#12211D",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Role/RACI + OKR/KPI + Delegation Card + Task Tracker + BD Feasibility Machine"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Role/RACI + OKR/KPI + Delegation Card + Task Tracker + BD Feasibility Machine",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "typeface": "Leelawadee UI",
+            "color": "#12211D",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Role/RACI + OKR/KPI + Delegation Card + Task Tracker + BD Feasibility Machine",
+              "fontSize": 24,
+              "typeface": "Leelawadee UI",
+              "color": "#12211D",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a5gbq1or",
+      "id": "30",
+      "bbox": [
+        54,
+        676,
+        360,
+        18
+      ],
+      "geometry": "rect",
+      "text": "Wellnista Operating System · 03",
+      "textPreview": "Wellnista Operating System · 03",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10,
+        "typeface": "Aptos",
+        "color": "#5F6B64",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Wellnista Operating System · 03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Wellnista Operating System · 03",
+          "resolvedTextStyle": {
+            "fontSize": 10,
+            "typeface": "Aptos",
+            "color": "#5F6B64",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Wellnista Operating System · 03",
+              "fontSize": 10,
+              "typeface": "Aptos",
+              "color": "#5F6B64"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 31,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3m94fu18",
+      "id": "31",
+      "bbox": [
+        1116,
+        683,
+        110,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#D8CCC0",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

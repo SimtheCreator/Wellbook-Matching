@@ -1,0 +1,158 @@
+97: <p class="text-xs text-wellnista-textMuted mb-10">เลือกภาษาที่ต้องการใช้งาน</p>
+101: <span class="text-2xl">🇹🇭</span> ภาษาไทย
+115: <h2 class="text-xl md:text-2xl font-semibold mb-2 tracking-tight text-wellnista-textDark">ข้อมูลพื้นฐานของคุณ</h2>
+116: <p class="text-wellnista-textMuted text-xs mb-6 font-light leading-relaxed">เพื่อให้ระบบปรับแต่งการประเมินให้เหมาะสมกับคุณที่สุด</p>
+118: <h3 class="text-[10px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase">1. เพศ (Gender)</h3>
+121: <i data-lucide="user" class="w-5 h-5 text-wellnista-sage"></i><span class="text-[11px] font-medium">หญิง</span>
+124: <i data-lucide="user" class="w-5 h-5 text-wellnista-sage"></i><span class="text-[11px] font-medium">ชาย</span>
+127: <i data-lucide="users" class="w-5 h-5 text-wellnista-sage"></i><span class="text-[11px] font-medium">ไม่ระบุ</span>
+131: <h3 class="text-[10px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase">2. ช่วงอายุ (Age Range)</h3>
+137: <button onclick="selectSingle('age', '55+', this)" class="option-btn p-2 rounded-xl text-[11px] font-medium text-center col-span-2">55 ปีขึ้นไป</button>
+140: <h3 class="text-[10px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase">3. รูปแบบการทำงาน (Work Style)</h3>
+143: <i data-lucide="building" class="w-4 h-4 text-wellnista-sand"></i><span class="text-[11px] font-medium">พนักงานบริษัท</span>
+146: <i data-lucide="laptop" class="w-4 h-4 text-wellnista-sand"></i><span class="text-[11px] font-medium">ทำงานอิสระ / WFH</span>
+149: <i data-lucide="briefcase" class="w-4 h-4 text-wellnista-sand"></i><span class="text-[11px] font-medium">เจ้าของธุรกิจ</span>
+152: <i data-lucide="graduation-cap" class="w-4 h-4 text-wellnista-sand"></i><span class="text-[11px] font-medium">นักศึกษา</span>
+155: <i data-lucide="heart-pulse" class="w-4 h-4 text-wellnista-sand"></i><span class="text-[11px] font-medium">สายแพทย์/สาธารณสุข</span>
+158: <i data-lucide="palette" class="w-4 h-4 text-wellnista-sand"></i><span class="text-[11px] font-medium">สายอาร์ต/ครีเอทีฟ</span>
+161: <i data-lucide="coffee" class="w-4 h-4 text-wellnista-sand"></i><span class="text-[11px] font-medium">งานบริการ/ค้าขาย</span>
+164: <i data-lucide="users" class="w-4 h-4 text-wellnista-sand"></i><span class="text-[11px] font-medium">อื่นๆ</span>
+169: <button onclick="nextStep(2)" id="btn-next-1" class="w-full bg-wellnista-olive hover:bg-wellnista-oliveDark text-white font-medium py-4 rounded-[20px] shadow-md disabled:opacity-40 disabled:shadow-none transition-all duration-300 flex justify-center items-center gap-2" disabled>เริ่มทำแบบประเมิน <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+179: <h2 class="text-xl md:text-2xl font-semibold mb-2 tracking-tight text-wellnista-textDark">คุณรู้สึกอย่างไรในสัปดาห์นี้?</h2>
+180: <p class="text-wellnista-textMuted text-xs mb-6 font-light leading-relaxed">สำรวจร่างกายและจิตใจอย่างนุ่มนวล</p>
+182: <h3 class="text-[10px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase">1. สภาพร่างกาย (Physical State)</h3>
+186: <span class="text-[11px] font-medium">ออฟฟิศซินโดรม</span>
+190: <span class="text-[11px] font-medium">ล้ากล้ามเนื้อ</span>
+194: <span class="text-[11px] font-medium">ร่างกายปกติดี แต่อยากฟิตขึ้น</span>
+198: <h3 class="text-[10px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase">2. สภาวะจิตใจ (Mental State)</h3>
+201: <i data-lucide="cloud" class="w-5 h-5 text-wellnista-sage"></i><span class="text-[11px] font-medium">เครียดสะสม</span>
+204: <i data-lucide="moon" class="w-5 h-5 text-wellnista-sage"></i><span class="text-[11px] font-medium">นอนไม่หลับ</span>
+207: <i data-lucide="wind" class="w-5 h-5 text-wellnista-sage"></i><span class="text-[11px] font-medium">หมดไฟ</span>
+210: <i data-lucide="sun" class="w-5 h-5 text-wellnista-sage"></i><span class="text-[11px] font-medium">แจ่มใสปกติ</span>
+214: <h3 class="text-[10px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase">3. หากไม่ได้ฟื้นฟู จะเกิดอะไรขึ้น?</h3>
+218: <div class="font-medium text-[11px]">เครียดสะสม รับมือปัญหาไม่ไหว</div>
+222: <div class="font-medium text-[11px]">อารมณ์แปรปรวน หงุดหงิดง่าย</div>
+226: <div class="font-medium text-[11px]">ปวดเมื่อยทางกายรุนแรงขึ้น</div>
+230: <div class="font-medium text-[11px]">ใช้ชีวิตปกติได้เรื่อยๆ ไม่มีผลกระทบมาก</div>
+235: <button onclick="nextStep(1)" class="w-1/3 bg-white border border-wellnista-border text-wellnista-textDark font-medium py-3 rounded-[20px] hover:bg-slate-50 transition-colors">กลับ</button>
+236: <button onclick="nextStep(3)" id="btn-next-2" class="w-2/3 bg-wellnista-olive hover:bg-wellnista-oliveDark text-white font-medium py-3 rounded-[20px] shadow-md disabled:opacity-40 disabled:shadow-none transition-all flex justify-center items-center gap-2" disabled>ถัดไป <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+246: <h2 class="text-xl md:text-2xl font-semibold mb-2 tracking-tight text-wellnista-textDark">ตัวชี้วัดสุขภาพ</h2>
+247: <p class="text-wellnista-textMuted text-xs mb-6 font-light">ข้อมูลเหล่านี้ช่วยเราประเมินความปลอดภัยและสรีรวิทยาของคุณ</p>
+252: <span class="flex items-center gap-2"><i data-lucide="heart-pulse" class="w-4 h-4 text-wellnista-olive"></i> จังหวะชีพจรขณะพัก (Resting HR)</span>
+255: <button onclick="selectSingle('rhr', 'low', this, 'vitals')" class="option-btn p-2.5 rounded-xl text-center text-[10px] font-medium">< 60 bpm (เต้นช้า)</button>
+256: <button onclick="selectSingle('rhr', 'normal', this, 'vitals')" class="option-btn p-2.5 rounded-xl text-center text-[10px] font-medium">60-80 bpm (ปกติ)</button>
+257: <button onclick="selectSingle('rhr', 'high', this, 'vitals')" class="option-btn p-2.5 rounded-xl text-center text-[10px] font-medium">81-99 bpm (เริ่มเร็ว)</button>
+258: <button onclick="selectSingle('rhr', 'veryhigh', this, 'vitals')" class="option-btn p-2.5 rounded-xl text-center text-[10px] font-medium text-rose-600">> 100 bpm (เต้นเร็ว)</button>
+264: <span class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4 text-wellnista-olive"></i> เวลานอนเฉลี่ย</span>
+267: <button onclick="selectSingle('sleep', 'less5', this, 'vitals')" class="option-btn p-2.5 rounded-xl text-center text-[10px] font-medium text-rose-600">น้อยกว่า 5 ชม.</button>
+268: <button onclick="selectSingle('sleep', '6to7', this, 'vitals')" class="option-btn p-2.5 rounded-xl text-center text-[10px] font-medium">6-7 ชม.</button>
+269: <button onclick="selectSingle('sleep', '7to8', this, 'vitals')" class="option-btn p-2.5 rounded-xl text-center text-[10px] font-medium">7-8 ชม.</button>
+270: <button onclick="selectSingle('sleep', 'more9', this, 'vitals')" class="option-btn p-2.5 rounded-xl text-center text-[10px] font-medium">9 ชม. ขึ้นไป</button>
+276: <span class="flex items-center gap-2"><i data-lucide="flame" class="w-4 h-4 text-wellnista-olive"></i> ความถี่การออกกำลังกาย</span>
+279: <button onclick="selectSingle('exercise', 'none', this, 'vitals')" class="option-btn p-2.5 rounded-xl text-center text-[10px] font-medium">ไม่ออกเลย</button>
+280: <button onclick="selectSingle('exercise', '1to2', this, 'vitals')" class="option-btn p-2.5 rounded-xl text-center text-[10px] font-medium">1-2 วัน/สัปดาห์</button>
+281: <button onclick="selectSingle('exercise', '3to4', this, 'vitals')" class="option-btn p-2.5 rounded-xl text-center text-[10px] font-medium">3-4 วัน/สัปดาห์</button>
+282: <button onclick="selectSingle('exercise', '5plus', this, 'vitals')" class="option-btn p-2.5 rounded-xl text-center text-[10px] font-medium">5 วันขึ้นไป/สัปดาห์</button>
+288: <span class="flex items-center gap-2"><i data-lucide="brain" class="w-4 h-4 text-wellnista-olive"></i> ระดับความเครียด</span>
+307: <button onclick="nextStep(2)" class="w-1/3 bg-white border border-wellnista-border text-wellnista-textDark font-medium py-3 rounded-[20px] hover:bg-slate-50 transition-colors">กลับ</button>
+308: <button onclick="nextStep(4)" id="btn-next-3" class="w-2/3 bg-wellnista-olive hover:bg-wellnista-oliveDark text-white font-medium py-3 rounded-[20px] shadow-md disabled:opacity-40 disabled:shadow-none transition-all flex justify-center items-center gap-2" disabled>ถัดไป <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+318: <h2 class="text-xl md:text-2xl font-semibold mb-2 tracking-tight text-wellnista-textDark">ข้อจำกัดด้านสุขภาพ</h2>
+319: <p class="text-wellnista-textMuted text-xs mb-8 font-light">เพื่อความปลอดภัย โปรดระบุอาการบาดเจ็บหรือโรคประจำตัว (PAR-Q+)</p>
+325: <div class="text-[11px] font-medium">โรคหัวใจ / ความดันโลหิตสูง</div>
+331: <div class="text-[11px] font-medium">บาดเจ็บข้อต่อ / กระดูก</div>
+337: <div class="text-[11px] font-medium">ไมเกรน / ไวต่อแสงและเสียง</div>
+346: <div class="text-[11px] font-semibold text-wellnista-oliveDark">ไม่มีข้อจำกัดทางสุขภาพ</div>
+352: <button onclick="nextStep(3)" class="w-1/3 bg-white border border-wellnista-border text-wellnista-textDark font-medium py-3 rounded-[20px] hover:bg-slate-50 transition-colors">กลับ</button>
+353: <button onclick="nextStep(5)" id="btn-next-4" class="w-2/3 bg-wellnista-olive hover:bg-wellnista-oliveDark text-white font-medium py-3 rounded-[20px] shadow-md disabled:opacity-40 disabled:shadow-none transition-all duration-300 flex justify-center items-center gap-2" disabled>ถัดไป <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+363: <h2 class="text-xl md:text-2xl font-semibold mb-2 tracking-tight text-wellnista-textDark">สไตล์ที่ใช่สำหรับคุณ?</h2>
+364: <p class="text-wellnista-textMuted text-xs mb-6 font-light">จับคู่ความชอบที่ตรงกับบุคลิกภาพ</p>
+366: <h3 class="text-[10px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase">1. สไตล์กิจกรรม (Style)</h3>
+370: <div class="font-medium text-[11px]">อยู่นิ่งๆ (Passive) ฟื้นฟูตัวเอง</div>
+374: <div class="font-medium text-[11px]">เรียกเหงื่อ (Active)</div>
+378: <div class="font-medium text-[11px]">ความคิดสร้างสรรค์ (Creative)</div>
+382: <div class="font-medium text-[11px]">พัฒนาทักษะ (Growth)</div>
+386: <h3 class="text-[10px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase">2. ความเปิดรับสิ่งใหม่ (Openness)</h3>
+388: <button onclick="selectSingle('openness', 'low', this)" class="option-btn p-2 rounded-xl text-[10px] font-medium text-center h-12">ชอบแบบแผนเดิม</button>
+389: <button onclick="selectSingle('openness', 'mid', this)" class="option-btn p-2 rounded-xl text-[10px] font-medium text-center h-12">ปานกลาง</button>
+390: <button onclick="selectSingle('openness', 'high', this)" class="option-btn p-2 rounded-xl text-[10px] font-medium text-center h-12">เปิดรับสิ่งใหม่ๆ</button>
+393: <h3 class="text-[10px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase">3. ระดับการเข้าสังคม (Social Level)</h3>
+395: <button onclick="selectSingle('social', 'solo', this)" class="option-btn p-3 rounded-2xl text-left text-[11px] font-medium flex items-center gap-2"><i data-lucide="user" class="w-4 h-4 text-wellnista-sand"></i> ชอบทำคนเดียวเงียบๆ</button>
+396: <button onclick="selectSingle('social', 'smallgroup', this)" class="option-btn p-3 rounded-2xl text-left text-[11px] font-medium flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-wellnista-sand"></i> สบายใจกับกลุ่มเล็กๆ</button>
+397: <button onclick="selectSingle('social', 'networking', this)" class="option-btn p-3 rounded-2xl text-left text-[11px] font-medium flex items-center gap-2"><i data-lucide="globe" class="w-4 h-4 text-wellnista-sand"></i> ชอบพบปะผู้คนใหม่ๆ / คอนเนคชัน</button>
+401: <button onclick="nextStep(4)" class="w-1/3 bg-white border border-wellnista-border text-wellnista-textDark font-medium py-3 rounded-[20px] hover:bg-slate-50 transition-colors">กลับ</button>
+402: <button onclick="nextStep(6)" id="btn-next-5" class="w-2/3 bg-wellnista-olive hover:bg-wellnista-oliveDark text-white font-medium py-3 rounded-[20px] shadow-md disabled:opacity-40 disabled:shadow-none transition-all duration-300 flex justify-center items-center gap-2" disabled>ถัดไป <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+412: <h2 class="text-xl md:text-2xl font-semibold mb-2 tracking-tight text-wellnista-textDark">วิถีชีวิตและกิจวัตร</h2>
+413: <p class="text-wellnista-textMuted text-xs mb-6 font-light">เพื่อให้ AI หาโซลูชันที่เข้ากับตารางชีวิตของคุณได้อย่างราบรื่น</p>
+415: <h3 class="text-[10px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase">1. สภาพแวดล้อมที่ชอบ (Environment)</h3>
+417: <button onclick="selectSingle('env', 'nature', this)" class="option-btn p-3 rounded-2xl text-left flex items-center gap-3"><i data-lucide="tree-pine" class="w-4 h-4 text-wellnista-sage"></i><span class="text-[11px] font-medium">ธรรมชาติ / กลางแจ้ง</span></button>
+418: <button onclick="selectSingle('env', 'indoor', this)" class="option-btn p-3 rounded-2xl text-left flex items-center gap-3"><i data-lucide="home" class="w-4 h-4 text-wellnista-sage"></i><span class="text-[11px] font-medium">พื้นที่ปิดเงียบสงบ (เช่น สปา)</span></button>
+419: <button onclick="selectSingle('env', 'studio', this)" class="option-btn p-3 rounded-2xl text-left flex items-center gap-3"><i data-lucide="users" class="w-4 h-4 text-wellnista-sage"></i><span class="text-[11px] font-medium">สตูดิโอมีพลังงาน / เวิร์กชอป</span></button>
+422: <h3 class="text-[10px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase">2. ความสะดวกในการเดินทาง</h3>
+424: <button onclick="selectSingle('access', 'weekly', this)" class="option-btn p-3 rounded-2xl text-center text-[11px] font-medium">ไปได้ทุกสัปดาห์</button>
+425: <button onclick="selectSingle('access', 'monthly', this)" class="option-btn p-3 rounded-2xl text-center text-[11px] font-medium">เดือนละ 1-2 ครั้ง</button>
+426: <button onclick="selectSingle('access', 'rarely', this)" class="option-btn p-3 rounded-2xl text-center text-[11px] font-medium">ไปได้นานๆ ครั้ง</button>
+427: <button onclick="selectSingle('access', 'athome', this)" class="option-btn p-3 rounded-2xl text-center text-[11px] font-medium text-wellnista-oliveDark border-wellnista-sage bg-wellnista-sageLight">ไม่สะดวก (ขอทำที่บ้าน)</button>
+430: <h3 class="text-[10px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase">3. ช่วงเวลาที่คุณว่างพักผ่อน</h3>
+432: <button onclick="selectSingle('time', 'afterwork', this)" class="option-btn p-3 rounded-2xl text-center text-[11px] font-medium">หลังเลิกงานวันธรรมดา</button>
+433: <button onclick="selectSingle('time', 'weekend', this)" class="option-btn p-3 rounded-2xl text-center text-[11px] font-medium">วันหยุดสุดสัปดาห์</button>
+434: <button onclick="selectSingle('time', 'morning', this)" class="option-btn p-3 rounded-2xl text-center text-[11px] font-medium">ตอนเช้าก่อนเริ่มงาน</button>
+435: <button onclick="selectSingle('time', 'random', this)" class="option-btn p-3 rounded-2xl text-center text-[11px] font-medium">ไม่แน่นอนจัดสรรยาก</button>
+439: <button onclick="nextStep(5)" class="w-1/3 bg-white border border-wellnista-border text-wellnista-textDark font-medium py-3 rounded-[20px] hover:bg-slate-50 transition-colors">กลับ</button>
+440: <button onclick="processData()" id="btn-next-6" class="w-2/3 bg-wellnista-olive hover:bg-wellnista-oliveDark text-white font-medium py-3 rounded-[20px] shadow-md disabled:opacity-40 disabled:shadow-none transition-all duration-300 flex justify-center items-center gap-2" disabled>ประมวลผลด้วย AI <i data-lucide="sparkles" class="w-4 h-4"></i></button>
+454: <div id="loading-sub" class="text-xs text-wellnista-textMuted font-light">ประมวลผลข้อมูลร่างกายและจิตใจ</div>
+464: <div class="text-[11px] text-rose-900/70 leading-relaxed font-light">ระบบได้คัดกรองกิจกรรมที่อาจเสี่ยงต่อสุขภาพของคุณออก (PAR-Q+)</div>
+472: <div class="text-[11px] text-wellnista-olive leading-relaxed font-light">เน้นเฉพาะกิจกรรมที่คุณสามารถทำได้อย่างสะดวกที่บ้าน</div>
+500: <h3 class="text-[9px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase">ตัวเลือกอื่นๆ ที่เหมาะกับคุณ</h3>
+511: <h3 class="text-xs md:text-sm font-semibold mb-2 text-wellnista-textDark font-serif">ประสบการณ์นี้ตรงใจคุณไหม?</h3>
+512: <p class="text-[9px] text-wellnista-textMuted mb-4">โปรดให้คะแนนเพื่อดูผลวิเคราะห์ขั้นสุดท้าย</p>
+530: <h2 class="text-xl font-semibold mb-2 tracking-tight text-wellnista-textDark">คุณคิดว่ากิจกรรมอื่นน่าจะเหมาะกับคุณมากกว่าไหม?</h2>
+531: <p class="text-wellnista-textMuted text-xs mb-4 font-light">โปรดเลือกสิ่งที่คุณอยากทำที่สุดในตอนนี้ เพื่อสอน AI ให้รู้จักคุณมากขึ้น</p>
+534: <h3 class="text-[9px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase border-b border-wellnista-border pb-1">หมวดร่างกาย / พักผ่อน</h3>
+536: <button onclick="selectSingle('targetActivity', 'perfect', this)" class="option-btn p-2 rounded-xl text-center text-[10px] font-bold text-wellnista-olive border-wellnista-olive bg-wellnista-sageLight col-span-2">พอใจกับกิจกรรมที่แนะนำแล้ว ✨</button>
+543: <h3 class="text-[9px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase border-b border-wellnista-border pb-1">หมวดจิตใจ / ทางเลือกสงบ</h3>
+549: <h3 class="text-[9px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase border-b border-wellnista-border pb-1">หมวดคอมมูนิตี้ & เติบโต</h3>
+556: <h3 class="text-[10px] font-medium text-wellnista-textMuted mb-2 tracking-wide uppercase">เหตุผลหลักคืออะไร?</h3>
+558: <button onclick="selectSingle('targetReason', 'perfect', this)" class="option-btn p-3 rounded-2xl text-left text-[10px] font-bold text-wellnista-olive border-wellnista-olive bg-wellnista-sageLight flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-wellnista-olive shrink-0"></i> ผลลัพธ์ตรงกับความต้องการที่สุด</button>
+559: <button onclick="selectSingle('targetReason', 'physical', this)" class="option-btn p-3 rounded-2xl text-left text-[10px] font-medium flex items-center gap-2"><i data-lucide="activity-square" class="w-4 h-4 text-wellnista-sage shrink-0"></i> บรรเทาอาการปวดเมื่อยทางกาย</button>
+560: <button onclick="selectSingle('targetReason', 'mental', this)" class="option-btn p-3 rounded-2xl text-left text-[10px] font-medium flex items-center gap-2"><i data-lucide="cloud-off" class="w-4 h-4 text-wellnista-sage shrink-0"></i> ระบายความเครียด หนีความวุ่นวาย</button>
+561: <button onclick="selectSingle('targetReason', 'stimulation', this)" class="option-btn p-3 rounded-2xl text-left text-[10px] font-medium flex items-center gap-2"><i data-lucide="zap" class="w-4 h-4 text-wellnista-sage shrink-0"></i> ต้องการพลังงาน ความท้าทายใหม่</button>
+562: <button onclick="selectSingle('targetReason', 'growth', this)" class="option-btn p-3 rounded-2xl text-left text-[10px] font-medium flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-wellnista-sage shrink-0"></i> พัฒนาตัวเอง เรียนรู้และหาเพื่อนใหม่</button>
+567: <button onclick="processUserChoice()" id="btn-next-9" class="w-full bg-wellnista-olive hover:bg-wellnista-oliveDark text-white font-medium py-3 md:py-4 rounded-[20px] shadow-md disabled:opacity-40 disabled:shadow-none transition-all duration-300 flex items-center justify-center gap-2" disabled>เสร็จสิ้น <i data-lucide="check-circle" class="w-4 h-4"></i></button>
+579: <p class="text-wellnista-textMuted text-xs md:text-sm mb-10 font-light leading-relaxed max-w-[280px] mx-auto">ขอบคุณที่ให้ข้อมูลเพิ่มเติม<br>ความคิดเห็นของคุณช่วยให้เราออกแบบ Wellness Lifestyle ได้ตอบโจทย์คุณมากยิ่งขึ้น</p>
+581: <i data-lucide="rotate-ccw" class="w-4 h-4"></i> ทำแบบประเมินอีกครั้ง
+595: { id: "pilates", name: "Reformer Pilates", type: "onsite", env: "studio", icon: "🤸‍♀️", pubmed: "PMID: 22375213", mechanism: "Controlled eccentric contractions target deep-trunk musculature, improving lumbo-pelvic stability.", description: "พิลาทิสบนเครื่องรีฟอร์เมอร์ แก้ออฟฟิศซินโดรม สร้างกล้ามเนื้อแกนกลาง", veto: ["joint_injury"], vector: { p: 3, m: 1, s: 2, n: 0, g: 2 } },
+596: { id: "onsen", name: "Onsen & Hot Springs", type: "onsite", env: "indoor", icon: "♨️", pubmed: "PMID: 29882782", mechanism: "Thermal stress triggers Heat Shock Factor 1 (HSF1), producing systemic anti-inflammatory effects.", description: "แช่น้ำแร่ร้อน ลดปวดเมื่อย กระตุ้นการไหลเวียนเลือดและฮอร์โมนฟื้นฟู", veto: ["heart_risk"], vector: { p: -4, m: -3, s: -4, n: 0, g: -2 } },
+597: { id: "sound_bath", name: "Sound Bath", type: "any", env: "indoor", icon: "🧘", pubmed: "PMID: 36826208", mechanism: "Low-frequency acoustic vibrations stimulate the vagus nerve and promote parasympathetic dominance.", description: "บำบัดด้วยคลื่นเสียงความถี่ต่ำ ดึงสมองสู่ความสงบขั้นสุด ลดความเครียด", veto: ["sensory"], vector: { p: -4, m: -5, s: -3, n: 2, g: 1 } },
+598: { id: "ice_bath", name: "Ice Baths / Cold Plunge", type: "onsite", env: "studio", icon: "🧊", pubmed: "PMID: 24799686", mechanism: "Cold water immersion spikes epinephrine, upregulating anti-inflammatory cytokines.", description: "แช่น้ำแข็งฟื้นฟูกล้ามเนื้อเฉียบพลัน กระตุ้นภูมิคุ้มกันและปลุกพลังใจ", veto: ["heart_risk"], vector: { p: 2, m: 2, s: -4, n: 4, g: 3 } },
+599: { id: "muaythai", name: "Muay Thai / HIIT", type: "any", env: "studio", icon: "🥊", pubmed: "PMID: 35547204", mechanism: "High-intensity mechanical loading stimulates osteoblast activity via Wolff's Law.", description: "คาร์ดิโอความเข้มข้นสูง ระบายความเครียด เผาผลาญไขมัน", veto: ["heart_risk", "joint_injury"], vector: { p: 5, m: 2, s: 3, n: 1, g: 3 } },
+600: { id: "clay_art", name: "Pottery & Clay Art", type: "onsite", env: "indoor", icon: "🏺", pubmed: "PMID: 28730717", mechanism: "Bilateral tactile stimulation engages the somatosensory cortex and facilitates emotion regulation.", description: "เวิร์กชอปปั้นดินเผา ฝึกสมาธิ ดึงสมองเข้าสู่ Flow State", veto: [], vector: { p: -2, m: -2, s: 2, n: 4, g: 1 } },
+601: { id: "yoga", name: "Restorative Yoga", type: "any", env: "indoor", icon: "🧘‍♀️", pubmed: "PMID: 32240757", mechanism: "Sustained stretching decreases sympathetic tone and significantly improves HRV metrics.", description: "โยคะยืดเหยียดช้าๆ เน้นลมหายใจ ช่วยให้ระบบประสาทผ่อนคลาย", veto: [], vector: { p: -3, m: -4, s: 1, n: 0, g: 1 } },
+602: { id: "business", name: "Business Workshop", type: "onsite", env: "studio", icon: "📈", pubmed: "PMID: 11148302", mechanism: "Fulfills psychological needs for competence and relatedness, buffering against existential burnout.", description: "คลาสสอนธุรกิจ หาคอนเนคชัน (เช่น Pitching Event)", veto: [], vector: { p: 0, m: 5, s: 5, n: 2, g: 5 } },
+603: { id: "selfdev", name: "Self-Development", type: "any", env: "indoor", icon: "🧠", pubmed: "PMID: 24192560", mechanism: "Cognitive engagement increases neural plasticity and builds cognitive reserve against stress.", description: "เวิร์กชอปพัฒนาตัวเอง (เช่น Enneagram, Vision Board)", veto: [], vector: { p: -1, m: 4, s: 3, n: 2, g: 5 } },
+604: { id: "boardgame", name: "Board Game Club", type: "onsite", env: "studio", icon: "🎲", pubmed: "PMID: 25910392", mechanism: "Positive social interaction releases oxytocin, reducing cortisol and mitigating social isolation risks.", description: "คอมมูนิตี้บอร์ดเกม พบปะพูดคุย เสียงหัวเราะบำบัดจิตใจ", veto: [], vector: { p: -1, m: 2, s: 5, n: 3, g: 0 } }
+682: '1': 'ผ่อนคลายมาก (Relaxed) - สงบ ไม่มีเรื่องกวนใจ',
+683: '2': 'ผ่อนคลายมาก (Relaxed) - สงบ ไม่มีเรื่องกวนใจ',
+684: '3': 'เครียดเล็กน้อย (Mild) - มีเรื่องให้คิดบ้าง แต่ยังจัดการได้',
+685: '4': 'เครียดเล็กน้อย (Mild) - มีเรื่องให้คิดบ้าง แต่ยังจัดการได้',
+686: '5': 'เครียดปานกลาง (Moderate) - เริ่มรู้สึกกดดัน แต่พอรับมือไหว',
+687: '6': 'เครียดปานกลาง (Moderate) - เริ่มรู้สึกกดดัน แต่พอรับมือไหว',
+688: '7': 'เครียดสูง (High) - หนักอึ้ง อารมณ์แปรปรวน ส่งผลต่อการนอน',
+689: '8': 'เครียดสูง (High) - หนักอึ้ง อารมณ์แปรปรวน ส่งผลต่อการนอน',
+690: '9': 'เครียดรุนแรง (Severe) - รับมือไม่ไหว รู้สึกหมดไฟ (Burnout)',
+691: '10': 'เครียดรุนแรง (Severe) - รับมือไม่ไหว รู้สึกหมดไฟ (Burnout)'
+696: stressTextEl.innerHTML = `<span class="text-wellnista-olive font-bold">ระดับ ${state.vitals.stress}:</span> ${descMap[state.vitals.stress]}`;
+773: '1': 'ผ่อนคลายมาก (Relaxed) - สงบ ไม่มีเรื่องกวนใจ',
+774: '2': 'ผ่อนคลายมาก (Relaxed) - สงบ ไม่มีเรื่องกวนใจ',
+775: '3': 'เครียดเล็กน้อย (Mild) - มีเรื่องให้คิดบ้าง แต่ยังจัดการได้',
+776: '4': 'เครียดเล็กน้อย (Mild) - มีเรื่องให้คิดบ้าง แต่ยังจัดการได้',
+777: '5': 'เครียดปานกลาง (Moderate) - เริ่มรู้สึกกดดัน แต่พอรับมือไหว',
+778: '6': 'เครียดปานกลาง (Moderate) - เริ่มรู้สึกกดดัน แต่พอรับมือไหว',
+779: '7': 'เครียดสูง (High) - หนักอึ้ง อารมณ์แปรปรวน ส่งผลต่อการนอน',
+780: '8': 'เครียดสูง (High) - หนักอึ้ง อารมณ์แปรปรวน ส่งผลต่อการนอน',
+781: '9': 'เครียดรุนแรง (Severe) - รับมือไม่ไหว รู้สึกหมดไฟ (Burnout)',
+782: '10': 'เครียดรุนแรง (Severe) - รับมือไม่ไหว รู้สึกหมดไฟ (Burnout)'
+787: stressTextEl.innerHTML = `<span class="text-wellnista-olive font-bold">ระดับ ${val}:</span> ${descMap[val]}`;
+834: {t: "ANALYZING BIOMARKERS", s: "ประเมินสรีรวิทยาและนาฬิกาชีวิต..."},
+835: {t: "CLINICAL SCREENING", s: "ตรวจสอบข้อจำกัดสุขภาพ (PAR-Q+)..."},
+836: {t: "LIFESTYLE MATCHING", s: "ค้นหาความสมดุลที่เข้ากับตารางชีวิต..."},
+837: {t: "CURATING WELLNESS", s: "เลือกสิ่งที่ดีที่สุดสำหรับคุณในวันนี้..."}

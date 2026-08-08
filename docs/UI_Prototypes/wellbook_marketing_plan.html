@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellBook Marketing Plan - Executive Visualization</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-1: #6366f1; /* Indigo */
+            --accent-2: #14b8a6; /* Teal */
+            --accent-3: #f43f5e; /* Rose */
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(20, 184, 166, 0.15) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 280px;
+            background: var(--glass-bg);
+            border-right: 1px solid var(--glass-border);
+            padding: 2rem;
+            position: fixed;
+            height: 100vh;
+            backdrop-filter: blur(10px);
+            z-index: 10;
+        }
+
+        .brand {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(to right, var(--accent-1), var(--accent-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 3rem;
+        }
+
+        .nav-links {
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-bottom: 1rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            margin-left: 280px;
+            padding: 4rem;
+        }
+
+        section {
+            min-height: 80vh;
+            margin-bottom: 6rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        /* Glass Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-2);
+        }
+
+        /* Visual Flywheel */
+        .flywheel-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin: 4rem 0;
+            flex-wrap: wrap;
+        }
+
+        .flywheel-node {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(20, 184, 166, 0.2));
+            border: 1px solid var(--accent-1);
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+            animation: pulse 4s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 20px rgba(99, 102, 241, 0.2); }
+            100% { transform: scale(1.05); box-shadow: 0 0 40px rgba(20, 184, 166, 0.4); }
+        }
+
+        .flywheel-node h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .flywheel-arrow {
+            font-size: 3rem;
+            color: var(--text-muted);
+            animation: slideRight 2s infinite;
+        }
+
+        @keyframes slideRight {
+            0% { transform: translateX(-10px); opacity: 0.5; }
+            50% { transform: translateX(10px); opacity: 1; }
+            100% { transform: translateX(-10px); opacity: 0.5; }
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: var(--glass-border);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item.left { left: 0; }
+        .timeline-item.right { left: 50%; }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--accent-1);
+            border: 4px solid var(--bg-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item.right::after {
+            left: -10px;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background: var(--glass-bg);
+            border-radius: 8px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .highlight-text {
+            color: var(--accent-3);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav class="sidebar">
+        <div class="brand">WellBook.</div>
+        <ul class="nav-links">
+            <li><a href="#summary" class="active">Executive Summary</a></li>
+            <li><a href="#b2b-strategy">B2B Strategy (Supply)</a></li>
+            <li><a href="#b2c-strategy">B2C Strategy (Demand)</a></li>
+            <li><a href="#seo-strategy">SEO Dominance (Gowabi/HDmall Model)</a></li>
+            <li><a href="#roadmap">Action Roadmap</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <!-- Section: Executive Summary -->
+        <section id="summary">
+            <div class="section-header">
+                <h1 class="section-title">WellBook Marketing Strategy</h1>
+                <p class="section-subtitle">B2B2C Marketplace Growth Plan: Solving the "Chicken and Egg" problem.</p>
+            </div>
+            
+            <div class="flywheel-container">
+                <div class="flywheel-node">
+                    <h3>1. Acquire Organizers</h3>
+                    <p class="text-muted">(B2B Supply)</p>
+                    <p style="font-size: 0.9rem; margin-top: 10px;">Attract Thai wellness creators with pain points in admin work.</p>
+                </div>
+                <div class="flywheel-arrow">➔</div>
+                <div class="flywheel-node" style="border-color: var(--accent-2);">
+                    <h3>2. Organizers Bring Users</h3>
+                    <p class="text-muted">(Initial B2C Demand)</p>
+                    <p style="font-size: 0.9rem; margin-top: 10px;">They migrate their existing students to book via WellBook.</p>
+                </div>
+                <div class="flywheel-arrow">➔</div>
+                <div class="flywheel-node" style="border-color: var(--accent-3);">
+                    <h3>3. Network Effect</h3>
+                    <p class="text-muted">(Platform Growth)</p>
+                    <p style="font-size: 0.9rem; margin-top: 10px;">Users discover new events. More demand attracts more organizers.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: B2B Strategy -->
+        <section id="b2b-strategy">
+            <div class="section-header">
+                <h2 class="section-title">Supply-Side Strategy (B2B)</h2>
+                <p class="section-subtitle">ดึงดูดผู้จัดงาน (Organizers) ด้วยการลดภาระงานแอดมิน</p>
+            </div>
+            
+            <div class="grid">
+                <div class="card">
+                    <span class="card-icon">🎯</span>
+                    <h3 class="card-title">Direct Outreach (Outbound)</h3>
+                    <p>เจาะกลุ่มเป้าหมาย (ICP) 100 ลีดแรกที่มี <strong>High Admin Pain</strong> (ต้องจองผ่าน LINE/โอนเงิน manual) โดยนำเสนอระบบจอง-จ่าย-จบ และ QR Check-in หน้างาน</p>
+                    <br>
+                    <p><small class="highlight-text">เป้าหมาย: ปิดดีล 10 Partners แรกภายในเดือน พ.ค. 2026</small></p>
+                </div>
+                
+                <div class="card">
+                    <span class="card-icon">🧲</span>
+                    <h3 class="card-title">Inbound Marketing</h3>
+                    <p>สร้าง SEO Content แก้ปัญหาให้ Organizer (เช่น "จัดคลาสยังไงไม่ให้เหนื่อยตอบ LINE") และแฝงตัวให้ความรู้ใน Facebook Groups (ครูโยคะไทย, Run Club)</p>
+                </div>
+
+                <div class="card">
+                    <span class="card-icon">🛡️</span>
+                    <h3 class="card-title">Objection Handling</h3>
+                    <p>รับมือกับข้อโต้แย้ง <em>"Google Form ง่ายกว่า"</em> ด้วยการชูจุดแข็ง: Form ทำ <strong>Payment, Capacity Limit และ QR Check-in</strong> ไม่ได้ และไม่มีระบบ <strong>Discovery</strong> ช่วยหาคนใหม่ๆ</p>
+                </div>
+
+                <div class="card">
+                    <span class="card-icon">🎁</span>
+                    <h3 class="card-title">Early Adopter Launch Offer</h3>
+                    <p>ข้อเสนอสุดพิเศษเพื่อลบความเสี่ยง (Risk Reversal): <strong>0% Commission ใน 3 เดือนแรก</strong> และรับเครดิตโปรโมทคลาสฟรีผ่าน Wellness Influencer</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: B2C Strategy -->
+        <section id="b2c-strategy">
+            <div class="section-header">
+                <h2 class="section-title">Demand-Side Strategy (B2C)</h2>
+                <p class="section-subtitle">ดึงดูดผู้เข้าร่วม (Users) ให้ค้นพบและกลับมาจองซ้ำ</p>
+            </div>
+            
+            <div class="grid">
+                <div class="card" style="border-color: var(--accent-1);">
+                    <span class="card-icon">🔍</span>
+                    <h3 class="card-title" style="color: var(--accent-1);">Marketplace Discovery</h3>
+                    <p>เปลี่ยนพฤติกรรมจากการตามหาอีเวนต์ใน IG/FB มาเป็นการค้นหาผ่าน WellBook Platform รองรับการค้นหาด้วยสถานที่, หมวดหมู่ (Yoga, Run, Sound Bath), และวันที่</p>
+                </div>
+
+                <div class="card" style="border-color: var(--accent-2);">
+                    <span class="card-icon">🎮</span>
+                    <h3 class="card-title" style="color: var(--accent-2);">Well-Hours Gamification</h3>
+                    <p>สร้าง Loyalty Loop โดยผู้ใช้งานจะได้รับแต้ม (Well-Hours) ทุกครั้งที่เข้าคลาส เพื่อนำไปแลกของรางวัล หรือส่วนลดในการจองครั้งถัดไป สร้างแรงจูงใจในการจองผ่านระบบ</p>
+                </div>
+
+                <div class="card" style="border-color: var(--accent-3);">
+                    <span class="card-icon">📣</span>
+                    <h3 class="card-title" style="color: var(--accent-3);">Influencer Amplification</h3>
+                    <p>ใช้ Macro & Micro Wellness Influencers ในการรีวิวประสบการณ์การเข้าร่วมอีเวนต์ที่จองผ่าน WellBook เพื่อสร้าง Awareness ในหมู่ B2C (ผู้บริโภคทั่วไป)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: SEO Strategy -->
+        <section id="seo-strategy">
+            <div class="section-header">
+                <h2 class="section-title">SEO Dominance Playbook</h2>
+                <p class="section-subtitle">ถอดรหัสความสำเร็จแบบ Gowabi และ HDmall เพื่อดึง Organic Traffic</p>
+            </div>
+            
+            <div class="grid">
+                <div class="card" style="border-color: var(--accent-1);">
+                    <span class="card-icon">🚀</span>
+                    <h3 class="card-title" style="color: var(--accent-1);">The Aggregator Model</h3>
+                    <p>ถอดแบบความสำเร็จจาก <strong>Gowabi และ HDmall</strong> ที่ใช้ <strong>User-Generated Content (UGC) และ Provider Listings</strong> ในการสร้าง SEO Indexing นับแสนหน้า ทำให้เมื่อลูกค้าค้นหาบริการ จะเจอแพลตฟอร์มเหล่านี้เสมอ WellBook จะใช้โครงสร้างเดียวกันในการยึดครอง Keyword สาย Wellness ในไทย</p>
+                </div>
+
+                <div class="card">
+                    <span class="card-icon">🏢</span>
+                    <h3 class="card-title">B2B SEO (ดึงดูดผู้จัดงาน)</h3>
+                    <p><strong>Programmatic SEO & Content Hub:</strong> สร้างบทความแก้ปัญหาเจาะจงกลุ่มเป้าหมาย เช่น "วิธีรับจองคลาสโยคะออนไลน์", "โปรแกรมเช็คอินงานวิ่ง", "ทำระบบจองคิวฟรี"<br><br>
+                    <small class="highlight-text">ผลลัพธ์:</small> เมื่อผู้จัดงานค้นหาวิธีแก้ปัญหาหลังบ้าน จะเจอ Blog ของ WellBook เสมอ เปลี่ยนปัญหาให้กลายเป็น Inbound Lead โดยอัตโนมัติ</p>
+                </div>
+
+                <div class="card">
+                    <span class="card-icon">🧘‍♀️</span>
+                    <h3 class="card-title">B2C SEO (ดึงดูดผู้เข้าร่วม)</h3>
+                    <p><strong>Dynamic Directory Pages:</strong> ทุกอีเวนต์และโปรไฟล์ผู้จัดที่สร้างบน WellBook จะถูกปรับโครงสร้าง (Structured Data) ให้ Google ค้นหาง่าย เช่น "คลาสโยคะ สวนลุม", "งานวิ่ง วันอาทิตย์ กรุงเทพ", "Sound Bath ทองหล่อ"<br><br>
+                    <small class="highlight-text">ผลลัพธ์:</small> สร้าง Long-tail keyword มหาศาล เมื่อมีผู้ใช้งานที่ค้นหาผ่าน Google จะถูกดึงเข้ามาเจอหน้าอีเวนต์ของ Partner บน WellBook ทันที (SEO Flywheel)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Roadmap -->
+        <section id="roadmap">
+            <div class="section-header">
+                <h2 class="section-title">Action Roadmap (May 2026)</h2>
+                <p class="section-subtitle">แผนการดำเนินงานเพื่อไปสู่เป้าหมาย 10 Active Partners</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Week 1: BKK & Chiang Mai</h3>
+                        <p>Focus: Top 5 Priority Leads (e.g. Yoga in the Park). Pitch: ระบบจอง-จ่าย-จบ ลดงานตอบ DM.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>Week 2: Secondary Cities</h3>
+                        <p>Focus: Khon Kaen, Hua Hin. Emphasize "First-mover advantage" ในต่างจังหวัด.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Week 3: Niche Segments</h3>
+                        <p>Focus: Eco Trails & Rehab Wellness. Show them the "Online Storefront" capability since they lack websites.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>Week 4: Close & Onboard</h3>
+                        <p>Follow-up all pipeline leads. Do 15-min live demos. Setup accounts and launch first live listings!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script>
+    // Simple smooth scrolling and active state for sidebar links
+    document.querySelectorAll('.nav-links a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all
+            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+            // Add to clicked
+            this.classList.add('active');
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

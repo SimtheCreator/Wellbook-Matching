@@ -1,0 +1,38 @@
+[
+  {
+    "pmid": "36018149",
+    "title": "Lights at night: does photobiomodulation improve sleep?",
+    "authors": [
+      "Valverde A",
+      "Hamilton C",
+      "Moro C",
+      "Billeres M",
+      "Magistretti P",
+      "Mitrofanis J"
+    ],
+    "journal": "Neural regeneration research",
+    "pubdate": "2023 Mar",
+    "doi": "10.4103/1673-5374.350191",
+    "abstract": "Sleep is a critical part of our daily routine. It impacts every organ and system of our body, from the brain to the heart and from cellular metabolism to immune function. A consistent daily schedule of quality of sleep makes a world of difference to our health and well-being. Despite its importance, so many individuals have trouble sleeping well. Poor quality sleep has such a detrimental impact on many aspects of our lives; it affects our thinking, learning, memory, and movements. Further, and most poignantly, poor quality sleep over time increases the risk of developing a serious medical condition, including neurodegenerative disease. In this review, we focus on a potentially new non-pharmacological treatment that improves the quality of sleep. This treatment, called photobiomodulation, involves the application of very specific wavelengths of light to body tissues. In animal models, these wavelengths, when applied at night, have been reported to stimulate the removal of fluid and toxic waste-products from the brain; that is, they improve the brain's inbuilt house-keeping function. We suggest that transcranial nocturnal photobiomodulation, by improving brain function at night, will help improve the health and well-being of many individuals, by enhancing the quality of their sleep."
+  },
+  {
+    "pmid": "35968381",
+    "title": "The effect of photobiomodulation on the brain during wakefulness and sleep.",
+    "authors": [
+      "Moro C",
+      "Valverde A",
+      "Dole M",
+      "Hoh Kam J",
+      "Hamilton C",
+      "Liebert A",
+      "Bicknell B",
+      "Benabid AL",
+      "Magistretti P",
+      "Mitrofanis J"
+    ],
+    "journal": "Frontiers in neuroscience",
+    "pubdate": "2022",
+    "doi": "10.3389/fnins.2022.942536",
+    "abstract": "Over the last seventy years or so, many previous studies have shown that photobiomodulation, the use of red to near infrared light on body tissues, can improve central and peripheral neuronal function and survival in both health and in disease. These improvements are thought to arise principally from an impact of photobiomodulation on mitochondrial and non-mitochondrial mechanisms in a range of different cell types, including neurones. This impact has downstream effects on many stimulatory and protective genes. An often-neglected feature of nearly all of these improvements is that they have been induced during the state of wakefulness. Recent studies have shown that when applied during the state of sleep, photobiomodulation can also be of benefit, but in a different way, by improving the flow of cerebrospinal fluid and the clearance of toxic waste-products from the brain. In this review, we consider the potential differential effects of photobiomodulation dependent on the state of arousal. We speculate that the effects of photobiomodulation is on different cells and systems depending on whether it is applied during wakefulness or sleep, that it may follow a circadian rhythm. We speculate further that the arousal-dependent photobiomodulation effects are mediated principally through a biophoton - ultra-weak light emission - network of communication and repair across the brain."
+  }
+]

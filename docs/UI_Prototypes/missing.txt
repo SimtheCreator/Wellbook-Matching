@@ -1,0 +1,38 @@
+457: <div id="loading-sub" class="text-xs text-wellnista-textMuted font-light">ประมวลผลข้อมูลร่างกายและจิตใจ</div>
+584: <i data-lucide="rotate-ccw" class="w-4 h-4"></i> ทำแบบประเมินอีกครั้ง
+598: { id: "pilates", name: "Reformer Pilates", type: "onsite", env: "studio", icon: "🤸‍♀️", pubmed: "PMID: 22375213", mechanism: "Controlled eccentric contractions target deep-trunk musculature, improving lumbo-pelvic stability.", description: { th: "พิลาทิสบนเครื่องรีฟอร์เมอร์ แก้ออฟฟิศซินโดรม สร้างกล้ามเนื้อแกนกลาง", en: "Reformer Pilates for office syndrome and core strength" }, veto: ["joint_injury"], vector: { p: 3, m: 1, s: 2, n: 0, g: 2 } },
+599: { id: "onsen", name: "Onsen & Hot Springs", type: "onsite", env: "indoor", icon: "♨️", pubmed: "PMID: 29882782", mechanism: "Thermal stress triggers Heat Shock Factor 1 (HSF1), producing systemic anti-inflammatory effects.", description: { th: "แช่น้ำแร่ร้อน ลดปวดเมื่อย กระตุ้นการไหลเวียนเลือดและฮอร์โมนฟื้นฟู", en: "Hot springs to reduce aches, boost circulation and recovery hormones" }, veto: ["heart_risk"], vector: { p: -4, m: -3, s: -4, n: 0, g: -2 } },
+600: { id: "sound_bath", name: "Sound Bath", type: "any", env: "indoor", icon: "🧘", pubmed: "PMID: 36826208", mechanism: "Low-frequency acoustic vibrations stimulate the vagus nerve and promote parasympathetic dominance.", description: { th: "บำบัดด้วยคลื่นเสียงความถี่ต่ำ ดึงสมองสู่ความสงบขั้นสุด ลดความเครียด", en: "Low-frequency sound therapy for ultimate calm and stress relief" }, veto: ["sensory"], vector: { p: -4, m: -5, s: -3, n: 2, g: 1 } },
+601: { id: "ice_bath", name: "Ice Baths / Cold Plunge", type: "onsite", env: "studio", icon: "🧊", pubmed: "PMID: 24799686", mechanism: "Cold water immersion spikes epinephrine, upregulating anti-inflammatory cytokines.", description: { th: "แช่น้ำแข็งฟื้นฟูกล้ามเนื้อเฉียบพลัน กระตุ้นภูมิคุ้มกันและปลุกพลังใจ", en: "Ice baths for acute muscle recovery, immunity, and mental toughness" }, veto: ["heart_risk"], vector: { p: 2, m: 2, s: -4, n: 4, g: 3 } },
+602: { id: "muaythai", name: "Muay Thai / HIIT", type: "any", env: "studio", icon: "🥊", pubmed: "PMID: 35547204", mechanism: "High-intensity mechanical loading stimulates osteoblast activity via Wolff's Law.", description: { th: "คาร์ดิโอความเข้มข้นสูง ระบายความเครียด เผาผลาญไขมัน", en: "High-intensity cardio to relieve stress and burn fat" }, veto: ["heart_risk", "joint_injury"], vector: { p: 5, m: 2, s: 3, n: 1, g: 3 } },
+603: { id: "clay_art", name: "Pottery & Clay Art", type: "onsite", env: "indoor", icon: "🏺", pubmed: "PMID: 28730717", mechanism: "Bilateral tactile stimulation engages the somatosensory cortex and facilitates emotion regulation.", description: { th: "เวิร์กชอปปั้นดินเผา ฝึกสมาธิ ดึงสมองเข้าสู่ Flow State", en: "Pottery workshop to practice mindfulness and enter a Flow State" }, veto: [], vector: { p: -2, m: -2, s: 2, n: 4, g: 1 } },
+604: { id: "yoga", name: "Restorative Yoga", type: "any", env: "indoor", icon: "🧘‍♀️", pubmed: "PMID: 32240757", mechanism: "Sustained stretching decreases sympathetic tone and significantly improves HRV metrics.", description: { th: "โยคะยืดเหยียดช้าๆ เน้นลมหายใจ ช่วยให้ระบบประสาทผ่อนคลาย", en: "Slow stretching yoga focusing on breath to relax the nervous system" }, veto: [], vector: { p: -3, m: -4, s: 1, n: 0, g: 1 } },
+605: { id: "business", name: "Business Workshop", type: "onsite", env: "studio", icon: "📈", pubmed: "PMID: 11148302", mechanism: "Fulfills psychological needs for competence and relatedness, buffering against existential burnout.", description: { th: "คลาสสอนธุรกิจ หาคอนเนคชัน (เช่น Pitching Event)", en: "Business classes for networking (e.g., Pitching Events)" }, veto: [], vector: { p: 0, m: 5, s: 5, n: 2, g: 5 } },
+606: { id: "selfdev", name: "Self-Development", type: "any", env: "indoor", icon: "🧠", pubmed: "PMID: 24192560", mechanism: "Cognitive engagement increases neural plasticity and builds cognitive reserve against stress.", description: { th: "เวิร์กชอปพัฒนาตัวเอง (เช่น Enneagram, Vision Board)", en: "Self-development workshops (e.g., Enneagram, Vision Board)" }, veto: [], vector: { p: -1, m: 4, s: 3, n: 2, g: 5 } },
+607: { id: "boardgame", name: "Board Game Club", type: "onsite", env: "studio", icon: "🎲", pubmed: "PMID: 25910392", mechanism: "Positive social interaction releases oxytocin, reducing cortisol and mitigating social isolation risks.", description: { th: "คอมมูนิตี้บอร์ดเกม พบปะพูดคุย เสียงหัวเราะบำบัดจิตใจ", en: "Board game community to meet, talk, and heal through laughter" }, veto: [], vector: { p: -1, m: 2, s: 5, n: 3, g: 0 } }
+698: '1': 'ผ่อนคลายมาก (Relaxed) - สงบ ไม่มีเรื่องกวนใจ',
+699: '2': 'ผ่อนคลายมาก (Relaxed) - สงบ ไม่มีเรื่องกวนใจ',
+700: '3': 'เครียดเล็กน้อย (Mild) - มีเรื่องให้คิดบ้าง แต่ยังจัดการได้',
+701: '4': 'เครียดเล็กน้อย (Mild) - มีเรื่องให้คิดบ้าง แต่ยังจัดการได้',
+702: '5': 'เครียดปานกลาง (Moderate) - เริ่มรู้สึกกดดัน แต่พอรับมือไหว',
+703: '6': 'เครียดปานกลาง (Moderate) - เริ่มรู้สึกกดดัน แต่พอรับมือไหว',
+704: '7': 'เครียดสูง (High) - หนักอึ้ง อารมณ์แปรปรวน ส่งผลต่อการนอน',
+705: '8': 'เครียดสูง (High) - หนักอึ้ง อารมณ์แปรปรวน ส่งผลต่อการนอน',
+706: '9': 'เครียดรุนแรง (Severe) - รับมือไม่ไหว รู้สึกหมดไฟ (Burnout)',
+707: '10': 'เครียดรุนแรง (Severe) - รับมือไม่ไหว รู้สึกหมดไฟ (Burnout)'
+712: stressTextEl.innerHTML = `<span class="text-wellnista-olive font-bold">ระดับ ${state.vitals.stress}:</span> ${descMap[state.vitals.stress]}`;
+804: '1': 'ผ่อนคลายมาก (Relaxed) - สงบ ไม่มีเรื่องกวนใจ',
+805: '2': 'ผ่อนคลายมาก (Relaxed) - สงบ ไม่มีเรื่องกวนใจ',
+806: '3': 'เครียดเล็กน้อย (Mild) - มีเรื่องให้คิดบ้าง แต่ยังจัดการได้',
+807: '4': 'เครียดเล็กน้อย (Mild) - มีเรื่องให้คิดบ้าง แต่ยังจัดการได้',
+808: '5': 'เครียดปานกลาง (Moderate) - เริ่มรู้สึกกดดัน แต่พอรับมือไหว',
+809: '6': 'เครียดปานกลาง (Moderate) - เริ่มรู้สึกกดดัน แต่พอรับมือไหว',
+810: '7': 'เครียดสูง (High) - หนักอึ้ง อารมณ์แปรปรวน ส่งผลต่อการนอน',
+811: '8': 'เครียดสูง (High) - หนักอึ้ง อารมณ์แปรปรวน ส่งผลต่อการนอน',
+812: '9': 'เครียดรุนแรง (Severe) - รับมือไม่ไหว รู้สึกหมดไฟ (Burnout)',
+813: '10': 'เครียดรุนแรง (Severe) - รับมือไม่ไหว รู้สึกหมดไฟ (Burnout)'
+818: stressTextEl.innerHTML = `<span class="text-wellnista-olive font-bold">ระดับ ${val}:</span> ${descMap[val]}`;
+870: {t: "ANALYZING BIOMARKERS", s: "ประเมินสรีรวิทยาและนาฬิกาชีวิต..."},
+871: {t: "CLINICAL SCREENING", s: "ตรวจสอบข้อจำกัดสุขภาพ (PAR-Q+)..."},
+872: {t: "LIFESTYLE MATCHING", s: "ค้นหาความสมดุลที่เข้ากับตารางชีวิต..."},
+873: {t: "CURATING WELLNESS", s: "เลือกสิ่งที่ดีที่สุดสำหรับคุณในวันนี้..."}

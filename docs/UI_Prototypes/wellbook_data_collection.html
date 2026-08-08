@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellBook Data Collection & Implementation Guidelines</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Prompt:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Dark Mode Palette */
+            --bg-dark: #0f172a; --bg-inner: #020617; --card-bg: #1e293b; --card-border: #334155;
+            --accent-pink: #ec4899; --accent-blue: #3b82f6; --accent-cyan: #06b6d4; --accent-green: #10b981; --accent-purple: #8b5cf6;
+            --text-light: #f8fafc; --text-muted: #94a3b8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Prompt', 'Inter', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-light); padding: 3rem 2rem; background-image: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.15) 0%, transparent 50%); background-attachment: fixed; display: flex; flex-direction: column; align-items: center; }
+
+        .header { text-align: center; margin-bottom: 2rem; max-width: 900px; }
+        .header h1 { font-size: 2.8rem; margin-bottom: 1rem; background: linear-gradient(to right, #38bdf8, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .header p { color: var(--text-muted); font-size: 1.1rem; line-height: 1.6; }
+
+        .content-wrapper { width: 100%; max-width: 1200px; display: flex; flex-direction: column; gap: 2.5rem; margin-bottom: 4rem; }
+
+        /* Implementation Guidelines Panels */
+        .guideline-panel { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+        .guideline-panel h2 { display: flex; align-items: center; gap: 10px; font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--card-border); padding-bottom: 0.8rem; }
+        
+        .ux-title { color: var(--accent-purple); }
+        .protocol-title { color: var(--accent-green); }
+        
+        .guideline-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .guideline-item { background: var(--bg-inner); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--card-border); }
+        .guideline-item.ux { border-left-color: var(--accent-purple); }
+        .guideline-item.protocol { border-left-color: var(--accent-green); }
+        
+        .g-title { font-weight: 700; color: #fff; margin-bottom: 0.8rem; font-size: 1.1rem; }
+        .g-desc { font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; }
+        .g-desc b { color: var(--accent-cyan); }
+
+        /* Flow Container */
+        .flow-container { width: 100%; max-width: 1200px; display: flex; flex-direction: column; gap: 3rem; position: relative; }
+        .flow-container::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 4px; height: 100%; background: linear-gradient(to bottom, var(--accent-purple), var(--accent-cyan)); z-index: 0; border-radius: 4px; }
+        @media (max-width: 768px) { .flow-container::before { display: none; } }
+
+        .stage { position: relative; z-index: 1; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; padding: 2.5rem; backdrop-filter: blur(10px); width: calc(50% - 3rem); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .stage-left { align-self: flex-start; margin-right: auto; border-right: 4px solid var(--accent-purple); }
+        .stage-right { align-self: flex-end; margin-left: auto; border-left: 4px solid var(--accent-cyan); }
+        @media (max-width: 768px) { .stage { width: 100%; align-self: center !important; margin: 0 !important; border-left: 4px solid var(--accent-cyan) !important; border-right: none !important; } }
+
+        .stage h2 { font-size: 1.4rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 10px; }
+        .stage-left h2 { color: var(--accent-purple); }
+        .stage-right h2 { color: var(--accent-cyan); }
+
+        .data-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+        .data-item { background: var(--bg-inner); padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); }
+        .data-title { font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 5px; }
+        .data-desc { font-size: 0.85rem; color: #94a3b8; }
+        .match-box { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--card-border); font-size: 0.85rem; color: var(--accent-green); font-weight: 600; }
+
+        .logic-hub { align-self: center; background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(6, 182, 212, 0.2)); border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; padding: 2rem 4rem; text-align: center; z-index: 2; box-shadow: 0 0 40px rgba(139, 92, 246, 0.3); }
+        .logic-hub h2 { color: #fff; font-size: 1.8rem; margin-bottom: 10px; }
+        .logic-hub p { color: #cbd5e1; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>WellBook Data Collection & App Architecture</h1>
+        <p>สถาปัตยกรรมการประยุกต์ใช้อัลกอริทึมทางสรีรวิทยาในระบบดิจิทัล (Implementation Guidelines) และ Data Privacy</p>
+    </div>
+
+    <div class="content-wrapper">
+        
+        <!-- App Implementation Guidelines -->
+        <div class="guideline-panel">
+            <h2 class="ux-title">📱 แนวทางการพัฒนาซอฟต์แวร์สุขภาวะ (Implementation Guidelines)</h2>
+            <div class="guideline-grid">
+                <div class="guideline-item ux">
+                    <div class="g-title">1. การคัดกรองอัจฉริยะ (Algorithmic Onboarding)</div>
+                    <div class="g-desc">ระบบต้อง <b>ล็อกเมนูที่มีความเสี่ยงสูงโดยอัตโนมัติ (Hide/Lock)</b> หากผู้ใช้กรอกประวัติโรคที่ระบุไว้ใน Red Flags เช่น หากติ๊กว่ามีความหนาแน่นกระดูกต่ำ (Osteoporosis) ระบบจะบล็อกการแสดงผลคลาส "พิลาทิส" ที่มีท่าก้มหลังทันที</div>
+                </div>
+                <div class="guideline-item ux">
+                    <div class="g-title">2. การจัดลำดับตามสรีรวิทยา (Session Sequencing)</div>
+                    <div class="g-desc">ในการจัด Bundle แพ็กเกจให้ผู้ใช้ ระบบต้องจัดลำดับอย่างถูกต้อง: <br>- <b>ลำดับการฟื้นฟู:</b> เริ่มด้วย <i>ซาวน่า</i> (ขยายหลอดเลือด/HSP70) ตามด้วย <i>แช่น้ำเย็น</i> (เร่งกำจัดของเสีย)<br>- <b>ลำดับการนอน:</b> เริ่มด้วย <i>ฝึกหายใจ</i> (กระตุ้นพาราซิมพาเทติก) ตามด้วย <i>โยคะนิทรา</i></div>
+                </div>
+                <div class="guideline-item ux">
+                    <div class="g-title">3. Wearable Integration (ปรับกิจกรรมตาม HRV)</div>
+                    <div class="g-desc">หากดึงข้อมูล Smartwatch แล้วพบว่าค่า <b>HRV ขณะนอนหลับลดลง</b> (ระบบประสาทล้า) ระบบจะปรับ Algorithm ไม่ให้แนะนำการออกกำลังกายหนัก แต่จะแนะนำ <i>Sound Bath</i> หรือ <i>Yoga Nidra</i> เพื่อป้องกันสภาวะ Over-training</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Sensitivity & Protocols -->
+        <div class="guideline-panel">
+            <h2 class="protocol-title">🛡️ Data Sensitivity & Liability Protocols</h2>
+            <div class="guideline-grid">
+                <div class="guideline-item protocol">
+                    <div class="g-title">1. No Raw Data Storage (เก็บเฉพาะผลลัพธ์)</div>
+                    <div class="g-desc">แอปจะไม่เก็บข้อมูลกราฟหัวใจหรือคลื่นสมองแบบดิบๆ แต่จะดึงมาคำนวณผ่าน On-device/API แล้วแปลงเป็นตัวแปรสถานะ เช่น <code>HRV_Status = Low</code> เพื่อป้องกันหากเกิด Data Breach ข้อมูลสุขภาพเชิงลึกจะไม่หลุดออกไป</div>
+                </div>
+                <div class="guideline-item protocol">
+                    <div class="g-title">2. Medical Disclaimer (คำเตือนคุ้มครองบริษัท)</div>
+                    <div class="g-desc">ต้องระบุชัดเจน: <b>"WellBook เป็นแพลตฟอร์ม Lifestyle ไม่ใช่เครื่องมือแพทย์"</b> เพื่อปกป้องบริษัทจากการถูกฟ้องร้อง (Liability) และลดความเสี่ยงในการละเมิด พ.ร.บ. สถานพยาบาล</div>
+                </div>
+                <div class="guideline-item protocol">
+                    <div class="g-title">3. Data Decoupling (แยกชื่อออกจากสุขภาพ)</div>
+                    <div class="g-desc">แยกข้อมูลส่วนบุคคล (PII) ออกจากข้อมูลสุขภาพด้วย Hash ID เวลาส่ง Lead ให้สตูดิโอ (B2B) สตูดิโอจะเห็นแค่ "User ID #1042 มีเป้าหมายลดความเครียด" เท่านั้น</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Flow (Original Flow updated to match new guidelines) -->
+    <div class="flow-container">
+        <!-- Stage 1 -->
+        <div class="stage stage-left">
+            <h2>📝 1. ข้อมูลจากการสอบถาม (Self-Reported)</h2>
+            <ul class="data-list">
+                <li class="data-item">
+                    <div class="data-title">เป้าหมาย & อาการปวดเมื่อย (Wellness Goals)</div>
+                    <div class="data-desc">เช่น นอนไม่หลับ, ปวดคอบ่าไหล่, ต้องการฟื้นฟูกล้ามเนื้อ</div>
+                    <div class="match-box">➜ วางรากฐานเพื่อดึงกิจกรรมตาม Biological Mechanism</div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Stage 2 -->
+        <div class="stage stage-right">
+            <h2>⌚ 2. ข้อมูลจาก Smartwatch (Wearable Tech)</h2>
+            <ul class="data-list">
+                <li class="data-item">
+                    <div class="data-title">Heart Rate Variability (HRV) & Sleep Data</div>
+                    <div class="data-desc">ดึงตัวบ่งชี้การทำงานของ Autonomic Nervous System (ANS)</div>
+                    <div class="match-box">➜ นำเข้ากฎ Wearable Integration (ปรับเบา/หนักตาม HRV)</div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Central Hub -->
+        <div class="logic-hub">
+            <h2>⚙️ WellBook Matching Engine</h2>
+            <p>ประมวลผลผ่าน Algorithm: กรองข้อห้าม ➔ จัดลำดับกิจกรรม ➔ แนะนำ B2B สตูดิโอ</p>
+        </div>
+
+        <!-- Stage 3 -->
+        <div class="stage stage-left">
+            <h2>🚫 3. ระบบคัดกรองความปลอดภัย (Algorithmic Onboarding)</h2>
+            <ul class="data-list">
+                <li class="data-item">
+                    <div class="data-title">ข้อห้ามทางการแพทย์ (Absolute Contraindications)</div>
+                    <div class="data-desc">ลิ้นหัวใจตีบ, กระดูกพรุน, โรคจิตเวชเฉียบพลัน, ลมชัก</div>
+                    <div class="match-box">➜ ทำการซ่อน/ล็อก (Hide) กิจกรรมที่อันตรายแบบอัตโนมัติ</div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Stage 4 -->
+        <div class="stage stage-right">
+            <h2>🎯 4. ผลลัพธ์การจับคู่ (Session Sequencing & B2B Match)</h2>
+            <ul class="data-list">
+                <li class="data-item">
+                    <div class="data-title">จัดลำดับแพ็กเกจสุขภาพ & เชื่อมต่อสตูดิโอ</div>
+                    <div class="data-desc">จัดเรียงกิจกรรมให้ถูกต้องตามสรีรวิทยา (เช่น ซาวน่า แล้วค่อย แช่น้ำเย็น) พร้อมส่งข้อมูลแบบไร้ชื่อ (Anonymized) ให้พาร์ทเนอร์สตูดิโอในไทย</div>
+                    <div class="match-box">➜ นำไปสู่โมเดลรายได้ (B2B Lead Gen & Booking)</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
